@@ -1,0 +1,10 @@
+---
+title: "DataDeficiency_analysis"
+author: "Alex"
+date: "8/29/2019"
+output: pdf_document
+---
+
+```{r}
+
+```
