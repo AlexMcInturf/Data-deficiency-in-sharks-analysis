@@ -1,110 +1,108 @@
-,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,,,"* all lowercase, each seperated by comma",,,,,,,low (1) to very high (4),formatted/averaged in cm,
 Order,Family,Genus,species ,Common name,Data Deficient,Deepwater,Coastal,Pelagic,Benthic,BrackishFreshwater,Tropical ,Temperate,Global,Pacific,Atlantic,Indian,Arctic,Antartic,Trans-oceanic,Human Uses,Fisheries,minor commercial,commercial,subsistence,Gamefish,Aquarium,Vulnerability #,Size ,*Reproductive Strategy
-Hexanchiformes,Chlamydoselachidae,Chlamydoselachus,africana,southern african frilled shark,1,0,1,0,1,0,0,1,0,1,0,0,0,0,0,,N/A,,,,,,3.5,117,
+Hexanchiformes,Chlamydoselachidae,Chlamydoselachus,africana,southern african frilled shark,1,0,1,0,1,0,0,1,0,1,0,0,0,0,0,,NA,,,,,,3.5,117,
 Hexanchiformes,Chlamydoselachidae,Chlamydoselachus,anguineus,frilled shark,0,1,0,0,1,0,0,0,1,0,0,0,0,0,1,fisheries: minor commercial,1,1,,,,,4,196,Ovoviviparous
 Hexanchiformes,Hexanchidae,Heptranchias,perlo,sharpnose sevengill shark,0,1,0,0,0,0,0,0,1,0,0,0,0,0,1,fisheries: minor commercial,1,1,,,,,3.5,139,Ovoviviparous
 Hexanchiformes,Hexanchidae,Hexanchus,griseus,bluntnose sixgill shark,0,1,0,0,0,0,0,0,1,0,0,0,0,0,1,fisheries: commercial; gamefish: yes,1,,1,,1,,4,482,Ovoviviparous
 Hexanchiformes,Hexanchidae,Hexanchus,nakamurai,bigeye sixgill shark,1,1,0,0,1,0,0,0,1,0,0,0,0,0,1,fisheries: subsistence fisheries,1,,,1,,,4,180,Ovoviviparous
-Hexanchiformes,Hexanchidae,Notorynchus,cepedianus,broadnose sevengill shark,1,1,0,0,0,0,0,0,1,0,0,0,0,0,1,"fisheries: commercial; gamefish: yes; aquarium: public aquariums
+Hexanchiformes,Hexanchidae,Notorynchus,cepedianus,broadnose sevengill shark,1,1,,0,0,0,0,0,1,0,0,0,0,0,1,"fisheries: commercial; gamefish: yes; aquarium: public aquariums
 ",1,,1,,1,1,3,296,Ovoviviparous
 Echinorhiniformes,Echinorhinidae,Echinorhinus,brucus,bramble shark,1,1,0,0,1,0,0,0,1,0,0,0,0,0,1,fisheries: minor commercial; gamefish: yes,1,1,,,1,,4,310,Ovoviviparous
 Echinorhiniformes,Echinorhinidae,Echinorhinus,cookei,prickly shark,1,1,0,0,1,0,0,0,1,1,0,0,0,0,0,fisheries: minor commercial,1,1,,,,,4,450,Ovoviviparous
-Squaliformes,Squalidae,Cirrhigaleus,asper,roughskin spurdog,1,0,0,0,1,0,0,0,1,0,0,0,0,0,1,,N/A,,,,,,3.5,118,Ovoviviparous
-Squaliformes,Squalidae,Cirrhigaleus,australis,southern mandarin dogfish,1,1,0,0,1,0,0,1,0,1,0,0,0,0,0,,N/A,,,,,,4,123,
+Squaliformes,Squalidae,Cirrhigaleus,asper,roughskin spurdog,1,0,0,0,1,0,0,0,1,0,0,0,0,0,1,,NA,,,,,,3.5,118,Ovoviviparous
+Squaliformes,Squalidae,Cirrhigaleus,australis,southern mandarin dogfish,1,1,0,0,1,0,0,1,0,1,0,0,0,0,0,,NA,,,,,,4,123,
 Squaliformes,Squalidae,Cirrhigaleus,barbifer,mandarin dogfish,1,1,0,0,1,0,0,0,1,1,0,0,0,0,0,fisheries: of no interest,0,,,,,,4,122,Ovoviviparous
 Squaliformes,Squalidae,Squalus ,acanthias ,piked dogfish,0,1,1,0,0,0,0,1,0,0,0,0,0,0,0,fisheries: commercial; gamefish: yes,1,,1,,1,,3,165,Ovoviviparous
-Squaliformes,Squalidae,Squalus ,albifrons,eastern highfin spurdog,0,1,1,0,0,0,0,1,0,1,0,0,0,0,0,,N/A,,,,,,3.5,86,
-Squaliformes,Squalidae,Squalus ,altipinnis,western highfin spurdog,1,1,1,0,0,0,1,0,0,0,0,1,0,0,0,,N/A,,,,,,3,59,
+Squaliformes,Squalidae,Squalus ,albifrons,eastern highfin spurdog,0,1,1,0,0,0,0,1,0,1,0,0,0,0,0,,NA,,,,,,3.5,86,
+Squaliformes,Squalidae,Squalus ,altipinnis,western highfin spurdog,1,1,1,0,0,0,1,0,0,0,0,1,0,0,0,,NA,,,,,,3,59,
 Squaliformes,Squalidae,Squalus ,blainville,longnose spurdog,1,1,0,0,1,0,0,1,1,0,0,0,0,0,1,fisheries: commercial,1,,1,,,,3.5,81.5,Ovoviviparous
-Squaliformes,Squalidae,Squalus ,brevirostris,japanese shortnose spurdog,1,0,1,1,0,0,0,1,0,1,0,0,0,0,0,,N/A,,,,,,3,51,Ovoviviparous
-Squaliformes,Squalidae,Squalus ,bucephalus,bighead spurdog,1,1,0,0,0,0,1,1,0,1,0,0,0,0,0,,N/A,,,,,,3.5,90,
-Squaliformes,Squalidae,Squalus ,chloroculus,greeneye spurdog,0,1,1,0,0,0,0,1,0,0,0,0,0,0,0,,N/A,,,,,,3.5,92.5,
-Squaliformes,Squalidae,Squalus ,crassispinus,fatspine spurdog,1,0,1,1,0,0,1,0,0,0,0,1,0,0,0,,N/A,,,,,,3,58,
+Squaliformes,Squalidae,Squalus ,brevirostris,japanese shortnose spurdog,1,0,1,1,0,0,0,1,0,1,0,0,0,0,0,,NA,,,,,,3,51,Ovoviviparous
+Squaliformes,Squalidae,Squalus ,bucephalus,bighead spurdog,1,1,0,0,0,0,1,1,0,1,0,0,0,0,0,,NA,,,,,,3.5,90,
+Squaliformes,Squalidae,Squalus ,chloroculus,greeneye spurdog,0,1,1,0,0,0,0,1,0,0,0,0,0,0,0,,NA,,,,,,3.5,92.5,
+Squaliformes,Squalidae,Squalus ,crassispinus,fatspine spurdog,1,0,1,1,0,0,1,0,0,0,0,1,0,0,0,,NA,,,,,,3,58,
 Squaliformes,Squalidae,Squalus ,cubensis,cuban dogfish,1,0,0,0,1,0,0,0,1,0,1,0,0,0,0,fisheries: minor commercial,1,1,,,,,3.5,110,Ovoviviparous
-Squaliformes,Squalidae,Squalus ,edmundsi,edmund's spurdog,0,1,1,0,0,0,1,1,0,0,0,1,0,0,0,,N/A,,,,,,3.5,87,
-Squaliformes,Squalidae,Squalus ,formosus,taiwan spurdog,0,0,1,0,0,0,0,1,0,1,0,0,0,0,0,,N/A,,,,,,3.5,81,
-Squaliformes,Squalidae,Squalus ,grahami,eastern longnose spurdog,0,1,1,0,0,0,1,0,0,1,0,0,0,0,0,,N/A,,,,,,3.5,65,
-Squaliformes,Squalidae,Squalus ,griffini,new zealand dogfish,0,1,1,0,0,0,0,1,0,1,0,0,0,0,0,,N/A,,,,,,3.5,100,
-Squaliformes,Squalidae,Squalus ,hemipinnis,indonesian shortsnout dogfish,0,0,1,0,0,0,1,0,0,0,0,1,0,0,0,,N/A,,,,,,3.5,63,Viviparous
+Squaliformes,Squalidae,Squalus ,edmundsi,edmund's spurdog,0,1,1,0,0,0,1,1,0,0,0,1,0,0,0,,NA,,,,,,3.5,87,
+Squaliformes,Squalidae,Squalus ,formosus,taiwan spurdog,0,0,1,0,0,0,0,1,0,1,0,0,0,0,0,,NA,,,,,,3.5,81,
+Squaliformes,Squalidae,Squalus ,grahami,eastern longnose spurdog,0,1,1,0,0,0,1,0,0,1,0,0,0,0,0,,NA,,,,,,3.5,65,
+Squaliformes,Squalidae,Squalus ,griffini,new zealand dogfish,0,1,1,0,0,0,0,1,0,1,0,0,0,0,0,,NA,,,,,,3.5,100,
+Squaliformes,Squalidae,Squalus ,hemipinnis,indonesian shortsnout dogfish,0,0,1,0,0,0,1,0,0,0,0,1,0,0,0,,NA,,,,,,3.5,63,Viviparous
 Squaliformes,Squalidae,Squalus ,japanicus,japanese spurdog,1,0,0,0,1,0,0,0,1,0,0,0,0,0,0,fisheries: minor commercial,1,1,,,,,3.5,95,Ovoviviparous
-Squaliformes,Squalidae,Squalus ,lalannei,seychelles spurdog,1,1,1,0,0,0,1,0,0,0,0,0,0,0,0,,N/A,,,,,,3.5,70.5,
+Squaliformes,Squalidae,Squalus ,lalannei,seychelles spurdog,1,1,1,0,0,0,1,0,0,0,0,0,0,0,0,,NA,,,,,,3.5,70.5,
 Squaliformes,Squalidae,Squalus ,megalops,shortnose spurdog,1,1,0,0,1,0,0,1,0,0,1,1,0,0,0,fisheries: commercial; gamefish: yes,1,,1,,1,,3.5,77,Ovoviviparous
 Squaliformes,Squalidae,Squalus ,melanurus,blacktail spurdog,1,1,0,0,0,0,1,0,0,1,0,0,0,0,0,fisheries: of no interest,0,,,,,,3.5,75,
 Squaliformes,Squalidae,Squalus ,mitsukurii,shortspine spurdog,1,1,0,0,1,0,0,0,1,0,0,0,0,0,1,fisheries: minor commercial,1,1,,,,,3.5,125,Ovoviviparous
-Squaliformes,Squalidae,Squalus ,montalbani,philippines spurdog,0,1,1,0,0,0,1,0,0,1,0,1,0,0,0,,N/A,,,,,,3.5,86.5,Viviparous
-Squaliformes,Squalidae,Squalus ,nasutus,western longnose spurdog,0,1,1,0,0,0,1,0,0,1,0,1,0,0,0,,N/A,,,,,,3,67,
-Squaliformes,Squalidae,Squalus ,notocaudatus,bartail spurdog,0,1,0,0,0,0,1,0,0,1,0,0,0,0,0,,N/A,,,,,,3,62,
-Squaliformes,Squalidae,Squalus ,rancureli,cyrano spurdog,0,1,0,0,0,0,1,1,0,1,0,0,0,0,0,,N/A,,,,,,3.5,77,Ovoviviparous
-Squaliformes,Squalidae,,,kermadec spiny dogfish,0,0,0,1,0,0,1,0,0,1,0,0,0,0,0,,N/A,,,,,,3.5,73,
-Squaliformes,Squalidae,Squalus ,suckleyi,north pacific spiny dogfish,0,1,0,0,0,0,0,1,0,1,0,0,0,0,0,,N/A,,,,,,3.5,150,
-Squaliformes,Centrophoridae,Centrophorus,acus,needle dogfish,N/A,0,0,0,0,0,0,0,0,0,0,0,0,0,0,,N/A,,,,,,N/A,130,
-Squaliformes,Centrophoridae,Centrophorus,atromarginatus,dwarf gulper shark,1,1,0,0,0,0,0,0,1,1,0,1,0,0,0,,N/A,,,,,,3.5,94,Ovoviviparous
-Squaliformes,Centrophoridae,Centrophorus,granulosus,gulper shark,N/A,0,0,0,1,0,0,0,0,1,0,1,0,0,0,,N/A,,,,,,N/A,107.5,Ovoviviparous
+Squaliformes,Squalidae,Squalus ,montalbani,philippines spurdog,0,1,1,0,0,0,1,0,0,1,0,1,0,0,0,,NA,,,,,,3.5,86.5,Viviparous
+Squaliformes,Squalidae,Squalus ,nasutus,western longnose spurdog,0,1,1,0,0,0,1,0,0,1,0,1,0,0,0,,NA,,,,,,3,67,
+Squaliformes,Squalidae,Squalus ,notocaudatus,bartail spurdog,0,1,0,0,0,0,1,0,0,1,0,0,0,0,0,,NA,,,,,,3,62,
+Squaliformes,Squalidae,Squalus ,rancureli,cyrano spurdog,0,1,0,0,0,0,1,1,0,1,0,0,0,0,0,,NA,,,,,,3.5,77,Ovoviviparous
+Squaliformes,Squalidae,,,kermadec spiny dogfish,0,0,0,1,0,0,1,0,0,1,0,0,0,0,0,,NA,,,,,,3.5,73,
+Squaliformes,Squalidae,Squalus ,suckleyi,north pacific spiny dogfish,0,1,0,0,0,0,0,1,0,1,0,0,0,0,0,,NA,,,,,,3.5,150,
+Squaliformes,Centrophoridae,Centrophorus,acus,needle dogfish,NA,0,0,0,0,0,0,0,0,0,0,0,0,0,0,,NA,,,,,,NA,130,
+Squaliformes,Centrophoridae,Centrophorus,atromarginatus,dwarf gulper shark,1,1,0,0,0,0,0,0,1,1,0,1,0,0,0,,NA,,,,,,3.5,94,Ovoviviparous
+Squaliformes,Centrophoridae,Centrophorus,granulosus,gulper shark,NA,0,0,0,1,0,0,0,0,1,0,1,0,0,0,,NA,,,,,,NA,107.5,Ovoviviparous
 Squaliformes,Centrophoridae,Centrophorus,harrissoni,longnose gulper shark,0,1,0,0,0,0,0,1,0,0,0,0,0,0,0,fisheries: of no interest,0,,,,,,3.5,107.5,
-Squaliformes,Centrophoridae,Centrophorus,isodon,blackfin gulper shark,1,1,1,0,0,0,1,0,0,1,0,0,0,0,0,,N/A,,,,,,3.5,108,Ovoviviparous
+Squaliformes,Centrophoridae,Centrophorus,isodon,blackfin gulper shark,1,1,1,0,0,0,1,0,0,1,0,0,0,0,0,,NA,,,,,,3.5,108,Ovoviviparous
 Squaliformes,Centrophoridae,Centrophorus,lusitanicus,lowfin gulper shark,0,1,0,0,0,0,1,1,0,0,0,0,0,0,1,"fisheries: minor commercial
 ",1,1,,,,,4,60.5,Ovoviviparous
 Squaliformes,Centrophoridae,Centrophorus,moluccensis,smallfin gulper shark,1,1,0,0,0,0,0,0,1,1,0,1,0,0,0,"fisheries: minor commercial
 ",1,1,,,,,3.5,100,Ovoviviparous
-Squaliformes,Centrophoridae,Centrophorus,niaukang,taiwan gulper shark,N/A,0,0,0,0,0,0,0,0,0,0,0,0,0,0,,N/A,,,,,,N/A,170,
-Squaliformes,Centrophoridae,Centrophorus,seychellorum,seychelles gulper shark,1,1,0,0,0,0,1,0,0,0,0,1,0,0,0,,N/A,,,,,,3,80,
+Squaliformes,Centrophoridae,Centrophorus,niaukang,taiwan gulper shark,NA,0,0,0,0,0,0,0,0,0,0,0,0,0,0,,NA,,,,,,NA,170,
+Squaliformes,Centrophoridae,Centrophorus,seychellorum,seychelles gulper shark,1,1,0,0,0,0,1,0,0,0,0,1,0,0,0,,NA,,,,,,3,80,
 Squaliformes,Centrophoridae,Centrophorus,squamosus,leafscale gulper shark,0,1,0,0,0,0,0,0,1,0,0,0,0,0,1,fisheries: minor commercial,1,1,,,,,4,164,Ovoviviparous
 Squaliformes,Centrophoridae,Centrophorus,tessellatus,mosaic gulper shark,1,1,0,0,1,0,0,0,1,1,0,0,0,0,0,fisheries: of no interest,0,,,,,,3.5,89,Ovoviviparous
-Squaliformes,Centrophoridae,Centrophorus,westraliensis,western gulper shark,1,1,1,0,1,0,1,0,0,0,0,1,0,0,0,,N/A,,,,,,3.5,91,
-Squaliformes,Centrophoridae,Centrophorus,zeehaani,southern dogfish,N/A,1,0,0,1,0,0,0,1,1,0,1,0,0,0,,N/A,,,,,,3.5,88,
+Squaliformes,Centrophoridae,Centrophorus,westraliensis,western gulper shark,1,1,1,0,1,0,1,0,0,0,0,1,0,0,0,,NA,,,,,,3.5,91,
+Squaliformes,Centrophoridae,Centrophorus,zeehaani,southern dogfish,NA,1,0,0,1,0,0,0,1,1,0,1,0,0,0,,NA,,,,,,3.5,88,
 Squaliformes,Centrophoridae,Deania,calcea,birdbeak dogfish,0,1,0,0,0,0,0,0,1,1,1,0,0,0,0,fisheries: minor commercial,1,1,,,,,3.5,122,Ovoviviparous
 Squaliformes,Centrophoridae,Deania,hystricosa,rough longnose dogfish,1,1,1,0,0,0,0,1,0,1,1,0,0,0,0,fisheries: minor commercial,1,1,,,,,3.5,111,Ovoviviparous
 Squaliformes,Centrophoridae,Deania,profundorum,arrowhead dogfish,0,1,0,0,1,0,0,0,1,0,0,0,0,0,1,fisheries: minor commercial,1,1,,,,,3.5,97,Ovoviviparous
 Squaliformes,Centrophoridae,Deania,quadrispinosa,longsnout dogfish,0,1,1,0,0,0,1,1,0,0,0,0,0,0,1,fisheries: minor commercial,1,1,,,,,3.5,114,Ovoviviparous
 Squaliformes,Etmopteridae,Aculeola,nigra,hooktooth dogfish,1,1,1,0,1,0,0,0,1,1,0,0,0,0,0,"fisheries: of no interest
 ",0,,,,,,2.5,60.5,Ovoviviparous
-Squaliformes,Etmopteridae,Centroscyllium,excelsum,highfin dogfish,1,1,0,0,0,0,0,1,0,1,0,0,0,0,0,,N/A,,,,,,2.5,64,Ovoviviparous
+Squaliformes,Etmopteridae,Centroscyllium,excelsum,highfin dogfish,1,1,0,0,0,0,0,1,0,1,0,0,0,0,0,,NA,,,,,,2.5,64,Ovoviviparous
 Squaliformes,Etmopteridae,Centroscyllium,fabricii,black dogfish,0,1,1,0,0,0,0,1,1,0,1,0,0,0,0,fisheries: subsistence fisheries,1,,,1,,,3,95.5,Ovoviviparous
 Squaliformes,Etmopteridae,Centroscyllium,granulatum,granular dogfish,1,1,1,0,0,0,0,1,0,0,1,0,0,0,0,fisheries: of no interest,0,,,,,,1,28,Ovoviviparous
 Squaliformes,Etmopteridae,Centroscyllium,kamoharai,bareskin dogfish,0,1,1,0,1,0,0,1,0,1,0,0,0,0,0,fisheries: of no interest,0,,,,,,2.5,63,Ovoviviparous
 Squaliformes,Etmopteridae,Centroscyllium,nigrum,comnbtooth dogfish,1,1,0,0,1,0,0,0,1,1,0,0,0,0,0,fisheries: of no interest,0,,,,,,2,52,Ovoviviparous
 Squaliformes,Etmopteridae,Centroscyllium,ornatum,ornate dogfish,1,1,0,0,1,0,1,0,0,0,0,1,0,0,0,fisheries: of no interest,0,,,,,,1,30,Ovoviviparous
 Squaliformes,Etmopteridae,Centroscyllium,ritteri,whitefin dogfish,1,1,1,0,0,0,0,1,0,1,0,0,0,0,0,fisheries: of no interest,0,,,,,,1.5,42.5,Ovoviviparous
-Squaliformes,Etmopteridae,Etmopterus,baxteri,giant lanternshark,0,1,1,0,1,0,0,1,0,1,0,0,0,0,0,,N/A,,,,,,3.5,86,Ovoviviparous
-Squaliformes,Etmopteridae,Etmopterus,bigelowi,blurred smooth lanternshark,0,1,0,0,0,0,0,0,1,0,0,0,0,0,1,,N/A,,,,,,2.5,72,Ovoviviparous
+Squaliformes,Etmopteridae,Etmopterus,baxteri,giant lanternshark,0,1,1,0,1,0,0,1,0,1,0,0,0,0,0,,NA,,,,,,3.5,86,Ovoviviparous
+Squaliformes,Etmopteridae,Etmopterus,bigelowi,blurred smooth lanternshark,0,1,0,0,0,0,0,0,1,0,0,0,0,0,1,,NA,,,,,,2.5,72,Ovoviviparous
 Squaliformes,Etmopteridae,Etmopterus,brachyurus,shorttail lanternshark,1,1,0,0,1,0,1,1,0,1,0,0,0,0,0,fisheries: of no interest,0,,,,,,2,42,Ovoviviparous
 Squaliformes,Etmopteridae,Etmopterus,bullisi,lined lanternshark,1,1,1,0,,0,0,0,1,0,1,0,0,0,0,fisheries: of no interest,0,,,,,,1.5,,Ovoviviparous
-Squaliformes,Etmopteridae,Etmopterus,burgessi,broadsnout lanternshark,1,1,1,0,0,0,0,0,1,1,0,0,0,0,0,,N/A,,,,,,1.5,41,
-Squaliformes,Etmopteridae,Etmopterus,carteri,cylindrical lanternshark,1,1,1,0,0,0,1,0,0,0,1,0,0,0,0,,N/A,,,,,,1,21,Ovoviviparous
-Squaliformes,Etmopteridae,Etmopterus,caudistigmus,tailspot lanternshark,0,1,0,0,0,0,1,0,0,1,0,0,0,0,0,,N/A,,,,,,1,34,Ovoviviparous
-Squaliformes,Etmopteridae,Etmopterus,compagnoi,brown lanternshark,N/A,1,1,0,1,0,1,0,0,0,1,0,0,0,0,,N/A,,,,,,2.5,67.4,
+Squaliformes,Etmopteridae,Etmopterus,burgessi,broadsnout lanternshark,1,1,1,0,0,0,0,0,1,1,0,0,0,0,0,,NA,,,,,,1.5,41,
+Squaliformes,Etmopteridae,Etmopterus,carteri,cylindrical lanternshark,1,1,1,0,0,0,1,0,0,0,1,0,0,0,0,,NA,,,,,,1,21,Ovoviviparous
+Squaliformes,Etmopteridae,Etmopterus,caudistigmus,tailspot lanternshark,0,1,0,0,0,0,1,0,0,1,0,0,0,0,0,,NA,,,,,,1,34,Ovoviviparous
+Squaliformes,Etmopteridae,Etmopterus,compagnoi,brown lanternshark,NA,1,1,0,1,0,1,0,0,0,1,0,0,0,0,,NA,,,,,,2.5,67.4,
 Squaliformes,Etmopteridae,Etmopterus,decacuspidatus,combtooth lanternshark,1,1,0,0,1,0,0,1,0,1,0,0,0,0,0,fisheries: of no interest,0,,,,,,1,29,Ovoviviparous
-Squaliformes,Etmopteridae,Etmopterus,dianthus,pink lanternshark,0,1,0,0,1,0,1,0,0,1,0,0,0,0,0,,N/A,,,,,,1.5,41,Ovoviviparous
-Squaliformes,Etmopteridae,Etmopterus,dislineatus,lined lanternshark,0,1,0,0,1,0,1,1,0,1,0,0,0,0,0,,N/A,,,,,,2,45,Ovoviviparous
-Squaliformes,Etmopteridae,Etmopterus,evansi,blackmouth lanternshark,0,1,0,0,0,0,1,0,0,0,0,0,0,0,1,,N/A,,,,,,1,32,Ovoviviparous
-Squaliformes,Etmopteridae,Etmopterus,fusus,pygmy lanternshark,0,1,0,0,0,0,1,1,0,0,0,1,0,0,0,,N/A,,,,,,1,30,Ovoviviparous
+Squaliformes,Etmopteridae,Etmopterus,dianthus,pink lanternshark,0,1,0,0,1,0,1,0,0,1,0,0,0,0,0,,NA,,,,,,1.5,41,Ovoviviparous
+Squaliformes,Etmopteridae,Etmopterus,dislineatus,lined lanternshark,0,1,0,0,1,0,1,1,0,1,0,0,0,0,0,,NA,,,,,,2,45,Ovoviviparous
+Squaliformes,Etmopteridae,Etmopterus,evansi,blackmouth lanternshark,0,1,0,0,0,0,1,0,0,0,0,0,0,0,1,,NA,,,,,,1,32,Ovoviviparous
+Squaliformes,Etmopteridae,Etmopterus,fusus,pygmy lanternshark,0,1,0,0,0,0,1,1,0,0,0,1,0,0,0,,NA,,,,,,1,30,Ovoviviparous
 Squaliformes,Etmopteridae,Etmopterus,gracilispinis,broadband lanternshark,0,1,0,0,1,0,1,0,0,0,1,0,0,0,0,fisheries: of no interest,0,,,,,,1.5,33,Ovoviviparous
 Squaliformes,Etmopteridae,Etmopterus,granulosus,southern lanternshark,0,1,0,0,0,0,0,1,0,1,1,0,0,0,0,fisheries: of no interest,0,,,,,,2.5,85.5,Ovoviviparous
 Squaliformes,Etmopteridae,Etmopterus,hillianus,caribbean lanternshark,0,1,0,0,1,0,1,0,0,0,1,0,0,0,0,fisheries: subsistence fisheries,1,,,1,,,2,27,Ovoviviparous
-Squaliformes,Etmopteridae,Etmopterus,joungi,shortfin smooth lanternshark,N/A,0,0,0,0,0,0,0,0,0,0,0,0,0,0,,N/A,,,,,,N/A,46,
-Squaliformes,Etmopteridae,Etmopterus,litvinovi,smalleye lanternshark,1,1,0,0,1,0,1,0,0,1,0,0,0,0,0,,N/A,,,,,,1.5,58,Ovoviviparous
+Squaliformes,Etmopteridae,Etmopterus,joungi,shortfin smooth lanternshark,NA,0,0,0,0,0,0,0,0,0,0,0,0,0,0,,NA,,,,,,NA,46,
+Squaliformes,Etmopteridae,Etmopterus,litvinovi,smalleye lanternshark,1,1,0,0,1,0,1,0,0,1,0,0,0,0,0,,NA,,,,,,1.5,58,Ovoviviparous
 Squaliformes,Etmopteridae,Etmopterus,lucifer,blackbelly lanternshark,0,1,0,0,1,0,0,1,0,1,0,0,0,0,0,fisheries: of no interest,0,,,,,,2,47,Ovoviviparous
 Squaliformes,Etmopteridae,Etmopterus,molleri,slendertail lanternshark,1,1,0,0,1,0,0,1,0,1,0,0,0,0,0,fisheries: of no interest,0,,,,,,2,46,Ovoviviparous
-Squaliformes,Etmopteridae,Etmopterus,perryi,dwarf lanternshark,1,1,1,0,0,0,1,0,0,0,1,0,0,0,0,,N/A,,,,,,1,21,Ovoviviparous
+Squaliformes,Etmopteridae,Etmopterus,perryi,dwarf lanternshark,1,1,1,0,0,0,1,0,0,0,1,0,0,0,0,,NA,,,,,,1,21,Ovoviviparous
 Squaliformes,Etmopteridae,Etmopterus,polli,african lanternshark,1,1,1,0,1,0,1,0,0,0,1,0,0,0,0,fisheries: minor commercial,1,1,,,,,1,24,Ovoviviparous
 Squaliformes,Etmopteridae,Etmopterus,princeps,great lanternshark,1,1,1,0,1,0,0,1,0,0,1,0,0,0,0,fisheries: of no interest,0,,,,,,2.5,89,Ovoviviparous
-Squaliformes,Etmopteridae,Etmopterus,pseudosqualiolus,false lanternshark,0,1,0,0,0,0,0,1,0,1,0,0,0,0,0,,N/A,,,,,,2,45,Ovoviviparous
+Squaliformes,Etmopteridae,Etmopterus,pseudosqualiolus,false lanternshark,0,1,0,0,0,0,0,1,0,1,0,0,0,0,0,,NA,,,,,,2,45,Ovoviviparous
 Squaliformes,Etmopteridae,Etmopterus,pusillus,smooth lanternshark,0,1,1,0,1,0,0,0,1,0,0,0,0,0,1,fisheries: minor commercial,1,1,,,,,2,50,Ovoviviparous
-Squaliformes,Etmopteridae,Etmopterus,pycnolepis,densescale lanternshark,1,1,0,0,1,0,0,1,0,1,0,0,0,0,0,,N/A,,,,,,2,43,Ovoviviparous
-Squaliformes,Etmopteridae,Etmopterus,robinsi,west indian lanternshark,0,1,1,0,0,0,0,0,1,0,1,0,0,0,0,,N/A,,,,,,1,32.5,Ovoviviparous
+Squaliformes,Etmopteridae,Etmopterus,pycnolepis,densescale lanternshark,1,1,0,0,1,0,0,1,0,1,0,0,0,0,0,,NA,,,,,,2,43,Ovoviviparous
+Squaliformes,Etmopteridae,Etmopterus,robinsi,west indian lanternshark,0,1,1,0,0,0,0,0,1,0,1,0,0,0,0,,NA,,,,,,1,32.5,Ovoviviparous
 Squaliformes,Etmopteridae,Etmopterus,schultzi,fringefin lanternshark,0,1,1,0,1,0,0,1,0,0,1,0,0,0,0,fisheries: of no interest,0,,,,,,1,30,Ovoviviparous
-Squaliformes,Etmopteridae,Etmopterus,sculptus,sculptured lanternshark,N/A,1,1,0,1,0,0,1,0,0,1,1,0,0,0,,N/A,,,,,,1.5,53,
+Squaliformes,Etmopteridae,Etmopterus,sculptus,sculptured lanternshark,NA,1,1,0,1,0,0,1,0,0,1,1,0,0,0,,NA,,,,,,1.5,53,
 Squaliformes,Etmopteridae,Etmopterus,sentosus,thorny lanternshark,0,1,1,0,1,0,0,0,1,0,0,1,0,0,0,fisheries: of no interest,0,,,,,,1,27,Ovoviviparous
-Squaliformes,Etmopteridae,Etmopterus,sheikoi,rasptooth dogfish,N/A,0,0,0,0,0,0,0,0,0,0,0,0,0,0,,N/A,,,,,,N/A,43,
+Squaliformes,Etmopteridae,Etmopterus,sheikoi,rasptooth dogfish,NA,0,0,0,0,0,0,0,0,0,0,0,0,0,0,,NA,,,,,,NA,43,
 Squaliformes,Etmopteridae,Etmopterus,spinax,velvet belly,0,1,1,0,1,0,0,0,1,0,1,0,0,0,0,"fisheries: minor commercial
 ",1,1,,,,,3,41,Ovoviviparous
-Squaliformes,Etmopteridae,Etmopterus,splendidus,splendid lanternshark,1,1,1,0,0,0,0,0,1,1,0,0,0,0,0,,N/A,,,,,,1,26,Ovoviviparous
+Squaliformes,Etmopteridae,Etmopterus,splendidus,splendid lanternshark,1,1,1,0,0,0,0,0,1,1,0,0,0,0,0,,NA,,,,,,1,26,Ovoviviparous
 Squaliformes,Etmopteridae,Etmopterus,unicolor,brown lanternshark,1,1,1,0,0,0,0,1,0,1,0,0,0,0,0,fisheries: of no interest,0,,,,,,2,79,Ovoviviparous
-Squaliformes,Etmopteridae,Etmopterus,viator,traveller lanternshark,,1,0,0,0,0,0,1,0,1,0,0,0,0,0,,N/A,,,,,,2,58,Ovoviviparous
+Squaliformes,Etmopteridae,Etmopterus,viator,traveller lanternshark,0,1,0,0,0,0,0,1,0,1,0,0,0,0,0,,NA,,,,,,2,58,Ovoviviparous
 Squaliformes,Etmopteridae,Etmopterus,villosus,hawaii lanternshark,0,1,1,0,1,0,1,0,0,1,0,0,0,0,0,fisheries: of no interest,0,,,,,,2,17,Ovoviviparous
 Squaliformes,Etmopteridae,Etmopterus,viren,green lanternshark,0,1,1,0,1,0,0,0,0,0,1,0,0,0,0,fisheries: of no interest,0,,,,,,1,26,Ovoviviparous
-Squaliformes,Etmopteridae,Trigonognathus,kabeyai,viper dogfish,1,1,1,0,1,0,0,1,0,1,0,0,0,0,0,,N/A,,,,,,2,54,Ovoviviparous
+Squaliformes,Etmopteridae,Trigonognathus,kabeyai,viper dogfish,1,1,1,0,1,0,0,1,0,1,0,0,0,0,0,,NA,,,,,,2,54,Ovoviviparous
 Squaliformes,Somniosidae,Centroscymnus,coelolepis,portuguese dogfish,0,1,1,0,1,0,0,0,1,0,0,0,0,0,1,"fisheries: minor commercial
 ",1,1,,,,,4,122,Ovoviviparous
 Squaliformes,Somniosidae,Centroscymnus,owstoni,roughskin dogfish,0,1,1,0,1,0,0,0,1,0,0,0,0,0,1,"fisheries: minor commercial
@@ -113,22 +111,22 @@ Squaliformes,Somniosidae,Centroselachus,crepidater,longnose velvet dogfish,0,1,1
 ",1,1,,,,,4,105,Ovoviviparous
 Squaliformes,Somniosidae,Proscymnodon,macracanthus,largespine velvet dogfish,1,1,1,0,NR,0,0,1,0,1,1,0,0,0,0,fisheries: of no interest,0,,,,,,2.5,68,Ovoviviparous
 Squaliformes,Somniosidae,Proscymnodon,plunketi,plunket shark,0,1,1,0,1,0,0,1,0,1,0,0,0,0,0,fisheries: of potential interest,1,,,,,,3.5,170,Ovoviviparous
-Squaliformes,Somniosidae,Scymnodalatias,albicauda,whitetail dogfish,1,1,1,0,1,0,0,1,0,1,0,1,0,0,0,,N/A,,,,,,3,110,Ovoviviparous
-Squaliformes,Somniosidae,Scymnodalatias,garricki,azores dogfish,1,1,0,0,1,0,0,1,0,0,1,0,0,0,0,,N/A,,,,,,3,40.6,Ovoviviparous
-Squaliformes,Somniosidae,Scymnodalatias,oligodon,sparsetooth dog,1,1,0,0,0,0,0,1,0,1,0,0,0,0,0,,N/A,,,,,,3,26,
+Squaliformes,Somniosidae,Scymnodalatias,albicauda,whitetail dogfish,1,1,1,0,1,0,0,1,0,1,0,1,0,0,0,,NA,,,,,,3,110,Ovoviviparous
+Squaliformes,Somniosidae,Scymnodalatias,garricki,azores dogfish,1,1,0,0,1,0,0,1,0,0,1,0,0,0,0,,NA,,,,,,3,40.6,Ovoviviparous
+Squaliformes,Somniosidae,Scymnodalatias,oligodon,sparsetooth dog,1,1,0,0,0,0,0,1,0,1,0,0,0,0,0,,NA,,,,,,3,26,
 Squaliformes,Somniosidae,Scymnodalatias,sherwoodi,sherwood dogfish,1,1,0,0,0,0,0,1,0,1,0,0,0,0,0,fisheries: of no interest,0,,,,,,2.5,85,Ovoviviparous
 Squaliformes,Somniosidae,Scymnodon,ringens,knifetooth dogfish,1,1,1,0,1,0,0,0,1,1,1,0,0,0,0,fisheries: minor commercial,1,1,,,,,3,110,Ovoviviparous
-Squaliformes,Somniosidae,Somniosus,antarcticus,southern sleeper shark,0,1,0,0,0,0,1,0,0,0,1,0,0,0,1,,N/A,,,,,,4,600,
-Squaliformes,Somniosidae,Somniosus,longus,frog shark,1,1,0,0,1,0,0,1,0,1,0,0,0,0,0,,N/A,,,,,,3,140,
+Squaliformes,Somniosidae,Somniosus,antarcticus,southern sleeper shark,0,1,0,0,0,0,1,0,0,0,1,0,0,0,1,,NA,,,,,,4,600,
+Squaliformes,Somniosidae,Somniosus,longus,frog shark,1,1,0,0,1,0,0,1,0,1,0,0,0,0,0,,NA,,,,,,3,140,
 Squaliformes,Somniosidae,Somniosus,microcephalus,greenland shark,0,1,0,0,0,0,0,1,0,0,1,0,1,0,0,fisheries: minor commercial; gamefish: yes,1,1,,,1,,4,640,Ovoviviparous
 Squaliformes,Somniosidae,Somniosus,pacificus,pacific sleeper shark,1,1,1,0,0,0,0,1,0,0,1,0,1,0,0,fisheries: of no interest,0,,,,,,4,578,Ovoviviparous
-Squaliformes,Somniosidae,Somniosus,rostratus,little sleeper shark,1,1,1,0,1,0,0,1,0,0,1,0,0,0,0,fisheries: minor commercial,N/A,1,,,,,4,143,Ovoviviparous
-Squaliformes,Somniosidae,Zameus,ichiharai,japanese velvet dogfish,1,1,0,0,1,0,0,1,0,1,0,1,0,0,0,,N/A,,,,,,3.5,103,Ovoviviparous
+Squaliformes,Somniosidae,Somniosus,rostratus,little sleeper shark,1,1,1,0,1,0,0,1,0,0,1,0,0,0,0,fisheries: minor commercial,NA,1,,,,,4,143,Ovoviviparous
+Squaliformes,Somniosidae,Zameus,ichiharai,japanese velvet dogfish,1,1,0,0,1,0,0,1,0,1,0,1,0,0,0,,NA,,,,,,3.5,103,Ovoviviparous
 Squaliformes,Somniosidae,Zameus,squamulosus,velvet dogfish,1,1,0,0,1,0,1,0,0,0,0,0,0,0,1,fisheries: minor commercial,1,1,,,,,2.5,84,Ovoviviparous
 Squaliformes,Oxynotidae,Oxynotus,bruniensis,prickly dogfish,0,1,1,0,0,0,0,1,0,1,0,0,0,0,0,fisheries: of no interest,0,,,,,,2.5,81.5,Ovoviviparous
 Squaliformes,Oxynotidae,Oxynotus,caribbaeus,caribbean roughshark,1,1,1,0,1,0,1,0,0,0,1,0,0,0,0,fisheries: of no interest,0,,,,,,2,49,Ovoviviparous
 Squaliformes,Oxynotidae,Oxynotus,centrina,angular roughshark,0,1,1,0,1,0,0,0,1,0,1,0,0,0,0,fisheries: minor commercial,1,1,,,,,4,150,Ovoviviparous
-Squaliformes,Oxynotidae,Oxynotus,japonicus,japanese roughshark,1,1,0,0,1,0,0,1,0,1,0,0,0,0,0,,N/A,,,,,,2.5,54,Ovoviviparous
+Squaliformes,Oxynotidae,Oxynotus,japonicus,japanese roughshark,1,1,0,0,1,0,0,1,0,1,0,0,0,0,0,,NA,,,,,,2.5,54,Ovoviviparous
 Squaliformes,Oxynotidae,Oxynotus,paradoxus,sailfin roughshark,1,1,0,0,1,0,0,1,0,0,1,0,0,0,0,fisheries: minor commercial,1,1,,,,,3,118,Ovoviviparous
 Squaliformes,Dalatiidae,Dalatias ,licha,kitefin shark,0,1,0,0,1,0,0,0,1,0,0,0,0,0,1,"fisheries: minor commercial
 ",1,1,,,,,3.5,170.5,Ovoviviparous
@@ -144,7 +142,7 @@ Squaliformes,Dalatiidae,Isistius,labialis,south china cookiecutter shark,1,1,0,0
 ",1,1,,,,,2,44.2,
 Squaliformes,Dalatiidae,Isistius,plutodus,largetooth cookiecutter shark,0,1,0,0,0,0,1,0,0,1,1,0,0,0,0,"fisheries: of no interest
 ",0,,,,,,1,38,
-Squaliformes,Dalatiidae,Mollisquama,parini,pocket shark,1,1,0,0,0,0,1,0,0,1,0,0,0,0,0,,N/A,,,,,,2,40,Ovoviviparous
+Squaliformes,Dalatiidae,Mollisquama,parini,pocket shark,1,1,0,0,0,0,1,0,0,1,0,0,0,0,0,,NA,,,,,,2,40,Ovoviviparous
 Squaliformes,Dalatiidae,Squaliolus,aliae,smalleye pygmy shark,0,1,0,0,0,0,1,0,0,1,0,0,0,0,0,"fisheries: of no interest
 ",0,,,,,,1,22,Ovoviviparous
 Squaliformes,Dalatiidae,Squaliolus,laticaudus,spined pygmy shark,0,1,0,0,0,0,1,0,0,0,0,0,0,0,1,"fisheries: of no interest
@@ -153,11 +151,11 @@ Pristiophoriformes,Pristiophoridae,Pliotrema,warreni,sixgill sawshark,0,0,1,0,1,
 ",0,,,,1,,3.5,124,Ovoviviparous
 Pristiophoriformes,Pristiophoridae,Pristiophorus,cirratus,longnose sawshark,0,1,1,0,1,0,0,1,0,0,0,1,0,0,0,"fisheries: commercial
 ",1,,1,,,,3,149,Ovoviviparous
-Pristiophoriformes,Pristiophoridae,Pristiophorus,delicatus,tropical sawshark,0,1,0,0,0,0,1,0,0,1,0,0,0,0,0,,N/A,,,,,,1.5,85,
+Pristiophoriformes,Pristiophoridae,Pristiophorus,delicatus,tropical sawshark,0,1,0,0,0,0,1,0,0,1,0,0,0,0,0,,NA,,,,,,1.5,85,
 Pristiophoriformes,Pristiophoridae,Pristiophorus,japonicus,japanese sawshark,1,1,0,0,1,0,0,1,0,1,0,0,0,0,0,"fisheries: commercial
 ",1,,1,,,,4,144.5,Ovoviviparous
-Pristiophoriformes,Pristiophoridae,Pristiophorus,lanae,lana's sawshark,N/A,0,0,0,1,0,0,0,0,0,0,0,0,0,0,,N/A,,,,,,N/A,73,
-Pristiophoriformes,Pristiophoridae,Pristiophorus,nancyae,african dwarf sawshark,N/A,0,0,0,0,0,0,0,0,0,0,0,0,0,0,,N/A,,,,,,N/A,62,
+Pristiophoriformes,Pristiophoridae,Pristiophorus,lanae,lana's sawshark,NA,0,0,0,1,0,0,0,0,0,0,0,0,0,0,,NA,,,,,,NA,73,
+Pristiophoriformes,Pristiophoridae,Pristiophorus,nancyae,african dwarf sawshark,NA,0,0,0,0,0,0,0,0,0,0,0,0,0,0,,NA,,,,,,NA,62,
 Pristiophoriformes,Pristiophoridae,Pristiophorus,nudipinnis,shortnose sawshark,0,0,1,0,1,0,0,1,0,0,0,1,0,0,0,"fisheries: minor commercial
 ",1,1,,,,,3,124,Ovoviviparous
 Pristiophoriformes,Pristiophoridae,Pristiophorus,schroederi,bahamas sawshark,1,1,0,0,1,0,1,0,0,0,1,0,0,0,0,"fisheries: of no interest
@@ -165,26 +163,26 @@ Pristiophoriformes,Pristiophoridae,Pristiophorus,schroederi,bahamas sawshark,1,1
 Squatiniformes,Squatinidae,Squatina,aculeata,sawback angelshark,0,1,0,0,1,0,1,0,0,0,1,0,0,0,0,"fisheries: minor commercial
 ",1,1,,,,,3.5,188,Ovoviviparous
 Squatiniformes,Squatinidae,Squatina,africana,african angelshark,0,1,0,0,1,0,1,0,0,0,0,1,0,0,0,fisheries: subsistence fisheries; gamefish: yes,1,,,1,1,,3,122,Ovoviviparous
-Squatiniformes,Squatinidae,Squatina,albipunctata,eastern angelshark,0,1,0,0,1,0,1,0,0,1,0,0,0,0,0,,N/A,,,,,,3.5,120,
+Squatiniformes,Squatinidae,Squatina,albipunctata,eastern angelshark,0,1,0,0,1,0,1,0,0,1,0,0,0,0,0,,NA,,,,,,3.5,120,
 Squatiniformes,Squatinidae,Squatina,argentina,argentine angelshark,0,1,0,0,1,0,0,1,0,0,1,0,0,0,0,"fisheries: subsistence fisheries
 ",1,,,1,,,3.5,138,Ovoviviparous
-Squatiniformes,Squatinidae,Squatina,armata,chilean angelshark,1,0,0,0,1,0,0,0,0,1,0,0,0,0,0,,N/A,,,,,,3.5,103,Ovoviviparous
+Squatiniformes,Squatinidae,Squatina,armata,chilean angelshark,1,0,0,0,1,0,0,0,0,1,0,0,0,0,0,,NA,,,,,,3.5,103,Ovoviviparous
 Squatiniformes,Squatinidae,Squatina,australis,australian angelshark,0,0,1,0,1,0,0,1,0,0,0,1,0,0,0,"fisheries: minor commercial
 ",1,1,,,,,3.5,137,Ovoviviparous
-Squatiniformes,Squatinidae,Squatina,caillieti,philippines angelshark,1,1,0,0,1,0,1,0,0,1,0,0,0,0,0,,N/A,,,,,,1.5,33,
+Squatiniformes,Squatinidae,Squatina,caillieti,philippines angelshark,1,1,0,0,1,0,1,0,0,1,0,0,0,0,0,,NA,,,,,,1.5,33,
 Squatiniformes,Squatinidae,Squatina,californica,pacific angelshark,0,0,1,0,1,0,0,1,0,1,0,0,0,0,0,"fisheries: commercial
 ",1,,1,,,,3,141.75,Ovoviviparous
 Squatiniformes,Squatinidae,Squatina,dumeril,sand devil,0,0,1,0,1,0,0,0,1,0,1,0,0,0,0,fisheries: minor commercial,1,1,,,,,3.5,152,Ovoviviparous
 Squatiniformes,Squatinidae,Squatina,formosa,taiwan angelshark,0,0,1,0,1,0,0,1,1,1,0,0,0,0,0,fisheries: of no interest,0,,,,,,2,150,Ovoviviparous
-Squatiniformes,Squatinidae,Squatina,guggenheim,angular angelshark,0,0,1,0,1,1,0,1,0,0,1,0,0,0,0,,N/A,,,,,,3,95,Ovoviviparous
+Squatiniformes,Squatinidae,Squatina,guggenheim,angular angelshark,0,0,1,0,1,1,0,1,0,0,1,0,0,0,0,,NA,,,,,,3,95,Ovoviviparous
 Squatiniformes,Squatinidae,Squatina,japonica,japanese angelshark,0,0,1,0,1,0,0,1,0,1,0,0,0,0,0,fisheries: minor commercial,1,1,,,,,4,200,Ovoviviparous
-Squatiniformes,Squatinidae,Squatina,legnota,indonesian angelshark,1,0,1,0,1,0,1,0,0,0,0,1,0,0,0,,N/A,,,,,,3.5,135,
-Squatiniformes,Squatinidae,Squatina,nebulosa,clouded angelshark,0,0,1,1,1,0,0,1,0,1,0,0,0,0,0,,N/A,,,,,,3.5,200,Ovoviviparous
-Squatiniformes,Squatinidae,Squatina,occulta,hidden angelshark,0,0,1,0,1,0,0,1,0,0,1,0,0,0,0,,N/A,,,,,,3,130,Ovoviviparous
+Squatiniformes,Squatinidae,Squatina,legnota,indonesian angelshark,1,0,1,0,1,0,1,0,0,0,0,1,0,0,0,,NA,,,,,,3.5,135,
+Squatiniformes,Squatinidae,Squatina,nebulosa,clouded angelshark,0,0,1,1,1,0,0,1,0,1,0,0,0,0,0,,NA,,,,,,3.5,200,Ovoviviparous
+Squatiniformes,Squatinidae,Squatina,occulta,hidden angelshark,0,0,1,0,1,0,0,1,0,0,1,0,0,0,0,,NA,,,,,,3,130,Ovoviviparous
 Squatiniformes,Squatinidae,Squatina,oculata,smoothback angelshark,0,0,1,0,1,0,0,0,1,0,1,0,0,0,0,fisheries: minor commercial,1,1,,,,,3.5,152.5,Ovoviviparous
-Squatiniformes,Squatinidae,Squatina,pseudocellata,western angelshark,0,1,1,0,1,0,0,0,1,0,0,1,0,0,0,,N/A,,,,,,2,114,
+Squatiniformes,Squatinidae,Squatina,pseudocellata,western angelshark,0,1,1,0,1,0,0,0,1,0,0,1,0,0,0,,NA,,,,,,2,114,
 Squatiniformes,Squatinidae,Squatina,squatina,angelshark,0,0,1,0,1,1,0,1,0,0,1,0,0,0,0,fisheries: minor commercial; gamefish: yes,1,1,,,1,,4,213.5,Ovoviviparous
-Squatiniformes,Squatinidae,Squatina,tergocellata,ornate angelshark,0,1,0,0,1,0,0,1,0,0,0,1,0,0,0,,N/A,,,,,,3.5,140,Ovoviviparous
+Squatiniformes,Squatinidae,Squatina,tergocellata,ornate angelshark,0,1,0,0,1,0,0,1,0,0,0,1,0,0,0,,NA,,,,,,3.5,140,Ovoviviparous
 Squatiniformes,Squatinidae,Squatina,tergocellatoides,ocellated angelshark,0,0,0,0,1,0,0,0,0,1,0,0,0,0,0,"fisheries: of no interest
 ",0,,,,,,2,100,Ovoviviparous
 Heterodontiformes,Heterodontidae,Heterodontus,francisci,horn shark,1,0,1,0,1,0,1,1,0,1,0,0,0,0,0,"fisheries: minor commercial; aquarium: public aquariums
@@ -195,7 +193,7 @@ Heterodontiformes,Heterodontidae,Heterodontus,japonicus,japanese bullhead shark,
 ",1,1,,,,,3.5,120,Oviparous
 Heterodontiformes,Heterodontidae,Heterodontus,mexicanus,mexican hornshark,1,0,1,0,1,0,1,0,0,1,0,0,0,0,0,"fisheries: subsistence fisheries
 ",1,,,1,,,4,62.5,Oviparous
-Heterodontiformes,Heterodontidae,Heterodontus,omanensis,oman bullhead shark,1,0,1,0,1,0,1,0,0,0,0,1,0,0,0,,N/A,,,,,,2.5,56.5,
+Heterodontiformes,Heterodontidae,Heterodontus,omanensis,oman bullhead shark,1,0,1,0,1,0,1,0,0,0,0,1,0,0,0,,NA,,,,,,2.5,56.5,
 Heterodontiformes,Heterodontidae,Heterodontus,portusjacksoni,port jackson shark,0,0,1,0,1,0,0,1,0,1,0,0,0,0,0,"fisheries: minor commercial; aquarium: public aquariums
 ",1,1,,,,1,4,165,Oviparous
 Heterodontiformes,Heterodontidae,Heterodontus,quoyi,galapagos bullhead shark,1,0,1,0,1,0,1,0,0,1,0,0,0,0,0,"fisheries: of no interest
@@ -204,7 +202,7 @@ Heterodontiformes,Heterodontidae,Heterodontus,ramalheira,whitespotted bullhead s
 ",0,,,,,1,3,83,Oviparous
 Heterodontiformes,Heterodontidae,Heterodontus,zebra,zebra bullhead shark,0,0,1,0,1,0,1,0,0,1,0,0,0,0,0,"fisheries: minor commercial; aquarium: potential
 ",1,1,,,,1,3.5,122,Oviparous
-Lamniformes,Mitsukurinidae,Mitsukurina,owstoni,goblin shark,0,1,0,0,0,0,0,0,1,0,0,0,0,0,1,,N/A,,,,,,4,550,Ovoviviparous
+Lamniformes,Mitsukurinidae,Mitsukurina,owstoni,goblin shark,0,1,0,0,0,0,0,0,1,0,0,0,0,0,1,,NA,,,,,,4,550,Ovoviviparous
 Lamniformes,Odontaspididae,Carcharias,taurus,sandtiger shark,0,0,1,0,0,0,0,0,1,0,0,0,0,0,1,fisheries: commercial; gamefish: yes,1,,1,,1,,3,320,Ovoviviparous
 Lamniformes,Odontaspididae,Odontaspis,ferox,smalltooth sandtiger,0,1,0,0,1,0,0,0,1,0,0,0,0,0,1,"fisheries: commercial
 ",1,,1,,,,3,450,
@@ -231,14 +229,14 @@ Lamniformes,Lamnidae,Lamna,ditropis,salmon shark,0,0,0,1,0,0,0,1,0,1,0,0,0,0,0,"
 ",1,1,,,1,,3,305,Ovoviviparous
 Lamniformes,Lamnidae,Lamna,nasus,porbeagle shark,0,1,0,0,0,0,0,1,0,0,0,0,0,0,1,"fisheries: commercial; gamefish: yes
 ",1,,1,,1,,4,355,Ovoviviparous
-Orectolobiformes,Parascylliidae,Cirrhoscyllium ,expolitum,barbelthroat carpetshark,1,0,1,0,1,0,1,0,0,1,0,0,0,0,0,,N/A,,,,,,1.5,33.5,Oviparous
+Orectolobiformes,Parascylliidae,Cirrhoscyllium ,expolitum,barbelthroat carpetshark,1,0,1,0,1,0,1,0,0,1,0,0,0,0,0,,NA,,,,,,1.5,33.5,Oviparous
 Orectolobiformes,Parascylliidae,Cirrhoscyllium,formosanum,taiwan saddled carpetshark,1,1,0,0,1,0,0,1,0,1,0,0,0,0,0,"fisheries: of no interest
 ",0,,,,,,1,39,Oviparous
 Orectolobiformes,Parascylliidae,Cirrhoscyllium,japonicum,saddled carpetshark ,1,1,0,0,1,0,0,1,0,1,0,0,0,0,0,"fisheries: of no interest
 ",0,,,,,,2,49,Oviparous
 Orectolobiformes,Parascylliidae,Parascyllium,collare,collared carpetshark,0,0,1,0,1,0,1,0,0,1,0,0,0,0,0,"fisheries: subsistence fisheries
 ",1,,,1,,,2.5,84.25,Oviparous
-Orectolobiformes,Parascylliidae,Parascyllium,elongatum ,elongate carpetshark ,1,0,1,0,1,0,0,1,0,0,0,1,0,0,0,,N/A,,,,,,1.5,42,
+Orectolobiformes,Parascylliidae,Parascyllium,elongatum ,elongate carpetshark ,1,0,1,0,1,0,0,1,0,0,0,1,0,0,0,,NA,,,,,,1.5,42,
 Orectolobiformes,Parascylliidae,Parascyllium,ferrugineum,rusty carpetshark,0,0,1,0,1,0,0,1,0,0,0,1,0,0,0,"fisheries: of no interest
 ",0,,,,,,2.5,80,Oviparous
 Orectolobiformes,Parascylliidae,Parascyllium,sparsimaculatum,ginger carpetshark,1,1,0,0,1,0,1,1,0,0,0,1,0,0,0,,,,,,,,2.5,79,Oviparous
@@ -248,26 +246,26 @@ Orectolobiformes,Brachaelurus ,Brachaelurus ,colcloughi,bluegrey carpet shark,0,
 ",1,1,,,,,2.5,75,Ovoviviparous
 Orectolobiformes,Brachaelurus ,Brachaelurus ,waddi,blind shark ,0,0,1,0,1,0,1,0,0,1,0,0,0,0,0,"gamefish: yes
 ",,,,,1,,2.5,120,Ovoviviparous
-Orectolobiformes,Orectolobus ,Eucrossorhinus ,dasypogon ,tasselled wobbegong,0,0,1,0,1,0,1,0,0,1,0,1,0,0,0,,N/A,,,,,,4,125,Ovoviviparous
-Orectolobiformes,Orectolobus ,Orectolobus ,floridus ,floral bandded wobbegong,0,0,1,0,1,0,1,0,0,0,0,1,0,0,0,,N/A,,,,,,2,75,
-Orectolobiformes,Orectolobus ,Orectolobus ,halei,gulf wobbegong,0,0,1,0,1,0,0,1,0,0,0,1,0,0,0,,N/A,,,,,,4,206,
-Orectolobiformes,Orectolobus ,Orectolobus ,hutchinsi,western wobbegong,0,0,1,0,1,0,1,0,0,0,0,1,0,0,0,,N/A,,,,,,,149,
+Orectolobiformes,Orectolobus ,Eucrossorhinus ,dasypogon ,tasselled wobbegong,0,0,1,0,1,0,1,0,0,1,0,1,0,0,0,,NA,,,,,,4,125,Ovoviviparous
+Orectolobiformes,Orectolobus ,Orectolobus ,floridus ,floral bandded wobbegong,0,0,1,0,1,0,1,0,0,0,0,1,0,0,0,,NA,,,,,,2,75,
+Orectolobiformes,Orectolobus ,Orectolobus ,halei,gulf wobbegong,0,0,1,0,1,0,0,1,0,0,0,1,0,0,0,,NA,,,,,,4,206,
+Orectolobiformes,Orectolobus ,Orectolobus ,hutchinsi,western wobbegong,0,0,1,0,1,0,1,0,0,0,0,1,0,0,0,,NA,,,,,,,149,
 Orectolobiformes,Orectolobus ,Orectolobus ,japonicus,japanese wobbegong,1,0,1,0,1,0,1,0,0,1,0,0,0,0,0,"fisheries: minor commercial
 ",1,1,,,,,3,118,Ovoviviparous
-Orectolobiformes,Orectolobus ,Orectolobus ,leptolineatus,false cobbler wobbegong,N/A,0,0,0,1,0,0,0,0,0,0,0,0,0,0,,,,,,,,N/A,116,
+Orectolobiformes,Orectolobus ,Orectolobus ,leptolineatus,false cobbler wobbegong,NA,0,0,0,1,0,0,0,0,0,0,0,0,0,0,,,,,,,,N/A,116,
 Orectolobiformes,Orectolobus ,Orectolobus ,maculatus,spotted wobbegong,0,0,1,0,1,0,0,1,0,0,0,1,0,0,0,"fisheries: minor commercial
 ",1,1,,,,,3,170,Ovoviviparous
-Orectolobiformes,Orectolobus ,Orectolobus ,ornatus,ornate wobbegong,0,0,1,0,1,0,0,1,0,0,0,1,0,0,0,,N/A,,,,,,3,110,Ovoviviparous
-Orectolobiformes,Orectolobus ,Orectolobus ,parvimaculatus,dwarf spotted wobbegong,0,0,1,0,1,0,0,1,0,0,0,1,0,0,0,,N/A,,,,,,2.5,94,
-Orectolobiformes,Orectolobus ,Orectolobus ,reticulatus,network wobbegong,1,0,1,0,1,0,1,0,0,0,0,1,0,0,0,,N/A,,,,,,2,52,
+Orectolobiformes,Orectolobus ,Orectolobus ,ornatus,ornate wobbegong,0,0,1,0,1,0,0,1,0,0,0,1,0,0,0,,NA,,,,,,3,110,Ovoviviparous
+Orectolobiformes,Orectolobus ,Orectolobus ,parvimaculatus,dwarf spotted wobbegong,0,0,1,0,1,0,0,1,0,0,0,1,0,0,0,,NA,,,,,,2.5,94,
+Orectolobiformes,Orectolobus ,Orectolobus ,reticulatus,network wobbegong,1,0,1,0,1,0,1,0,0,0,0,1,0,0,0,,NA,,,,,,2,52,
 Orectolobiformes,Orectolobus ,Orectolobus ,wardi,northern wobbegong,0,0,1,0,1,0,1,0,0,1,0,0,0,0,0,"fisheries: minor commercial
 ",1,1,,,,,2.5,63,Ovoviviparous
 Orectolobiformes,Orectolobus ,Sutorectus,tentaculatus,cobbler wobbegong,0,0,1,0,1,0,0,1,0,0,0,1,0,0,0,"fisheries: of no interest
 ",0,,,,,,2.5,92,Ovoviviparous
 Orectolobiformes,Hemiscylliidae,Chiloscyllium,arabicum,arabian carpetshark,0,0,1,0,1,0,1,0,0,0,0,1,0,0,0,"fisheries: minor commercial
 ",1,1,,,,,2.5,70,Oviparous
-Orectolobiformes,Hemiscylliidae,Chiloscyllium,burmensis,burmese bambooshark,1,0,1,0,1,0,1,0,0,0,0,1,0,0,0,,N/A,,,,,,1.5,57,Oviparous
-Orectolobiformes,Hemiscylliidae,Chiloscyllium,griseum,grey bambooshark,0,0,1,0,1,1,1,0,0,1,0,1,0,0,0,,N/A,,,,,,1.5,77,Oviparous
+Orectolobiformes,Hemiscylliidae,Chiloscyllium,burmensis,burmese bambooshark,1,0,1,0,1,0,1,0,0,0,0,1,0,0,0,,NA,,,,,,1.5,57,Oviparous
+Orectolobiformes,Hemiscylliidae,Chiloscyllium,griseum,grey bambooshark,0,0,1,0,1,1,1,0,0,1,0,1,0,0,0,,NA,,,,,,1.5,77,Oviparous
 Orectolobiformes,Hemiscylliidae,Chiloscyllium,hasselti,indonesian bambooshark,0,0,1,0,1,0,1,0,0,1,0,1,0,0,0,"fisheries: commercial
 ",1,,1,,,,1.5,61,Oviparous
 Orectolobiformes,Hemiscylliidae,Chiloscyllium,indicum,slender bambooshark,0,0,1,0,1,1,1,0,0,1,0,1,0,0,0,"fisheries: commercial
@@ -275,10 +273,10 @@ Orectolobiformes,Hemiscylliidae,Chiloscyllium,indicum,slender bambooshark,0,0,1,
 Orectolobiformes,Hemiscylliidae,Chiloscyllium,plagiosum,whitespotted bambooshark,0,0,1,0,1,0,1,0,0,1,0,1,0,0,0,fisheries: commercial,1,,1,,,,2,95,Oviparous
 Orectolobiformes,Hemiscylliidae,Chiloscyllium,punctatum,brownbanded bambooshark,0,0,1,0,1,0,1,0,0,1,0,1,0,0,0,fisheries: commercial; aquarium: commercial,1,,1,,,1,3,132,Oviparous
 Orectolobiformes,Hemiscylliidae,Hemiscyllium ,freycineti,indonesan speckled carpetshark,0,0,1,0,1,0,1,0,0,1,0,0,0,0,0,fisheries: minor commercial,1,1,,,,,1.5,72,Oviparous
-Orectolobiformes,Hemiscylliidae,Hemiscyllium ,galei,gale's epaulette shark,1,0,1,0,1,0,1,0,0,1,0,0,0,0,0,,N/A,,,,,,1.5,57,
+Orectolobiformes,Hemiscylliidae,Hemiscyllium ,galei,gale's epaulette shark,1,0,1,0,1,0,1,0,0,1,0,0,0,0,0,,NA,,,,,,1.5,57,
 Orectolobiformes,Hemiscylliidae,Hemiscyllium ,hallstromi,papuan epaulette carpetshark,0,0,1,0,1,0,1,0,0,1,0,0,0,0,0,fisheries: minor commercial,1,1,,,,,1.5,77,Oviparous
-Orectolobiformes,Hemiscylliidae,Hemiscyllium ,henryi,henry's epaulette shark ,1,0,1,0,1,0,1,0,0,1,0,0,0,0,0,,N/A,,,,,,1.5,70,
-Orectolobiformes,Hemiscylliidae,Hemiscyllium ,michaeli,michael's epaulette shark,0,0,1,0,1,0,1,0,0,1,0,0,0,0,0,,N/A,,,,,,2.5,82,
+Orectolobiformes,Hemiscylliidae,Hemiscyllium ,henryi,henry's epaulette shark ,1,0,1,0,1,0,1,0,0,1,0,0,0,0,0,,NA,,,,,,1.5,70,
+Orectolobiformes,Hemiscylliidae,Hemiscyllium ,michaeli,michael's epaulette shark,0,0,1,0,1,0,1,0,0,1,0,0,0,0,0,,NA,,,,,,2.5,82,
 Orectolobiformes,Hemiscylliidae,Hemiscyllium ,ocellatum,epaulette shark,0,0,1,0,1,0,1,0,0,1,0,0,0,0,0,fisheries: of no interest,0,,,,,,2.5,107,Oviparous
 Orectolobiformes,Hemiscylliidae,Hemiscyllium ,strahani,hooded carpetshark,0,0,1,0,1,0,1,0,0,1,0,0,0,0,0,fisheries: minor commercial,1,1,,,,,1.5,80,Oviparous
 Orectolobiformes,Hemiscylliidae,Hemiscyllium ,trispeculare,speckled carpetshark,0,0,1,0,1,0,1,0,0,1,0,0,0,0,0,fisheries: minor commercial,1,1,,,,,1.5,79,Oviparous
@@ -287,19 +285,19 @@ Orectolobiformes,Ginglymostomatidae,Ginglymostoma,cirratum,nurse shark,1,0,0,0,1
 Orectolobiformes,Ginglymostomatidae,Nebrius,ferrugineus,tawny nurse shark,0,0,1,0,1,0,1,0,0,1,0,1,0,0,0,fisheries: commercial; gamefish: yes,1,,1,,1,,4,317,Ovoviviparous
 Orectolobiformes,Ginglymostomatidae,Pseudoginglymostoma,brevicaudatum,shorttail nurse shark,0,0,1,0,1,0,1,0,0,0,0,1,0,0,0,fisheries: subsistence fisheries,1,,,1,,,1.5,75,
 Orectolobiformes,Rhincodontidae,Rhincodon ,typus,whale shark ,0,0,0,1,0,0,0,1,0,0,0,0,0,0,1,fisheries: commercial,1,,1,,,,4,1900,Ovoviviparous
-Carcharhiniformes,Scyliorhinidae,Apristurus,albisoma,white-bodied catshark,0,1,0,0,1,0,1,0,0,1,0,0,0,0,0,,N/A,,,,,,2.5,58.5,Oviparous
-Carcharhiniformes,Scyliorhinidae,Apristurus,ampliceps,roughskin catshark,0,1,0,0,1,0,0,1,0,1,0,0,0,0,0,,N/A,,,,,,3,87,
-Carcharhiniformes,Scyliorhinidae,Apristurus,aphyodes,white ghost catshark,0,1,0,0,1,0,0,1,0,0,1,0,0,0,0,,N/A,,,,,,3.5,53.5,Oviparous
-Carcharhiniformes,Scyliorhinidae,Apristurus,australis,pinocchio catshark,0,1,0,0,1,0,1,1,0,1,0,1,0,0,0,,N/A,,,,,,2.5,62,
+Carcharhiniformes,Scyliorhinidae,Apristurus,albisoma,white-bodied catshark,0,1,0,0,1,0,1,0,0,1,0,0,0,0,0,,NA,,,,,,2.5,58.5,Oviparous
+Carcharhiniformes,Scyliorhinidae,Apristurus,ampliceps,roughskin catshark,0,1,0,0,1,0,0,1,0,1,0,0,0,0,0,,NA,,,,,,3,87,
+Carcharhiniformes,Scyliorhinidae,Apristurus,aphyodes,white ghost catshark,0,1,0,0,1,0,0,1,0,0,1,0,0,0,0,,NA,,,,,,3.5,53.5,Oviparous
+Carcharhiniformes,Scyliorhinidae,Apristurus,australis,pinocchio catshark,0,1,0,0,1,0,1,1,0,1,0,1,0,0,0,,NA,,,,,,2.5,62,
 Carcharhiniformes,Scyliorhinidae,Apristurus,brunneus,brown catshark,1,1,0,0,1,0,0,1,0,1,0,0,0,0,0,fisheries: of no interest,0,,,,,,2.5,69,Oviparous
-Carcharhiniformes,Scyliorhinidae,Apristurus,bucephalus,bighead catshark,1,1,0,0,1,0,1,0,0,0,0,1,0,0,0,,N/A,,,,,,2.5,68,
+Carcharhiniformes,Scyliorhinidae,Apristurus,bucephalus,bighead catshark,1,1,0,0,1,0,1,0,0,0,0,1,0,0,0,,NA,,,,,,2.5,68,
 Carcharhiniformes,Scyliorhinidae,Apristurus,canutus,hoary catshark,1,1,0,0,1,0,1,0,0,0,1,0,0,0,0,fisheries: of no interest,0,,,,,,2.5,46,Oviparous
-Carcharhiniformes,Scyliorhinidae,Apristurus,exsanguis,flaccid catshark,0,1,0,0,1,0,0,1,0,1,0,0,0,0,0,,N/A,,,,,,3,91,Oviparous
-Carcharhiniformes,Scyliorhinidae,Apristurus,fedorovi,stout catshark,1,1,0,0,1,0,0,1,0,1,0,0,0,0,0,,N/A,,,,,,2.5,68,Oviparous
-Carcharhiniformes,Scyliorhinidae,Apristurus,gibbosus,humpback catshark,1,1,0,0,1,0,0,1,0,1,0,0,0,0,0,,N/A,,,,,,4,51,Oviparous
+Carcharhiniformes,Scyliorhinidae,Apristurus,exsanguis,flaccid catshark,0,1,0,0,1,0,0,1,0,1,0,0,0,0,0,,NA,,,,,,3,91,Oviparous
+Carcharhiniformes,Scyliorhinidae,Apristurus,fedorovi,stout catshark,1,1,0,0,1,0,0,1,0,1,0,0,0,0,0,,NA,,,,,,2.5,68,Oviparous
+Carcharhiniformes,Scyliorhinidae,Apristurus,gibbosus,humpback catshark,1,1,0,0,1,0,0,1,0,1,0,0,0,0,0,,NA,,,,,,4,51,Oviparous
 Carcharhiniformes,Scyliorhinidae,Apristurus,herklotsi,longfin catshark,1,1,0,0,1,0,0,1,0,1,0,0,0,0,0,fisheries: minor commercial; aquarium: public aquariums,1,1,,,,1,2.5,49,Oviparous
 Carcharhiniformes,Scyliorhinidae,Apristurus,indicus,smallbelly catshark,0,1,0,0,1,0,1,0,0,0,0,1,0,0,0,fisheries: of no interest,0,,,,,,1.5,34,Oviparous
-Carcharhiniformes,Scyliorhinidae,Apristurus,internatus,shortnose demon catshark,1,0,0,0,1,0,0,0,0,1,0,0,0,0,0,,N/A,,,,,,2,42,Oviparous
+Carcharhiniformes,Scyliorhinidae,Apristurus,internatus,shortnose demon catshark,1,0,0,0,1,0,0,0,0,1,0,0,0,0,0,,NA,,,,,,2,42,Oviparous
 Carcharhiniformes,Scyliorhinidae,Apristurus,investigatoris,broadnose catshark,1,1,0,0,1,0,1,0,0,0,0,1,0,0,0,fisheries: of no interest,0,,,,,,1.5,26,Oviparous
 Carcharhiniformes,Scyliorhinidae,Apristurus,japonicus ,japanese catshark,1,1,0,0,1,0,0,1,0,1,0,0,0,0,0,"Fisheries: minor commercial
 ",1,1,,,,,2.5,71,Oviparous
@@ -308,14 +306,14 @@ Carcharhiniformes,Scyliorhinidae,Apristurus,laurussoni,iceland catshark ,1,1,0,0
 Carcharhiniformes,Scyliorhinidae,Apristurus,longicephalus,longhead catshark,0,1,0,0,1,0,1,1,0,1,0,1,0,0,0,"Fisheries: minor commercial
 ",1,1,,,,,2.5,59,Oviparous
 Carcharhiniformes,Scyliorhinidae,Apristurus,macrorhynchus,flathead catshark,1,1,1,0,1,0,0,1,0,1,0,0,0,0,0,fisheries: of no interest,0,,,,,,2.5,66,Oviparous
-Carcharhiniformes,Scyliorhinidae,Apristurus,macrostomus,broadmouth catshark,1,1,0,0,1,0,0,1,0,1,0,0,0,0,0,,N/A,,,,,,2.5,38,Oviparous
+Carcharhiniformes,Scyliorhinidae,Apristurus,macrostomus,broadmouth catshark,1,1,0,0,1,0,0,1,0,1,0,0,0,0,0,,NA,,,,,,2.5,38,Oviparous
 Carcharhiniformes,Scyliorhinidae,Apristurus,manis,ghost catshark,0,1,0,0,1,0,0,1,0,0,1,0,0,0,0,fisheries: of no interest,0,,,,,,3,88,Oviparous
-Carcharhiniformes,Scyliorhinidae,Apristurus,melanoasper ,fleshynose catshark,0,1,0,0,1,0,0,1,0,0,1,0,0,0,0,,N/A,,,,,,3,79,
+Carcharhiniformes,Scyliorhinidae,Apristurus,melanoasper ,fleshynose catshark,0,1,0,0,1,0,0,1,0,0,1,0,0,0,0,,NA,,,,,,3,79,
 Carcharhiniformes,Scyliorhinidae,Apristurus,microps,smalleye catshark,0,1,0,0,1,0,0,1,0,0,1,0,0,0,0,fisheries: of no interest,0,,,,,,2.5,61,Oviparous
-Carcharhiniformes,Scyliorhinidae,Apristurus,micropterygeus,smalldorsal catshark,1,1,0,0,1,0,0,1,0,1,0,0,0,0,0,,N/A,,,,,,2.5,37,Oviparous
+Carcharhiniformes,Scyliorhinidae,Apristurus,micropterygeus,smalldorsal catshark,1,1,0,0,1,0,0,1,0,1,0,0,0,0,0,,NA,,,,,,2.5,37,Oviparous
 Carcharhiniformes,Scyliorhinidae,Apristurus,nasutus ,largenose catshark,1,1,1,0,1,0,0,0,1,1,0,0,0,0,0,fisheries: of no interest,0,,,,,,2.5,59,Oviparous
 Carcharhiniformes,Scyliorhinidae,Apristurus,parvipinnis,smallfin catshark,1,1,1,0,1,0,0,0,1,0,1,0,0,0,0,fisheries: subsistence fisheries,1,,,1,,,2.5,52,Oviparous
-Carcharhiniformes,Scyliorhinidae,Apristurus,pinguis,bulldog catshark,0,1,0,0,1,0,0,1,0,1,0,0,0,0,0,,N/A,,,,,,3,65,Oviparous
+Carcharhiniformes,Scyliorhinidae,Apristurus,pinguis,bulldog catshark,0,1,0,0,1,0,0,1,0,1,0,0,0,0,0,,NA,,,,,,3,65,Oviparous
 Carcharhiniformes,Scyliorhinidae,Apristurus,platyrhynchus,bigfin catshark,0,1,1,0,1,0,0,0,1,1,0,0,0,0,0,fisheries: of no interest,0,,,,,,3,71,Oviparous
 Carcharhiniformes,Scyliorhinidae,Apristurus,profundorum,deepwater catshark,1,1,0,0,1,0,0,1,0,0,1,0,0,0,0,fisheries: of no interest,0,,,,,,2.5,76,Oviparous
 Carcharhiniformes,Scyliorhinidae,Apristurus,riveri,broadgill catshark,1,1,0,0,1,0,1,0,0,0,1,0,0,0,0,fisheries: of no interest,0,,,,,,2.5,48,Oviparous
@@ -323,72 +321,72 @@ Carcharhiniformes,Scyliorhinidae,Apristurus,saldanha,saldanha catshark,0,1,0,0,1
 Carcharhiniformes,Scyliorhinidae,Apristurus,sibogae,pale catshark,1,1,0,0,1,0,1,0,0,1,0,0,0,0,0,fisheries: of no interest,0,,,,,,1,21,Oviparous
 Carcharhiniformes,Scyliorhinidae,Apristurus,sinensis,south china catshark,1,1,0,0,1,0,1,0,0,1,0,0,0,0,0,fisheries: of no interest,0,,,,,,2,75,Oviparous
 Carcharhiniformes,Scyliorhinidae,Apristurus,spongiceps,spongehead catshark,1,1,0,0,1,0,1,0,0,1,0,0,0,0,0,fisheries: of no interest,0,,,,,,2.5,51,Oviparous
-Carcharhiniformes,Scyliorhinidae,Apristurus,stenseni,panama ghost catshark,`1,1,0,0,1,0,1,0,0,1,0,0,0,0,0,fisheries: of no interest,0,,,,,,3.5,46,Oviparous
+Carcharhiniformes,Scyliorhinidae,Apristurus,stenseni,panama ghost catshark,1,1,0,0,1,0,1,0,0,1,0,0,0,0,0,fisheries: of no interest,0,,,,,,3.5,46,Oviparous
 Carcharhiniformes,Scyliorhinidae,Asymbolus,analis,grey spotted catshark,0,0,1,0,1,0,0,1,0,1,0,1,0,0,0,fisheries: of no interest,0,,,,,,3,61,Oviparous
-Carcharhiniformes,Scyliorhinidae,Asymbolus,funebris,blotched catshark,1,0,1,0,1,0,0,1,0,0,0,1,0,0,0,,N/A,,,,,,2,44,Oviparous
-Carcharhiniformes,Scyliorhinidae,Asymbolus,galacticus,starry catshark,0,1,0,0,1,0,1,0,0,1,0,0,0,0,0,,N/A,,,,,,2,48,
-Carcharhiniformes,Scyliorhinidae,Asymbolus,occiduus,western spotted catshark,0,1,0,1,1,0,0,1,0,0,0,1,0,0,0,,N/A,,,,,,2.5,60,Oviparous
-Carcharhiniformes,Scyliorhinidae,Asymbolus,pallidus,pale spotted catshark,0,1,0,0,1,0,1,1,0,1,0,0,0,0,0,,N/A,,,,,,2,47,Oviparous
-Carcharhiniformes,Scyliorhinidae,Asymbolus,parvus,dwarf catshark ,0,0,0,1,1,0,1,1,0,0,0,1,0,0,0,,N/A,,,,,,1.5,40,Oviparous
-Carcharhiniformes,Scyliorhinidae,Asymbolus,rubiginosus,orange spotted catshark,0,1,0,0,1,0,0,1,0,1,0,1,0,0,0,,N/A,,,,,,2,53,Oviparous
-Carcharhiniformes,Scyliorhinidae,Asymbolus,submaculatus,variegated catshark,0,0,0,1,1,0,0,1,0,0,0,1,0,0,0,,N/A,,,,,,2,44,Oviparous
+Carcharhiniformes,Scyliorhinidae,Asymbolus,funebris,blotched catshark,1,0,1,0,1,0,0,1,0,0,0,1,0,0,0,,NA,,,,,,2,44,Oviparous
+Carcharhiniformes,Scyliorhinidae,Asymbolus,galacticus,starry catshark,0,1,0,0,1,0,1,0,0,1,0,0,0,0,0,,NA,,,,,,2,48,
+Carcharhiniformes,Scyliorhinidae,Asymbolus,occiduus,western spotted catshark,0,1,0,1,1,0,0,1,0,0,0,1,0,0,0,,NA,,,,,,2.5,60,Oviparous
+Carcharhiniformes,Scyliorhinidae,Asymbolus,pallidus,pale spotted catshark,0,1,0,0,1,0,1,1,0,1,0,0,0,0,0,,NA,,,,,,2,47,Oviparous
+Carcharhiniformes,Scyliorhinidae,Asymbolus,parvus,dwarf catshark ,0,0,0,1,1,0,1,1,0,0,0,1,0,0,0,,NA,,,,,,1.5,40,Oviparous
+Carcharhiniformes,Scyliorhinidae,Asymbolus,rubiginosus,orange spotted catshark,0,1,0,0,1,0,0,1,0,1,0,1,0,0,0,,NA,,,,,,2,53,Oviparous
+Carcharhiniformes,Scyliorhinidae,Asymbolus,submaculatus,variegated catshark,0,0,0,1,1,0,0,1,0,0,0,1,0,0,0,,NA,,,,,,2,44,Oviparous
 Carcharhiniformes,Scyliorhinidae,Asymbolus,vincenti,gulf catshark ,0,1,1,0,1,0,0,1,0,0,0,1,0,0,0,fisheries: of no interest,0,,,,,,2.5,61,Oviparous
-Carcharhiniformes,Scyliorhinidae,Atelomycterus,baliensis,bali catshark,0,0,0,0,1,0,0,0,0,1,0,0,0,0,0,,N/A,,,,,,2,47,
-Carcharhiniformes,Scyliorhinidae,Atelomycterus,fasciatus,banded sand catshark,0,0,1,0,1,0,1,0,0,1,0,1,0,0,0,,N/A,,,,,,2,45,Oviparous
+Carcharhiniformes,Scyliorhinidae,Atelomycterus,baliensis,bali catshark,0,0,0,0,1,0,0,0,0,1,0,0,0,0,0,,NA,,,,,,2,47,
+Carcharhiniformes,Scyliorhinidae,Atelomycterus,fasciatus,banded sand catshark,0,0,1,0,1,0,1,0,0,1,0,1,0,0,0,,NA,,,,,,2,45,Oviparous
 Carcharhiniformes,Scyliorhinidae,Atelomycterus,macleayi,australian marbled catshark,0,0,1,0,1,0,1,0,0,0,0,1,0,0,0,"Fisheries: minor commercial
 ",1,1,,,,,2,60,Oviparous
 Carcharhiniformes,Scyliorhinidae,Atelomycterus,marmoratus,coral catshark,0,0,0,0,1,0,0,0,0,1,0,1,0,0,0,"fisheries: subsistence fisheries
 ",1,,,1,,,2.5,70,Oviparous
-Carcharhiniformes,Scyliorhinidae,Atelomycterus,marnkalha,whitespotted sand catshark,1,0,1,0,1,0,1,0,0,1,0,0,0,0,0,,N/A,,,,,,2,49,
-Carcharhiniformes,Scyliorhinidae,Aulohalaelurus,kanakorum,new caledonia catshark,1,0,1,0,1,0,1,0,0,1,0,0,0,0,0,,N/A,,,,,,2.5,79,
+Carcharhiniformes,Scyliorhinidae,Atelomycterus,marnkalha,whitespotted sand catshark,1,0,1,0,1,0,1,0,0,1,0,0,0,0,0,,NA,,,,,,2,49,
+Carcharhiniformes,Scyliorhinidae,Aulohalaelurus,kanakorum,new caledonia catshark,1,0,1,0,1,0,1,0,0,1,0,0,0,0,0,,NA,,,,,,2.5,79,
 Carcharhiniformes,Scyliorhinidae,Aulohalaelurus,labiosus,blackspotted catshark,0,0,1,0,1,0,0,1,0,0,0,1,0,0,0,fisheries: of no interest,0,,,,,,2.5,67,Oviparous
 Carcharhiniformes,Scyliorhinidae,Bythaelurus,canescens,dusky catshark,1,1,0,0,1,0,0,1,0,1,0,0,0,0,0,fisheries: of no interest,0,,,,,,2.5,70,Oviparous
-Carcharhiniformes,Scyliorhinidae,Bythaelurus,clevai,broadhead catshark,1,1,0,0,1,0,1,0,0,0,0,1,0,0,0,,N/A,,,,,,3.5,42,
+Carcharhiniformes,Scyliorhinidae,Bythaelurus,clevai,broadhead catshark,1,1,0,0,1,0,1,0,0,0,0,1,0,0,0,,NA,,,,,,3.5,42,
 Carcharhiniformes,Scyliorhinidae,Bythaelurus,dawsoni,new zealand catshark,0,1,0,0,1,0,0,1,0,1,0,0,0,0,0,fisheries: of no interest,0,,,,,,2,42,Ovoviviparous
-Carcharhiniformes,Scyliorhinidae,Bythaelurus,giddingsi,jaguar catshark,0,1,0,0,1,0,1,0,0,1,0,0,0,0,0,,N/A,,,,,,2,45,
+Carcharhiniformes,Scyliorhinidae,Bythaelurus,giddingsi,jaguar catshark,0,1,0,0,1,0,1,0,0,1,0,0,0,0,0,,NA,,,,,,2,45,
 Carcharhiniformes,Scyliorhinidae,Bythaelurus,hispidus,bristly catshark,1,1,0,0,1,0,1,0,0,0,0,1,0,0,0,fisheries: of no interest,0,,,,,,1.5,29,
 Carcharhiniformes,Scyliorhinidae,Bythaelurus,immaculatus,spotless catshark,1,1,0,0,1,0,1,0,0,1,0,0,0,0,0,fisheries: of no interest,0,,,,,,3,76,
-Carcharhiniformes,Scyliorhinidae,Bythaelurus,incanus,dusky catshark,1,1,0,0,1,0,0,0,0,0,0,1,0,0,0,,N/A,,,,,,2,45,
-Carcharhiniformes,Scyliorhinidae,Bythaelurus,lutarius,mud catshark,1,1,0,0,1,0,1,0,0,0,0,1,0,0,0,,N/A,,,,,,2,39,Ovoviviparous
-Carcharhiniformes,Scyliorhinidae,Cephaloscyllium ,albipinnum,whitefin swellshark,0,1,0,0,1,0,0,1,0,1,0,1,0,0,0,,N/A,,,,,,3,110,
-Carcharhiniformes,Scyliorhinidae,Cephaloscyllium ,cooki,cook's swellshark ,1,1,0,0,1,0,1,0,0,1,0,0,0,0,0,,N/A,,,,,,1.5,30,
+Carcharhiniformes,Scyliorhinidae,Bythaelurus,incanus,dusky catshark,1,1,0,0,1,0,0,0,0,0,0,1,0,0,0,,NA,,,,,,2,45,
+Carcharhiniformes,Scyliorhinidae,Bythaelurus,lutarius,mud catshark,1,1,0,0,1,0,1,0,0,0,0,1,0,0,0,,NA,,,,,,2,39,Ovoviviparous
+Carcharhiniformes,Scyliorhinidae,Cephaloscyllium ,albipinnum,whitefin swellshark,0,1,0,0,1,0,0,1,0,1,0,1,0,0,0,,NA,,,,,,3,110,
+Carcharhiniformes,Scyliorhinidae,Cephaloscyllium ,cooki,cook's swellshark ,1,1,0,0,1,0,1,0,0,1,0,0,0,0,0,,NA,,,,,,1.5,30,
 Carcharhiniformes,Scyliorhinidae,Cephaloscyllium ,fasciatum,reticulated swellshark,1,1,0,0,1,0,1,0,0,1,0,0,0,0,0,"fisheries: minor commercial
 ",1,1,,,,,2,42,Oviparous
-Carcharhiniformes,Scyliorhinidae,Cephaloscyllium ,hiscosellum,australian reticulated swellshark,0,1,0,0,1,0,1,1,0,0,0,1,0,0,0,,N/A,,,,,,2,52,
-Carcharhiniformes,Scyliorhinidae,Cephaloscyllium ,isabellum,draughtsboard shark,0,1,1,0,1,0,0,1,0,1,0,0,0,0,0,,N/A,,,,,,2,150,Oviparous
+Carcharhiniformes,Scyliorhinidae,Cephaloscyllium ,hiscosellum,australian reticulated swellshark,0,1,0,0,1,0,1,1,0,0,0,1,0,0,0,,NA,,,,,,2,52,
+Carcharhiniformes,Scyliorhinidae,Cephaloscyllium ,isabellum,draughtsboard shark,0,1,1,0,1,0,0,1,0,1,0,0,0,0,0,,NA,,,,,,2,150,Oviparous
 Carcharhiniformes,Scyliorhinidae,Cephaloscyllium ,laticeps ,australian swellshark,0,0,1,0,1,0,0,1,0,0,0,1,0,0,0,"fisheries: of no interest
 ",0,,,,,,4,150,Oviparous
-Carcharhiniformes,Scyliorhinidae,Cephaloscyllium ,maculatum,spotted swellshark,1,0,0,0,1,0,0,0,0,0,0,0,0,0,0,,N/A,,,,,,N/A,19,
-Carcharhiniformes,Scyliorhinidae,Cephaloscyllium ,pardelotum,leopard-spotted swellshark,1,0,0,0,1,0,0,0,0,0,0,0,0,0,0,,N/A,,,,,,N/A,20,
-Carcharhiniformes,Scyliorhinidae,Cephaloscyllium ,pictum,painted swellshark,,0,0,0,1,0,0,0,0,1,0,0,0,0,0,,N/A,,,,,,2.5,72,
-Carcharhiniformes,Scyliorhinidae,Cephaloscyllium ,sarawakensis,sarawak swellshark,1,0,1,0,1,0,1,0,0,1,0,0,0,0,0,,N/A,,,,,,2,44,
-Carcharhiniformes,Scyliorhinidae,Cephaloscyllium ,signourum,flatgtail swellshark,1,1,0,0,1,0,1,1,0,1,0,0,0,0,0,,N/A,,,,,,3,74,
+Carcharhiniformes,Scyliorhinidae,Cephaloscyllium ,maculatum,spotted swellshark,1,0,0,0,1,0,0,0,0,0,0,0,0,0,0,,NA,,,,,,NA,19,
+Carcharhiniformes,Scyliorhinidae,Cephaloscyllium ,pardelotum,leopard-spotted swellshark,1,0,0,0,1,0,0,0,0,0,0,0,0,0,0,,NA,,,,,,NA,20,
+Carcharhiniformes,Scyliorhinidae,Cephaloscyllium ,pictum,painted swellshark,NA,0,0,0,1,0,0,0,0,1,0,0,0,0,0,,NA,,,,,,2.5,72,
+Carcharhiniformes,Scyliorhinidae,Cephaloscyllium ,sarawakensis,sarawak swellshark,1,0,1,0,1,0,1,0,0,1,0,0,0,0,0,,NA,,,,,,2,44,
+Carcharhiniformes,Scyliorhinidae,Cephaloscyllium ,signourum,flatgtail swellshark,1,1,0,0,1,0,1,1,0,1,0,0,0,0,0,,NA,,,,,,3,74,
 Carcharhiniformes,Scyliorhinidae,Cephaloscyllium ,silasi,indian swellshark,1,1,0,0,1,0,1,0,0,0,0,1,0,0,0,"fisheries: of no interest
 ",0,,,,,,2,36,Oviparous
-Carcharhiniformes,Scyliorhinidae,Cephaloscyllium ,speccum,speckled swellshark,1,1,0,0,1,0,1,0,0,0,0,1,0,0,0,,N/A,,,,,,2.5,69,
-Carcharhiniformes,Scyliorhinidae,Cephaloscyllium ,stevensi,steven's swellshark,0,1,0,0,1,0,1,0,0,1,0,0,0,0,0,,N/A,,,,,,2.5,66,
+Carcharhiniformes,Scyliorhinidae,Cephaloscyllium ,speccum,speckled swellshark,1,1,0,0,1,0,1,0,0,0,0,1,0,0,0,,NA,,,,,,2.5,69,
+Carcharhiniformes,Scyliorhinidae,Cephaloscyllium ,stevensi,steven's swellshark,0,1,0,0,1,0,1,0,0,1,0,0,0,0,0,,NA,,,,,,2.5,66,
 Carcharhiniformes,Scyliorhinidae,Cephaloscyllium ,sufflans,balloon shark ,0,1,1,0,1,0,1,0,0,0,0,1,0,0,0,"fisheries: of no interest
 ",0,,,,,,3,110,Oviparous
-Carcharhiniformes,Scyliorhinidae,Cephaloscyllium ,umbratile ,japanese swellshark,1,1,0,0,1,0,0,1,0,1,0,0,0,0,0,aquarium: public aquariums,N/A,,,,,1,3.5,120,Oviparous
-Carcharhiniformes,Scyliorhinidae,Cephaloscyllium ,variegatum,saddled swellshark,0,1,0,0,1,0,0,1,0,1,0,0,0,0,0,,N/A,,,,,,2.5,74,
+Carcharhiniformes,Scyliorhinidae,Cephaloscyllium ,umbratile ,japanese swellshark,1,1,0,0,1,0,0,1,0,1,0,0,0,0,0,aquarium: public aquariums,NA,,,,,1,3.5,120,Oviparous
+Carcharhiniformes,Scyliorhinidae,Cephaloscyllium ,variegatum,saddled swellshark,0,1,0,0,1,0,0,1,0,1,0,0,0,0,0,,NA,,,,,,2.5,74,
 Carcharhiniformes,Scyliorhinidae,Cephaloscyllium ,ventriosum,swell shark,0,1,1,0,1,0,0,0,1,1,0,0,0,0,0,"fisheries: of no interest; gamefish: yes; aquarium: public aquariums
 ",0,,,,1,1,3.5,100,Oviparous
-Carcharhiniformes,Scyliorhinidae,Cephaloscyllium ,zebrum,narrowbar swellshark,1,1,1,0,1,0,1,0,0,1,0,0,0,0,0,,N/A,,,,,,2,44.5,
+Carcharhiniformes,Scyliorhinidae,Cephaloscyllium ,zebrum,narrowbar swellshark,1,1,1,0,1,0,1,0,0,1,0,0,0,0,0,,NA,,,,,,2,44.5,
 Carcharhiniformes,Scyliorhinidae,Cephalurus,cephalus,lollipop catshark ,1,1,1,0,1,0,0,0,1,0,0,0,0,0,0,"fisheries: of no interest
 ",0,,,,,,1.5,30,Oviparous
 Carcharhiniformes,Scyliorhinidae,Figaro,boardmani,australian sawtail catshark,0,1,1,0,1,0,0,1,0,1,0,1,0,0,0,fisheries: minor commercial,1,1,,,,,2.5,61,
-Carcharhiniformes,Scyliorhinidae,Figaro,striatus,northern sawtail catshark,1,1,1,0,1,0,1,0,0,1,0,0,0,0,0,,N/A,,,,,,2,42,
-Carcharhiniformes,Scyliorhinidae,Galeus ,antillensis,antilles catshark,1,1,1,0,1,0,1,0,0,0,1,0,0,0,0,,N/A,,,,,,2.5,46,
+Carcharhiniformes,Scyliorhinidae,Figaro,striatus,northern sawtail catshark,1,1,1,0,1,0,1,0,0,1,0,0,0,0,0,,NA,,,,,,2,42,
+Carcharhiniformes,Scyliorhinidae,Galeus ,antillensis,antilles catshark,1,1,1,0,1,0,1,0,0,0,1,0,0,0,0,,NA,,,,,,2.5,46,
 Carcharhiniformes,Scyliorhinidae,Galeus ,arae,roughtail catshark,0,1,1,0,1,0,0,0,1,0,1,0,0,0,0,"fisheries: of no interest
 ",0,,,,,,2,33,Ovoviviparous
-Carcharhiniformes,Scyliorhinidae,Galeus ,atlanticus,atlantic sawtail catshark,0,1,1,0,1,0,0,1,0,0,1,0,0,0,0,,N/A,,,,,,2.5,46,
-Carcharhiniformes,Scyliorhinidae,Galeus ,cadenati,longfin sawtail catshark,1,1,1,0,1,0,1,0,0,0,1,0,0,0,0,,N/A,,,,,,2.5,35,
+Carcharhiniformes,Scyliorhinidae,Galeus ,atlanticus,atlantic sawtail catshark,0,1,1,0,1,0,0,1,0,0,1,0,0,0,0,,NA,,,,,,2.5,46,
+Carcharhiniformes,Scyliorhinidae,Galeus ,cadenati,longfin sawtail catshark,1,1,1,0,1,0,1,0,0,0,1,0,0,0,0,,NA,,,,,,2.5,35,
 Carcharhiniformes,Scyliorhinidae,Galeus ,eastmani,gecko catshark ,0,1,0,0,1,0,0,1,0,1,0,0,0,0,0,fisheries: minor commercial,1,1,,,,,2,50,Oviparous
 Carcharhiniformes,Scyliorhinidae,Galeus ,gracilis,slender sawtail catshark,1,1,1,0,1,0,1,0,0,0,0,0,0,0,0,"fisheries: of no interest
 ",0,,,,,,1.5,34,
-Carcharhiniformes,Scyliorhinidae,Galeus ,longirostris,longnose sawtail catshark,1,1,0,0,1,0,0,0,0,1,0,0,0,0,0,,N/A,,,,,,3,80,
+Carcharhiniformes,Scyliorhinidae,Galeus ,longirostris,longnose sawtail catshark,1,1,0,0,1,0,0,0,0,1,0,0,0,0,0,,NA,,,,,,3,80,
 Carcharhiniformes,Scyliorhinidae,Galeus ,melastomus,blackmouth catshark,0,1,1,0,1,0,0,0,1,0,1,0,0,0,0,fisheries: minor commercial,1,1,,,,,3,75.5,Oviparous
-Carcharhiniformes,Scyliorhinidae,Galeus ,mincaronei,southern sawtail catshark,0,1,1,0,1,0,0,1,0,0,1,0,0,0,0,,N/A,,,,,,2,43,Oviparous
+Carcharhiniformes,Scyliorhinidae,Galeus ,mincaronei,southern sawtail catshark,0,1,1,0,1,0,0,1,0,0,1,0,0,0,0,,NA,,,,,,2,43,Oviparous
 Carcharhiniformes,Scyliorhinidae,Galeus ,murinus,mouse catshark,0,1,1,0,1,0,0,1,0,0,1,0,0,0,0,"fisheries: of no interest
 ",0,,,,,,2.5,63,
 Carcharhiniformes,Scyliorhinidae,Galeus ,nipponensis,broadfin catshark,1,1,1,0,1,0,0,1,0,1,0,0,0,0,0,"fisheries: of no interest
@@ -405,32 +403,32 @@ Carcharhiniformes,Scyliorhinidae,Halaelurus ,buergeri,blackspotted catshark,1,0,
 ",0,,,,,,2,49,Oviparous
 Carcharhiniformes,Scyliorhinidae,Halaelurus ,lineatus,lined catshark,1,1,1,0,1,0,1,0,0,0,0,1,0,0,0,"fisheries: of no interest; gamefish: yes; aquarium: public aquariums
 ",0,,,,1,1,2.5,56,
-Carcharhiniformes,Scyliorhinidae,Halaelurus ,maculosus,indonesian speckled catshark,0,0,0,0,1,0,0,0,0,1,0,0,0,0,0,,N/A,,,,,,2,53,
+Carcharhiniformes,Scyliorhinidae,Halaelurus ,maculosus,indonesian speckled catshark,0,0,0,0,1,0,0,0,0,1,0,0,0,0,0,,NA,,,,,,2,53,
 Carcharhiniformes,Scyliorhinidae,Halaelurus ,natalensis,tiger catshark,1,0,1,0,1,0,0,1,0,0,1,0,0,0,0,"fisheries: subsistence fisheries; gamefish: yes
 ",1,,,1,1,,2,50,Oviparous
 Carcharhiniformes,Scyliorhinidae,Halaelurus ,quagga ,guagga catshark,1,0,0,0,1,0,1,0,0,0,0,1,0,0,0,"fisheries: of no interest
 ",0,,,,,,1.5,35,
-Carcharhiniformes,Scyliorhinidae,Halaelurus ,sellus,rusty catshark,0,0,1,0,1,0,1,0,0,1,0,1,0,0,0,,N/A,,,,,,2,42,
+Carcharhiniformes,Scyliorhinidae,Halaelurus ,sellus,rusty catshark,0,0,1,0,1,0,1,0,0,1,0,1,0,0,0,,NA,,,,,,2,42,
 Carcharhiniformes,Scyliorhinidae,Haploblepharus ,edwardsii,puffadder shyshark,0,0,1,0,1,0,0,1,0,0,1,0,0,0,0,"fisheries: subsistence fisheries; gamefish: yes
 ",1,,,1,1,,2.5,60,Oviparous
 Carcharhiniformes,Scyliorhinidae,Haploblepharus ,fuscus,brown shyshark ,0,0,0,0,1,0,0,0,0,0,1,0,0,0,0,"fisheries: subsistence fisheries; gamefish: yes
 ",1,,,1,1,,2.5,69,Oviparous
-Carcharhiniformes,Scyliorhinidae,Haploblepharus ,kistnasamyi,natal shyshark,0,0,0,0,1,0,0,0,0,0,0,1,0,0,0,,N/A,,,,,,3,50,
+Carcharhiniformes,Scyliorhinidae,Haploblepharus ,kistnasamyi,natal shyshark,0,0,0,0,1,0,0,0,0,0,0,1,0,0,0,,NA,,,,,,3,50,
 Carcharhiniformes,Scyliorhinidae,Haploblepharus ,pictus,dark shyshark,0,0,0,0,1,0,0,0,0,0,1,0,0,0,0,"fisheries: subsistence fisheries; gamefish: yes
 ",1,,,1,1,,2.5,60,Oviparous
-Carcharhiniformes,Scyliorhinidae,Holohalaelurus ,favus,honeycomb izak catshark,0,1,0,0,1,0,0,1,0,0,0,1,0,0,0,,N/A,,,,,,2,52,
-Carcharhiniformes,Scyliorhinidae,Holohalaelurus ,grennian,grinning izak,1,0,0,1,1,0,0,1,0,0,0,1,0,0,0,,N/A,,,,,,2.5,27,
-Carcharhiniformes,Scyliorhinidae,Holohalaelurus ,melanostigma,crying izak catshark ,1,1,0,0,1,0,1,0,0,0,0,1,0,0,0,,N/A,,,,,,1.5,38,
+Carcharhiniformes,Scyliorhinidae,Holohalaelurus ,favus,honeycomb izak catshark,0,1,0,0,1,0,0,1,0,0,0,1,0,0,0,,NA,,,,,,2,52,
+Carcharhiniformes,Scyliorhinidae,Holohalaelurus ,grennian,grinning izak,1,0,0,1,1,0,0,1,0,0,0,1,0,0,0,,NA,,,,,,2.5,27,
+Carcharhiniformes,Scyliorhinidae,Holohalaelurus ,melanostigma,crying izak catshark ,1,1,0,0,1,0,1,0,0,0,0,1,0,0,0,,NA,,,,,,1.5,38,
 Carcharhiniformes,Scyliorhinidae,Holohalaelurus ,punctatus,african spotted catshark,0,1,0,0,1,0,1,1,0,0,0,1,0,0,0,"fisheries: of no interest
 ",0,,,,,,1.5,34,Oviparous
-Carcharhiniformes,Scyliorhinidae,Holohalaelurus ,regani,izak catshark,0,1,0,0,1,0,1,1,0,0,0,1,0,0,0,,N/A,,,,,,2.5,69,Oviparous
-Carcharhiniformes,Scyliorhinidae,Parmaturus,albimarginatus,whitetip catshark ,0,1,0,0,1,0,1,0,0,0,0,0,0,0,0,,N/A,,,,,,2.5,58,
-Carcharhiniformes,Scyliorhinidae,Parmaturus,albipenis,white-clasper catshark,0,1,0,0,1,0,1,0,0,1,0,0,0,0,0,,N/A,,,,,,2,41.5,
-Carcharhiniformes,Scyliorhinidae,Parmaturus,bigus,beige catshark,1,0,1,0,1,0,1,0,0,1,0,0,0,0,0,,N/A,,,,,,3,71,
+Carcharhiniformes,Scyliorhinidae,Holohalaelurus ,regani,izak catshark,0,1,0,0,1,0,1,1,0,0,0,1,0,0,0,,NA,,,,,,2.5,69,Oviparous
+Carcharhiniformes,Scyliorhinidae,Parmaturus,albimarginatus,whitetip catshark ,0,1,0,0,1,0,1,0,0,0,0,0,0,0,0,,NA,,,,,,2.5,58,
+Carcharhiniformes,Scyliorhinidae,Parmaturus,albipenis,white-clasper catshark,0,1,0,0,1,0,1,0,0,1,0,0,0,0,0,,NA,,,,,,2,41.5,
+Carcharhiniformes,Scyliorhinidae,Parmaturus,bigus,beige catshark,1,0,1,0,1,0,1,0,0,1,0,0,0,0,0,,NA,,,,,,3,71,
 Carcharhiniformes,Scyliorhinidae,Parmaturus,campechiensis,campeche catshark,1,1,0,0,1,0,1,0,0,0,1,0,0,0,0,"fisheries: of no interest
 ",0,,,,,,1,16,Oviparous
-Carcharhiniformes,Scyliorhinidae,Parmaturus,lanatus,velvet catshark,1,1,0,0,1,0,1,0,0,1,0,0,0,0,0,,N/A,,,,,,1.5,36,
-Carcharhiniformes,Scyliorhinidae,Parmaturus,macmillani,new zealand filetail,1,1,0,0,1,0,1,1,0,1,0,1,0,0,0,,N/A,,,,,,2,53,
+Carcharhiniformes,Scyliorhinidae,Parmaturus,lanatus,velvet catshark,1,1,0,0,1,0,1,0,0,1,0,0,0,0,0,,NA,,,,,,1.5,36,
+Carcharhiniformes,Scyliorhinidae,Parmaturus,macmillani,new zealand filetail,1,1,0,0,1,0,1,1,0,1,0,1,0,0,0,,NA,,,,,,2,53,
 Carcharhiniformes,Scyliorhinidae,Parmaturus,melanobranchius,blackgill catshark,1,1,0,0,1,0,1,0,0,1,0,0,0,0,0,"fisheries: of no interest
 ",0,,,,,,3,85,Oviparous
 Carcharhiniformes,Scyliorhinidae,Parmaturus,pilosus,salamander catshark,1,1,0,0,1,0,0,1,0,1,0,0,0,0,0,"Fisheries: subsistence fisheries
@@ -460,7 +458,7 @@ Carcharhiniformes,Scyliorhinidae,Scyliorhinus,boa,boa catshark,0,1,1,0,1,0,1,0,0
 Carcharhiniformes,Scyliorhinidae,Scyliorhinus,canicula,smallspotted catshark,0,0,1,1,1,0,0,1,0,0,1,0,0,0,0,fisheries: minor commercial,1,1,,,,,3,80,Oviparous
 Carcharhiniformes,Scyliorhinidae,Scyliorhinus,capensis,yellowspotted catshark,0,1,1,0,1,0,0,1,0,0,1,0,0,0,0,fisheries: of no interest; gamefish: yes,0,,,,1,,3.5,122,Oviparous
 Carcharhiniformes,Scyliorhinidae,Scyliorhinus,cervigoni,west african catshark,1,1,1,0,1,0,1,0,0,0,1,0,0,0,0,fisheries: subsistence fisheries,1,,,1,,,3,76,Oviparous
-Carcharhiniformes,Scyliorhinidae,Scyliorhinus,comoroensis,comoro catshark,1,1,1,0,1,0,1,0,0,0,0,1,0,0,0,,N/A,,,,,,3,46,Oviparous
+Carcharhiniformes,Scyliorhinidae,Scyliorhinus,comoroensis,comoro catshark,1,1,1,0,1,0,1,0,0,0,0,1,0,0,0,,NA,,,,,,3,46,Oviparous
 Carcharhiniformes,Scyliorhinidae,Scyliorhinus,garmani,brownspotted catshark,1,0,1,0,1,0,1,0,0,1,0,1,0,0,0,"fisheries: of no interest
 ",0,,,,,,1.5,24,Oviparous
 Carcharhiniformes,Scyliorhinidae,Scyliorhinus,haeckelii,freckled catshark,1,1,1,0,1,0,0,0,1,0,1,0,0,0,0,"fisheries: of no interest
@@ -472,40 +470,40 @@ Carcharhiniformes,Scyliorhinidae,Scyliorhinus,meadi,blotched catshark,1,1,1,0,1,
 Carcharhiniformes,Scyliorhinidae,Scyliorhinus,retifer,chain catshark,0,1,1,0,1,0,0,0,1,0,1,0,0,0,0,"fisheries: of no interest
 ",0,,,,,,2,59,Oviparous
 Carcharhiniformes,Scyliorhinidae,Scyliorhinus,stellaris,nursehound ,0,0,1,1,1,0,0,1,0,0,1,0,0,0,0,fisheries: minor commercial; aquarium: public aquariums,1,1,,,,1,3.5,162,Oviparous
-Carcharhiniformes,Scyliorhinidae,Scyliorhinus,tokubee,izu catshark,1,1,1,0,1,0,0,1,0,1,0,0,0,0,0,aquarium: public aquariums,N/A,,,,,1,2,41,Oviparous
-Carcharhiniformes,Scyliorhinidae,Scyliorhinus,torazame,cloudy catshark,0,1,1,0,1,0,0,1,0,1,0,0,0,0,0,,N/A,,,,,,2,48,Oviparous
+Carcharhiniformes,Scyliorhinidae,Scyliorhinus,tokubee,izu catshark,1,1,1,0,1,0,0,1,0,1,0,0,0,0,0,aquarium: public aquariums,NA,,,,,1,2,41,Oviparous
+Carcharhiniformes,Scyliorhinidae,Scyliorhinus,torazame,cloudy catshark,0,1,1,0,1,0,0,1,0,1,0,0,0,0,0,,NA,,,,,,2,48,Oviparous
 Carcharhiniformes,Scyliorhinidae,Scyliorhinus,torrei,dwarf catshark,0,1,1,0,1,0,0,0,1,0,1,0,0,0,0,"fisheries: of no interest
 ",0,,,,,,1.5,32,Oviparous
 Carcharhiniformes,Proscylliidae,Ctenacis,fehlmanni,harlequin catshark,0,1,1,0,1,0,1,0,0,0,0,1,0,0,0,"fisheries: of no interest
 ",0,,,,,,2,46,Oviparous
 Carcharhiniformes,Proscylliidae,Eridacnis,barbouri,cuban ribbontail catshark,1,1,1,0,1,0,0,1,0,0,1,0,0,0,0,"fisheries: of no interest
 ",0,,,,,,4,34,Ovoviviparous
-Carcharhiniformes,Proscylliidae,Eridacnis,radcliffei,pygmy ribbontail catshark,0,1,1,0,1,0,1,0,0,1,0,1,0,0,0,,N/A,,,,,,1,24,Ovoviviparous
+Carcharhiniformes,Proscylliidae,Eridacnis,radcliffei,pygmy ribbontail catshark,0,1,1,0,1,0,1,0,0,1,0,1,0,0,0,,NA,,,,,,1,24,Ovoviviparous
 Carcharhiniformes,Proscylliidae,Eridacnis,sinuans,african ribbontail catshark,0,1,1,0,1,0,1,0,0,0,0,1,0,0,0,"fisheries: of no interest
 ",0,,,,,,1.5,37,Ovoviviparous
 Carcharhiniformes,Proscylliidae,Proscyllium,habereri,graceful catshark,1,0,1,1,1,0,1,0,0,1,0,0,0,0,0,fisheries: subsistence fisheries,1,,,1,,,1.5,65,Oviparous
-Carcharhiniformes,Proscylliidae,Proscyllium,magnificum,magnificent catshark ,N/A,0,1,1,1,0,1,0,0,0,0,1,0,0,0,,N/A,,,,,,1.5,49,
+Carcharhiniformes,Proscylliidae,Proscyllium,magnificum,magnificent catshark ,NA,0,1,1,1,0,1,0,0,0,0,1,0,0,0,,NA,,,,,,1.5,49,
 Carcharhiniformes,Pseudotriakidae,Gollum ,attenuatus,slender smoothhound,0,1,1,0,0,0,0,1,0,1,0,0,0,0,0,"fisheries: of no interest
 ",0,,,,,,3,110,Ovoviviparous
-Carcharhiniformes,Pseudotriakidae,Gollum ,suluensis,sulu gollumshark,N/A,0,0,0,0,0,0,0,0,0,0,0,0,0,0,,N/A,,,,,,2.5,65,
-Carcharhiniformes,Pseudotriakidae,Gollum ,sp. B,whitemarked gollumshark,N/A,0,0,0,0,0,0,0,0,0,0,0,0,0,0,,N/A,,,,,,,60,
+Carcharhiniformes,Pseudotriakidae,Gollum ,suluensis,sulu gollumshark,NA,0,0,0,0,0,0,0,0,0,0,0,0,0,0,,NA,,,,,,2.5,65,
+Carcharhiniformes,Pseudotriakidae,Gollum ,sp. B,whitemarked gollumshark,NA,0,0,0,0,0,0,0,0,0,0,0,0,0,0,,NA,,,,,,,60,
 Carcharhiniformes,Pseudotriakidae,Pseudotriakis,microdon,false catfish ,0,1,1,0,1,0,0,0,1,0,1,0,0,0,1,fisheries: subsistence fisheries,1,,,1,,,4,295,Ovoviviparous
-Carcharhiniformes,Pseudotriakidae,Planonasus,parini,pygmy false catshark ,0,1,1,0,0,0,1,0,0,0,0,1,0,0,0,,N/A,,,,,,2,56,
-Carcharhiniformes,Leptochariidae,Leptocharias,smithii,barbeled houndshark ,0,0,1,0,1,1,1,0,0,0,1,0,0,0,0,fisheries: minor commercial,N/A,1,,,,,1.5,82,Viviparous
+Carcharhiniformes,Pseudotriakidae,Planonasus,parini,pygmy false catshark ,0,1,1,0,0,0,1,0,0,0,0,1,0,0,0,,NA,,,,,,2,56,
+Carcharhiniformes,Leptochariidae,Leptocharias,smithii,barbeled houndshark ,0,0,1,0,1,1,1,0,0,0,1,0,0,0,0,fisheries: minor commercial,NA,1,,,,,1.5,82,Viviparous
 Carcharhiniformes,Triakidae,Furgaleus,macki ,whiskey shark ,0,0,1,0,1,0,0,0,0,0,0,1,0,0,0,fisheries: commercial,1,,1,,,,3,160,Ovoviviparous
 Carcharhiniformes,Triakidae,Galeorhinus,galeus,tope,0,1,1,0,1,0,0,1,0,1,1,0,0,0,0,fisheries: highly commercial; gamefish: yes; aquarium: public aquariums,1,,,,1,1,3.5,185,Ovoviviparous
 Carcharhiniformes,Triakidae,Gogolia,filewoodi,sailback houndshark ,1,0,1,1,1,0,1,0,0,1,0,0,0,0,0,fisheries: minor commercial,1,1,,,,,2.5,74,Ovoviviparous
-Carcharhiniformes,Triakidae,Hemitriakis ,abdita,deepwater sicklefin hounshark,1,0,1,0,0,0,1,0,0,1,0,0,0,0,0,,N/A,,,,,,3.5,80,Ovoviviparous
-Carcharhiniformes,Triakidae,Hemitriakis ,complicofasciata,striped topeshark ,1,0,1,0,0,0,0,1,0,1,0,0,0,0,0,,N/A,,,,,,2.5,93,
-Carcharhiniformes,Triakidae,Hemitriakis ,falcata,sicklefin houndshark ,0,0,1,1,0,0,0,1,0,0,0,1,0,0,0,,N/A,,,,,,3.5,77,Ovoviviparous
-Carcharhiniformes,Triakidae,Hemitriakis ,indroyonoi,indonesian houndshark ,N/A,0,1,0,0,0,1,0,0,0,0,1,0,0,0,,N/A,,,,,,3,120,Viviparous
+Carcharhiniformes,Triakidae,Hemitriakis ,abdita,deepwater sicklefin hounshark,1,0,1,0,0,0,1,0,0,1,0,0,0,0,0,,NA,,,,,,3.5,80,Ovoviviparous
+Carcharhiniformes,Triakidae,Hemitriakis ,complicofasciata,striped topeshark ,1,0,1,0,0,0,0,1,0,1,0,0,0,0,0,,NA,,,,,,2.5,93,
+Carcharhiniformes,Triakidae,Hemitriakis ,falcata,sicklefin houndshark ,0,0,1,1,0,0,0,1,0,0,0,1,0,0,0,,NA,,,,,,3.5,77,Ovoviviparous
+Carcharhiniformes,Triakidae,Hemitriakis ,indroyonoi,indonesian houndshark ,NA,0,1,0,0,0,1,0,0,0,0,1,0,0,0,,NA,,,,,,3,120,Viviparous
 Carcharhiniformes,Triakidae,Hemitriakis ,japanica,japanese topeshark,0,1,1,0,0,0,0,1,0,1,0,0,0,0,0,fisheries: commercial,1,,1,,,,3,115,Ovoviviparous
 Carcharhiniformes,Triakidae,Hemitriakis ,leucoperiptera,whitefin topeshark ,0,0,1,0,0,0,1,0,0,1,0,0,0,0,0,fisheries: subsistence fisheries,1,,,1,,,2.5,96,Ovoviviparous
 Carcharhiniformes,Triakidae,Hypogaleus,hyugaensis,blacktip topeshark,0,0,1,0,1,0,0,0,1,1,0,1,0,0,0,fisheries: minor commercial,1,1,,,,,3.5,130,Viviparous
 Carcharhiniformes,Triakidae,Iago,garricki,longnose houndshark ,0,1,1,0,0,0,1,0,1,1,0,0,0,0,0,fisheries: minor commercial,1,1,,,,,2.5,75,Viviparous
-Carcharhiniformes,Triakidae,Iago,mangalorensis,mangalore houndshark ,N/A,0,0,0,0,0,0,0,0,0,0,0,0,0,0,,N/A,,,,,,N/A,41,
+Carcharhiniformes,Triakidae,Iago,mangalorensis,mangalore houndshark ,NA,0,0,0,0,0,0,0,0,0,0,0,0,0,0,,NA,,,,,,NA,41,
 Carcharhiniformes,Triakidae,Iago,omanensis,bigeye houndshark,0,1,1,0,1,0,0,0,1,0,0,1,0,0,0,fisheries: subsistence fisheries,1,,,1,,,2.5,58,Viviparous
-Carcharhiniformes,Triakidae,Mustelus ,albipinnis,white-margin fin houndshark,1,0,1,0,0,0,0,1,0,1,0,0,0,0,0,,N/A,,,,,,3,118,
+Carcharhiniformes,Triakidae,Mustelus ,albipinnis,white-margin fin houndshark,1,0,1,0,0,0,0,1,0,1,0,0,0,0,0,,NA,,,,,,3,118,
 Carcharhiniformes,Triakidae,Mustelus ,antarcticus,gummy shark ,0,0,1,1,1,0,0,1,0,0,0,1,0,0,0,fisheries: commercial; gamefish: yes,1,,1,,1,,3.5,166.5,Ovoviviparous
 Carcharhiniformes,Triakidae,Mustelus ,asterias,starry smoothhound,0,1,1,0,1,0,0,,1,0,1,0,0,0,0,fisheries: commercial; gamefish: yes,1,,1,,1,,3.5,140,Ovoviviparous
 Carcharhiniformes,Triakidae,Mustelus ,californicus,grey smoothhound,0,0,1,1,1,0,0,1,0,1,0,0,0,0,0,fisheries: commercial; gamefish: yes,1,,1,,1,,2.5,120.5,Viviparous
@@ -519,7 +517,7 @@ Carcharhiniformes,Triakidae,Mustelus ,lenticulatus,rig,0,1,1,0,0,0,0,1,0,1,0,0,0
 Carcharhiniformes,Triakidae,Mustelus ,lunulatus,sicklefin smoothhound,0,0,1,0,0,0,0,0,1,1,0,0,0,0,0,fisheries: commercial,1,,1,,,,3.5,175,Ovoviviparous
 Carcharhiniformes,Triakidae,Mustelus ,manazo,starspotted smoothhound,1,1,1,0,1,0,0,0,1,1,0,1,0,0,0,fisheries: commercial; gamefish: yes,1,,1,,1,,3.5,106.5,Ovoviviparous
 Carcharhiniformes,Triakidae,Mustelus ,mento,speckled smoothhound,0,0,1,0,0,0,0,0,1,1,0,0,0,0,0,fisheries: highly commercial,1,,,,,,3.5,130,Ovoviviparous
-Carcharhiniformes,Triakidae,Mustelus ,minicanis,venezuelan dwarf smoothhound,1,1,1,0,0,0,1,0,0,0,1,0,0,0,0,,N/A,,,,,,2,57,Ovoviviparous
+Carcharhiniformes,Triakidae,Mustelus ,minicanis,venezuelan dwarf smoothhound,1,1,1,0,0,0,1,0,0,0,1,0,0,0,0,,NA,,,,,,2,57,Ovoviviparous
 Carcharhiniformes,Triakidae,Mustelus ,mosis,arabian smoothhound,1,1,1,0,1,0,0,0,1,0,0,1,0,0,0,fisheries: commercial; gamefish: yes,1,,1,,1,,3.5,150,Viviparous
 Carcharhiniformes,Triakidae,Mustelus ,mustelus,smoothhound,0,0,1,1,0,0,0,1,0,0,1,0,0,0,0,fisheries: highly commercial; gamefish: yes,1,,,,1,,3.5,137,Viviparous
 Carcharhiniformes,Triakidae,Mustelus ,norrisi,narrowfin smoothhound,1,0,1,0,1,0,0,0,1,0,1,0,0,0,0,fisheries: minor commercial,1,,,,,,3,98,Viviparous
@@ -527,11 +525,11 @@ Carcharhiniformes,Triakidae,Mustelus ,palumbes,whitespot smoothhound,1,1,1,0,1,0
 Carcharhiniformes,Triakidae,Mustelus ,punctulatus,blackspot smoothhound ,1,0,1,0,1,0,0,1,0,0,1,0,0,0,0,fisheries: commercial,1,,1,,,,2.5,95,
 Carcharhiniformes,Triakidae,Mustelus ,ravidus,australian grey smoothhound,0,1,1,0,0,0,0,0,1,0,0,1,0,0,0,,,,,,,,2,101,
 Carcharhiniformes,Triakidae,Mustelus ,schmitti,narrownose smoothhound,0,0,1,1,0,0,0,1,0,0,1,0,0,0,0,fisheries: highly commercial,1,,,,,,3,109,Ovoviviparous
-Carcharhiniformes,Triakidae,Mustelus ,sinusmexicanus,gulf of mexico smoothhound,1,0,1,0,0,0,0,0,1,0,1,0,0,0,0,,N/A,,,,,,3,140,Ovoviviparous
-Carcharhiniformes,Triakidae,Mustelus ,stevensi ,whitespotted gummy shark ,0,1,1,0,0,0,0,0,1,0,0,1,0,0,0,,N/A,,,,,,2.5,103,
-Carcharhiniformes,Triakidae,Mustelus ,walkeri,eastern spotted gummy shark,1,1,1,0,0,0,1,0,0,1,0,0,0,0,0,,N/A,,,,,,3,122,
+Carcharhiniformes,Triakidae,Mustelus ,sinusmexicanus,gulf of mexico smoothhound,1,0,1,0,0,0,0,0,1,0,1,0,0,0,0,,NA,,,,,,3,140,Ovoviviparous
+Carcharhiniformes,Triakidae,Mustelus ,stevensi ,whitespotted gummy shark ,0,1,1,0,0,0,0,0,1,0,0,1,0,0,0,,NA,,,,,,2.5,103,
+Carcharhiniformes,Triakidae,Mustelus ,walkeri,eastern spotted gummy shark,1,1,1,0,0,0,1,0,0,1,0,0,0,0,0,,NA,,,,,,3,122,
 Carcharhiniformes,Triakidae,Mustelus ,whitneyi,humpback smoothhound,0,0,1,0,1,0,0,0,1,1,0,0,0,0,0,fisheries: highly commercial; gamefish: yes,1,,,,1,,2.5,87,Viviparous
-Carcharhiniformes,Triakidae,Mustelus ,widodoi,whitefin smoothhound,1,0,1,1,0,0,1,0,0,1,0,0,0,0,0,,N/A,,,,,,3,110,
+Carcharhiniformes,Triakidae,Mustelus ,widodoi,whitefin smoothhound,1,0,1,1,0,0,1,0,0,1,0,0,0,0,0,,NA,,,,,,3,110,
 Carcharhiniformes,Triakidae,Scylliogaleus,quecketti,flapnose houndshark,0,0,1,0,0,0,0,1,0,0,0,1,0,0,0,fisheries: subsistence fisheries; gamefish: yes,1,,,1,1,,2.5,102,Viviparous
 Carcharhiniformes,Triakidae,Triakis,acutipinna,sharpfin hounshark,0,0,1,0,0,0,1,0,0,1,0,0,0,0,0,fisheries: of no interest,0,,,,,,2.5,96,Ovoviviparous
 Carcharhiniformes,Triakidae,Triakis,maculata,spotted houndshark,0,0,1,0,0,0,1,0,0,1,0,0,0,0,0,fisheries: minor commercial,1,1,,,,,3.5,180,Ovoviviparous
@@ -539,7 +537,7 @@ Carcharhiniformes,Triakidae,Triakis,megalopterus,spotted gully shark,0,0,1,1,0,0
 Carcharhiniformes,Triakidae,Triakis,scyllium ,banded houndshark,0,0,1,0,1,1,0,1,0,1,0,0,0,0,0,fisheries: minor commercial; gamefish: yes; aquarium: public aquariums,1,1,,,1,1,3,150,Ovoviviparous
 Carcharhiniformes,Triakidae,Triakis,semifasciata,leopard shark ,0,0,1,0,1,1,0,1,0,1,0,0,0,0,0,fisheries: commercial; gamefish: yes; aquarium: commercial,1,,1,,1,1,4,195,Ovoviviparous
 Carcharhiniformes,Hemigaleidae,Chaenogaleus,macrostoma,hooktooth shark ,0,0,1,1,0,0,1,0,0,1,0,1,0,0,0,fisheries: minor commercial,1,1,,,,,2,100,Viviparous
-Carcharhiniformes,Hemigaleidae,Hemigaleus,australiensis,australien weasel shark ,0,0,1,0,1,0,1,0,0,0,0,1,0,0,0,,N/A,,,,,,2.5,110,
+Carcharhiniformes,Hemigaleidae,Hemigaleus,australiensis,australien weasel shark ,0,0,1,0,1,0,1,0,0,0,0,1,0,0,0,,NA,,,,,,2.5,110,
 Carcharhiniformes,Hemigaleidae,Hemigaleus,microstoma,sicklefin weasel shark,0,0,0,0,1,0,0,0,0,1,0,1,0,0,0,"fisheries: minor commercial
 ",1,1,,,,,2.5,92.5,Viviparous
 Carcharhiniformes,Hemigaleidae,Hemipristis,elongatus,snaggletooth shark,0,0,1,0,0,0,1,0,0,1,0,1,0,0,0,"fisheries: commercial
@@ -548,7 +546,7 @@ Carcharhiniformes,Hemigaleidae,Paragaleus,leucolomatus ,whitetip weasel shark,1,
 ",0,,,,,,2.5,96,Viviparous
 Carcharhiniformes,Hemigaleidae,Paragaleus,pectoralis,atlantic weasel shark ,1,0,1,0,0,0,1,0,0,0,1,0,0,0,0,"fisheries: commercial
 ",1,,1,,,,3,138,Viviparous
-Carcharhiniformes,Hemigaleidae,Paragaleus,randalli,slender weasel shark,0,0,1,0,0,0,1,0,0,0,0,1,0,0,0,,N/A,,,,,,3,81,Viviparous
+Carcharhiniformes,Hemigaleidae,Paragaleus,randalli,slender weasel shark,0,0,1,0,0,0,1,0,0,0,0,1,0,0,0,,NA,,,,,,3,81,Viviparous
 Carcharhiniformes,Hemigaleidae,Paragaleus,tengi,straighttooth weasel shark ,1,0,0,0,0,0,0,0,0,1,0,0,0,0,0,"fisheries: minor commercial
 ",1,1,,,,,2,79,Viviparous
 Carcharhiniformes,Carcharhinidae,Carcharhinus,acronotus,blacknose shark,0,0,1,0,0,0,0,1,0,0,1,0,0,0,0,"fisheries: minor commercial; gamefish: yes
@@ -570,7 +568,7 @@ Carcharhiniformes,Carcharhinidae,Carcharhinus,brevipinna,spinner shark ,0,0,1,0,
 ",1,,1,,1,,3,278,Viviparous
 Carcharhiniformes,Carcharhinidae,Carcharhinus,cautus,nervous shark ,1,0,0,0,0,0,0,0,0,1,0,0,0,0,0,"fisheries: minor commercial
 ",1,1,,,,,3,250,Viviparous
-Carcharhiniformes,Carcharhinidae,Carcharhinus,coatesi,coate's shark,0,0,1,0,0,0,1,0,0,1,0,1,0,0,0,,N/A,,,,,,2,88,
+Carcharhiniformes,Carcharhinidae,Carcharhinus,coatesi,coate's shark,0,0,1,0,0,0,1,0,0,1,0,1,0,0,0,,NA,,,,,,2,88,
 Carcharhiniformes,Carcharhinidae,Carcharhinus,dussumieri,whitecheek shark ,0,0,1,0,0,0,1,0,0,0,0,1,0,0,0,fisheries: commercial,1,,1,,,,3,100,Viviparous
 Carcharhiniformes,Carcharhinidae,Carcharhinus,falciformis,silky shark ,0,0,0,0,0,0,0,0,1,0,0,0,0,0,1,"fisheries: highly commercial
 ",1,,,,,,4,330,Viviparous
@@ -596,17 +594,17 @@ Carcharhiniformes,Carcharhinidae,Carcharhinus,porosus,smalltail shark,1,0,1,0,1,
 Carcharhiniformes,Carcharhinidae,Carcharhinus,sealei,blackspot shark ,0,0,1,1,0,0,1,0,0,1,0,1,0,0,0,fisheries: commercial; gamefish: yes,1,,1,,1,,2,95,Viviparous
 Carcharhiniformes,Carcharhinidae,Carcharhinus,signatus,night shark ,0,0,1,1,0,0,0,1,0,0,1,0,0,0,0,fisheries: commercial,1,,1,,,,3.5,280,Viviparous
 Carcharhiniformes,Carcharhinidae,Carcharhinus,sorrah ,spottail shark ,0,0,1,0,0,1,1,0,0,0,0,0,0,0,1,fisheries: minor commercial,1,1,,,,,2.5,160,Viviparous
-Carcharhiniformes,Carcharhinidae,Carcharhinus,tjujot,indonesian whaler shark ,0,0,1,1,0,0,1,0,0,1,0,0,0,0,0,,N/A,,,,,,2,93,
+Carcharhiniformes,Carcharhinidae,Carcharhinus,tjujot,indonesian whaler shark ,0,0,1,1,0,0,1,0,0,1,0,0,0,0,0,,NA,,,,,,2,93,
 Carcharhiniformes,Carcharhinidae,Carcharhinus,tilsoni,australian blacktip shark ,0,0,1,1,0,0,1,0,0,1,0,1,0,0,0,fisheries: minor commercial,1,1,,,,,3.5,200,Viviparous
 Carcharhiniformes,Carcharhinidae,Galeocerdo ,cuvier ,tiger shark ,0,0,1,0,0,1,0,0,1,0,0,0,0,0,1,fisheries: commercial; gamefish: yes,1,,1,,1,,3,550,Ovoviviparous
-Carcharhiniformes,Carcharhinidae,Glyphis ,fowlerae,borneo river shark ,N/A,0,1,0,0,1,1,0,0,1,0,0,0,0,0,,N/A,,,,,,2,200,
+Carcharhiniformes,Carcharhinidae,Glyphis ,fowlerae,borneo river shark ,NA,0,1,0,0,1,1,0,0,1,0,0,0,0,0,,NA,,,,,,2,200,
 Carcharhiniformes,Carcharhinidae,Glyphis ,gangeticus,ganges shark ,0,0,1,0,0,1,1,0,0,1,0,1,0,0,0,fisheries: subsistence fisheries,1,,,1,,,3.5,204,Viviparous
-Carcharhiniformes,Carcharhinidae,Glyphis ,garricki,new guinea river shark ,0,0,1,0,0,1,1,0,0,1,0,1,0,0,0,,N/A,,,,,,3.5,275,
+Carcharhiniformes,Carcharhinidae,Glyphis ,garricki,new guinea river shark ,0,0,1,0,0,1,1,0,0,1,0,1,0,0,0,,NA,,,,,,3.5,275,
 Carcharhiniformes,Carcharhinidae,Glyphis ,glyphis,speartooth shark ,0,0,1,0,0,1,1,0,0,1,0,0,0,0,0,fisheries: of no interest,0,,,,,,3,250,Viviparous
-Carcharhiniformes,Carcharhinidae,Glyphis ,siamensis,irrawaddy river shark ,0,0,1,0,0,1,1,0,0,0,0,1,0,0,0,,N/A,,,,,,N/A,200,Viviparous
+Carcharhiniformes,Carcharhinidae,Glyphis ,siamensis,irrawaddy river shark ,0,0,1,0,0,1,1,0,0,0,0,1,0,0,0,,NA,,,,,,NA,200,Viviparous
 Carcharhiniformes,Carcharhinidae,Isogomphodon ,oxyrhynchus,daggernose shark ,0,0,1,0,0,1,1,0,0,0,1,0,0,0,0,fisheries: subsistence fisheries,1,,,1,,,3.5,222,Viviparous
 Carcharhiniformes,Carcharhinidae,Lamiopsis,temmincki,broadfin shark ,0,0,1,0,0,1,1,0,0,1,0,1,0,0,0,fisheries: commercial,1,,1,,,,3,268,Viviparous
-Carcharhiniformes,Carcharhinidae,Lamiopsis,tephrodes,borneo broadfin shark ,N/A,0,1,0,0,0,1,0,0,1,0,1,0,0,0,,,,,,,,2.5,145,
+Carcharhiniformes,Carcharhinidae,Lamiopsis,tephrodes,borneo broadfin shark ,NA,0,1,0,0,0,1,0,0,1,0,1,0,0,0,,,,,,,,2.5,145,
 Carcharhiniformes,Carcharhinidae,Loxodon ,macrorhinus,sliteye shark ,0,0,1,1,0,0,1,0,0,1,0,1,0,0,0,fisheries: commercial; gamefish: yes,1,,1,,1,,2.5,99,Viviparous
 Carcharhiniformes,Carcharhinidae,Nasolamia,velox,whitenose shark ,1,0,1,0,0,0,0,0,1,1,0,0,0,0,0,fisheries: minor commercial,1,1,,,,,3,150,Viviparous
 Carcharhiniformes,Carcharhinidae,Negaprion,acutidens,sharptooth lemon shark ,0,0,1,0,1,1,0,0,1,1,0,0,0,0,0,"fisheries: commercial
@@ -622,7 +620,7 @@ Carcharhiniformes,Carcharhinidae,Rhizoprionodon ,porosus,caribbean sharpnose sha
 Carcharhiniformes,Carcharhinidae,Rhizoprionodon ,taylori,australian sharpnose shark ,0,0,1,1,0,0,1,0,0,1,0,0,0,0,0,,,,,,,,1,67,Viviparous
 Carcharhiniformes,Carcharhinidae,Rhizoprionodon ,terraenovae,atlantic sharpnose shark ,0,0,1,0,0,1,0,0,1,0,1,0,0,0,0,fisheries: subsistence fisheries; gamefish: yes,1,,,1,1,,2.5,110,Viviparous
 Carcharhiniformes,Carcharhinidae,Scoliodon ,laticaudus,spadenose shark ,0,0,1,0,0,1,0,0,1,0,0,0,0,0,1,fisheries: commercial; bait: usually,1,,1,,,,2.5,74,Viviparous
-Carcharhiniformes,Carcharhinidae,Scoliodon ,macrorhynchos,new spadenose shark ,N/A,0,1,0,0,0,0,0,1,1,0,0,0,0,0,,N/A,,,,,,1.5,71,
+Carcharhiniformes,Carcharhinidae,Scoliodon ,macrorhynchos,new spadenose shark ,NA,0,1,0,0,0,0,0,1,1,0,0,0,0,0,,NA,,,,,,1.5,71,
 Carcharhiniformes,Carcharhinidae,Triaenodon ,obesus,whitetip reef shark ,0,0,1,1,1,0,1,0,0,1,0,1,0,0,0,"fisheries: minor commercial; gamefish: yes
 ",1,1,,,1,,4,160,Viviparous
 Carcharhiniformes,Sphyrnidae,Eusphyra,blochii,winghead shark ,0,0,1,0,0,1,1,0,0,0,0,0,0,0,1,fisheries: commercial,1,,1,,,,3,186,Viviparous

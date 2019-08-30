@@ -1,0 +1,78 @@
+---
+title: "Alex_Evan_dataD"
+output: html_notebook
+---
+
+```{r}
+library(tidyverse);library(lme4);library(sjPlot)
+
+# Read in data
+dd_data <- read.csv("DD_analysis_datafile.csv", stringsAsFactors = FALSE)
+dd_data = dd_data[dd_data$Order != "",]
+
+# Set NAs to 0
+dd_data[is.na(dd_data)] = 0
+
+# Rename some columns
+dd_data = dd_data %>% rename("Rep_Strategy" = "X.Reproductive.Strategy",
+                             "Vulnerability" = "Vulnerability..",
+                             "Antarctic" = "Antartic")
+
+# Cleaning up fisheries data
+dd_data$Fisheries[dd_data$Fisheries == "N/A"] <- "Unknown"
+dd_data$Fisheries[dd_data$Fisheries == ""] <- "Unknown"
+dd_data$Fisheries <- factor(dd_data$Fisheries, levels = c("Unknown", "0", "1"))
+
+# Cleaning up reproductive strategy data
+dd_data$Rep_Strategy[dd_data$Rep_Strategy == ""] = "Unknown"
+dd_data$Rep_Strategy = factor(dd_data$Rep_Strategy, levels = c("Unknown", "Ovoviviparous", "Viviparous", "Oviparous"))
+
+# Removing columns unused in data
+dd_data$Benthic <- as.numeric(dd_data$Benthic) %>% replace_na(0)
+dd_data$Vulnerability <- as.numeric(dd_data$Vulnerability) %>% replace_na(0)
+```
+
+```{r}
+# First order model
+firstorder.mod <- glm(Data.Deficient ~ Deepwater + Coastal + Pelagic + Benthic + BrackishFreshwater + 
+      Tropical + Temperate + 
+      Global + Pacific + Atlantic + Indian + Arctic + Antarctic + Trans.oceanic +
+      Fisheries + commercial + subsistence + Gamefish + Aquarium + Vulnerability + 
+      Size + Rep_Strategy, data = dd_data, family = "binomial")
+```
+
+```{r}
+# First order model + random effects of order (rank deficient -- need to change)
+firstorder.mod.re <- glmer(Data.Deficient ~ Deepwater + Coastal + Pelagic + Benthic + BrackishFreshwater + 
+      Tropical + Temperate + 
+      Global + Pacific + Atlantic + Indian + Arctic + Antarctic + Trans.oceanic +
+      Fisheries + commercial + subsistence + Gamefish + Aquarium + Vulnerability + 
+      Size + Rep_Strategy +
+        (1|Order), data = dd_data, family = "binomial")
+```
+```{r}
+# Pulll out plot data
+coefs <- plot_model(firstorder.mod.re, transform = NULL)
+
+# Making custom figure
+coefs$data %>%
+  mutate(term = factor(term, levels = term)) %>%
+  # Color by sign of change, transparency by p-value
+  ggplot(aes(x = estimate,
+             y = as.numeric(term),
+             color = as.factor(sign(estimate)),
+             alpha = as.factor(p.value < 0.05))) +
+  geom_point() + 
+  # Add CIs around point
+  geom_segment(aes(x = conf.low,
+                   xend  = conf.high,
+                   yend = as.numeric(term))) +
+  geom_vline(xintercept = 0) +
+  # Adding labelled y axis
+  scale_y_continuous(labels = as.character(coefs$data$term),
+                     breaks = seq(1, 23, 1)) +
+  scale_alpha_discrete(range = c(.5, 1)) +
+  xlab("Log Odds Ratio of Being DD (Higher Values = Greater Chance)") +
+  ylab("Variables")
+```
+

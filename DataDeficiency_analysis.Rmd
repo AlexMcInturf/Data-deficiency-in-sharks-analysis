@@ -5,6 +5,120 @@ date: "8/29/2019"
 output: pdf_document
 ---
 
+This is an R Markdown file that will show the annotated analysis of our data on factors contributing to data deficiency in all known shark species.
+
+```{r}
+library(tidyverse);library(lme4);library(sjPlot)
+dd <- read.csv("DD_analysis_datafile.csv", stringsAsFactors = FALSE) # read in the data as a csv
+head(dd) #look at the top of the rows to see what columns we have
+
+### Cleaning up the data
+
+dd = dd[dd$Order != "",]
+
+## Exclude species that were not assessed for certain parts of the analysis
+not_assessed<- which(is.na(dd$Data.Deficient)) # there are 20 cases
+dd_NA = dd[-not_assessed,]
+nrow(dd_NA)
+head(dd_NA,40)
+#Set NAs to 0
+dd[is.na(dd)] = 0
+dd_NA[is.na(dd_NA)] = 0
+
+
+
+# Rename some columns
+dd = dd %>% rename("Rep_Strategy" = "X.Reproductive.Strategy",
+                             "Vulnerability" = "Vulnerability..",
+                             "Antarctic" = "Antartic")
+
+# Cleaning up fisheries data, make these into factors (categories)
+dd$Fisheries[dd$Fisheries == "NA"] <- "Unknown"
+dd$Fisheries[dd$Fisheries == ""] <- "Unknown"
+dd$Fisheries <- factor(dd$Fisheries, levels = c("Unknown", "0", "1"))
+
+# Cleaning up reproductive strategy data, make into factors (categories)
+dd$Rep_Strategy[dd$Rep_Strategy == "NA"] = "Unknown"
+dd$Rep_Strategy = factor(dd$Rep_Strategy, levels = c("Unknown", "Ovoviviparous", "Viviparous", "Oviparous"))
+
+# Removing columns unused in data
+#dd$Benthic <- as.numeric(dd$Benthic) %>% replace_na(0)
+#dd$Vulnerability <- as.numeric(dd$Vulnerability) %>% replace_na(0)
+
+
+# start simple: 
+# How many sharks do we have?
+nrow(dd) # 501 
+
+#Out of 501 shark species assessed: 37.5% are classified as DD, with ~ 4% not evaluated
+sum(dd$Data.Deficient==1, na.rm=T)/nrow(dd) #.375
+sum(dd$Data.Deficient==0, na.rm=T)/nrow(dd) # .585
+(nrow(dd)-nrow(dd_NA))/nrow(dd) #.04 
+```
+
+After we have our superficial values describing the data, time to do some stats and visualization. What potential predictive factors are we interested in?
+
+**Biology** 
+-- Size
+-- Reproductive strategy
+
+**Human Use**
+-- Vulnerability
+-- Type of fishery (commercial, gamefish, aquaculture)
+
+**Ecology**
+-- Geographic range
+-- Latitude/temperature (tropical/temperate)
+-- Habitat (benthic, deepwater, pelagic, coastal, freshwater)
+-- Depth range
+
+
 ```{r}
 
+#First, we will look at the coefficients of every single first order variable and extract p-values to see what we are dealing with
+firstorder.mod <- glm(Data.Deficient ~ Deepwater + Coastal + Pelagic + Benthic + BrackishFreshwater +
+      Tropical + Temperate + 
+      Global + Pacific + Atlantic + Indian + Arctic + Antarctic + Trans.oceanic +
+      Fisheries + commercial + subsistence + Gamefish + Aquarium + Vulnerability + 
+      Size + Rep_Strategy, data = dd, family = "binomial")
+
+firstorder.mod 
+
+### note that we did try to include "Family" as a random variable; however, it was "rank deficient", which means that it was correlated with multiple other variables and therefore redundant. However, code is below
+
+firstorder.mod.re <- glmer(Data.Deficient ~ Deepwater + Coastal + Pelagic + Benthic + BrackishFreshwater + 
+      Tropical + Temperate + 
+      Global + Pacific + Atlantic + Indian + Arctic + Antarctic + Trans.oceanic +
+      Fisheries + commercial + subsistence + Gamefish + Aquarium + Vulnerability + 
+      Size + Rep_Strategy +
+        (1|Order), data = dd, family = "binomial")
+
+
+```
+Now to visualize a coefficient plots to see what is significant
+
+```{r}
+# Pulll out plot data
+coefs <- plot_model(firstorder.mod.re, transform = NULL)
+
+# Making custom figure
+coefs$data %>%
+  mutate(term = factor(term, levels = term)) %>%
+  # Color by sign of change, transparency by p-value
+  ggplot(aes(x = estimate,
+             y = as.numeric(term),
+             color = as.factor(sign(estimate)),
+             alpha = as.factor(p.value < 0.05))) +
+  geom_point() + 
+  # Add CIs around point
+  geom_segment(aes(x = conf.low,
+                   xend  = conf.high,
+                   yend = as.numeric(term))) +
+  geom_vline(xintercept = 0) +
+  # Adding labelled y axis
+  scale_y_continuous(labels = as.character(coefs$data$term),
+                     breaks = seq(1, 23, 1)) +
+  scale_alpha_discrete(range = c(.5, 1)) +
+  xlab("Log Odds Ratio of Being DD (Higher Values = Greater Chance)") +
+  ylab("Variables")
 ```
