@@ -2,75 +2,65 @@
 title: "DataDeficiency_analysis"
 author: "Alex"
 date: "8/29/2019"
-output: pdf_document
+output: html_document
 ---
 
-This is an R Markdown file that will show the annotated analysis of our data on factors contributing to data deficiency in all known shark species.
+### This is an R Markdown file that will show the annotated analysis of our data on factors contributing to data deficiency in all known shark species.
 
 ```{r}
 library(tidyverse);library(lme4);library(sjPlot)
-dd <- read.csv("DD_analysis_datafile.csv", stringsAsFactors = FALSE) # read in the data as a csv
-head(dd) #look at the top of the rows to see what columns we have
-
-### Cleaning up the data
-
+# Read in data
+dd <- read.csv("DD_analysis_datafile.csv", stringsAsFactors = FALSE)
 dd = dd[dd$Order != "",]
 
-## Exclude species that were not assessed for certain parts of the analysis
-not_assessed<- which(is.na(dd$Data.Deficient)) # there are 20 cases
-dd_NA = dd[-not_assessed,]
-nrow(dd_NA)
-head(dd_NA,40)
-#Set NAs to 0
+# Set NAs to 0
 dd[is.na(dd)] = 0
-dd_NA[is.na(dd_NA)] = 0
-
-
 
 # Rename some columns
 dd = dd %>% rename("Rep_Strategy" = "X.Reproductive.Strategy",
                              "Vulnerability" = "Vulnerability..",
                              "Antarctic" = "Antartic")
 
-# Cleaning up fisheries data, make these into factors (categories)
-dd$Fisheries[dd$Fisheries == "NA"] <- "Unknown"
+# Cleaning up fisheries data
+dd$Fisheries[dd$Fisheries == "N/A"] <- "Unknown"
 dd$Fisheries[dd$Fisheries == ""] <- "Unknown"
 dd$Fisheries <- factor(dd$Fisheries, levels = c("Unknown", "0", "1"))
 
-# Cleaning up reproductive strategy data, make into factors (categories)
-dd$Rep_Strategy[dd$Rep_Strategy == "NA"] = "Unknown"
+# Cleaning up reproductive strategy data
+dd$Rep_Strategy[dd$Rep_Strategy == ""] = "Unknown"
 dd$Rep_Strategy = factor(dd$Rep_Strategy, levels = c("Unknown", "Ovoviviparous", "Viviparous", "Oviparous"))
 
 # Removing columns unused in data
-#dd$Benthic <- as.numeric(dd$Benthic) %>% replace_na(0)
-#dd$Vulnerability <- as.numeric(dd$Vulnerability) %>% replace_na(0)
+dd$Benthic <- as.numeric(dd$Benthic) %>% replace_na(0)
+dd$Vulnerability <- as.numeric(dd$Vulnerability) %>% replace_na(0)
 
+## Check normality of size variable; needs to be log transformed
+hist(dd$Size,100)
+dd$log_size<- log(dd$Size) #added a column with log transformed values, which we will use in the GLM
 
-# start simple: 
-# How many sharks do we have?
-nrow(dd) # 501 
+summary(dd)
 
+#simple look: 
 #Out of 501 shark species assessed: 37.5% are classified as DD, with ~ 4% not evaluated
 sum(dd$Data.Deficient==1, na.rm=T)/nrow(dd) #.375
 sum(dd$Data.Deficient==0, na.rm=T)/nrow(dd) # .585
-(nrow(dd)-nrow(dd_NA))/nrow(dd) #.04 
 ```
 
-After we have our superficial values describing the data, time to do some stats and visualization. What potential predictive factors are we interested in?
+### After we have our superficial values describing the data, time to do some stats and visualization. What potential predictive factors are we interested in?
 
-**Biology** 
--- Size
--- Reproductive strategy
+*Biology*  
+Size  
+Reproductive strategy  
 
-**Human Use**
--- Vulnerability
--- Type of fishery (commercial, gamefish, aquaculture)
+*Human Use*  
+Vulnerability  
+Type of fishery (commercial, gamefish, aquaculture)  
 
-**Ecology**
--- Geographic range
--- Latitude/temperature (tropical/temperate)
--- Habitat (benthic, deepwater, pelagic, coastal, freshwater)
--- Depth range
+*Ecology*  
+Geographic range  
+Latitude/temperature (tropical/temperate)  
+Habitat (benthic, deepwater, pelagic, coastal, freshwater)  
+Depth range  
 
 
 ```{r}
@@ -80,7 +70,7 @@ firstorder.mod <- glm(Data.Deficient ~ Deepwater + Coastal + Pelagic + Benthic +
       Tropical + Temperate + 
       Global + Pacific + Atlantic + Indian + Arctic + Antarctic + Trans.oceanic +
       Fisheries + commercial + subsistence + Gamefish + Aquarium + Vulnerability + 
-      Size + Rep_Strategy, data = dd, family = "binomial")
+      log_size + Rep_Strategy, data = dd, family = "binomial")
 
 firstorder.mod 
 
@@ -90,16 +80,16 @@ firstorder.mod.re <- glmer(Data.Deficient ~ Deepwater + Coastal + Pelagic + Bent
       Tropical + Temperate + 
       Global + Pacific + Atlantic + Indian + Arctic + Antarctic + Trans.oceanic +
       Fisheries + commercial + subsistence + Gamefish + Aquarium + Vulnerability + 
-      Size + Rep_Strategy +
+      log_size + Rep_Strategy +
         (1|Order), data = dd, family = "binomial")
 
 
 ```
-Now to visualize a coefficient plots to see what is significant
+### Now to visualize a coefficient plots to see what is significant!
 
 ```{r}
 # Pulll out plot data
-coefs <- plot_model(firstorder.mod.re, transform = NULL)
+coefs <- plot_model(firstorder.mod, transform = NULL)
 
 # Making custom figure
 coefs$data %>%
@@ -122,3 +112,43 @@ coefs$data %>%
   xlab("Log Odds Ratio of Being DD (Higher Values = Greater Chance)") +
   ylab("Variables")
 ```
+
+# Results  
+Here we see a few significant relationships:  
+
+*Biology*  
+**Size** negative correlation with DD  
+Reproductive strategy  
+
+*Human Use*  
+**Vulnerability** positive correlation with DD  
+Type of fishery (commercial, gamefish, aquaculture)  
+
+
+*Ecology*  
+**Geographic range** positive corr. with Arctic Ocean (note small sample size); negative corr. with Indian Ocean   
+Latitude/temperature (tropical/temperate)  
+**Habitat** (**benthic - positive correlation**, deepwater, pelagic, coastal, **freshwater - negative correlation**)  
+Depth range  
+
+
+### Let's visualize our significant results
+
+```{r}
+## subset coefficients by category
+
+fullcoeffs <- summary(firstorder.mod)$coefficients
+geo_coeffs <- fullcoeffs[c("Atlantic", "Arctic", "Global", "Indian", "Pacific", "Global"),] #note that this is a matrix
+bp <- barplot(geo_coeffs[,"Estimate"], ylab="Model coefficients")
+
+size_coeffs <- fullcoeffs[c("log_size"),]
+size_coeffs
+### Plot backtransformed values against all values of size in this data set (dd$Size vs. )
+
+vuln_coeffs <- fullcoeffs[c("Vulnerability"),]
+### See same thing for size, except with categorical variables
+
+hab_coeffs <- fullcoeffs[c("Benthic", "Deepwater", "Pelagic", "Coastal", "BrackishFreshwater"),]
+bp2 <- barplot(hab_coeffs[,"Estimate"], ylab="Model coefficients")
+```
+
