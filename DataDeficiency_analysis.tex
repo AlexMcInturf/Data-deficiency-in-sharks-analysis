@@ -1,0 +1,657 @@
+\documentclass[]{article}
+\usepackage{lmodern}
+\usepackage{amssymb,amsmath}
+\usepackage{ifxetex,ifluatex}
+\usepackage{fixltx2e} % provides \textsubscript
+\ifnum 0\ifxetex 1\fi\ifluatex 1\fi=0 % if pdftex
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+\else % if luatex or xelatex
+  \ifxetex
+    \usepackage{mathspec}
+  \else
+    \usepackage{fontspec}
+  \fi
+  \defaultfontfeatures{Ligatures=TeX,Scale=MatchLowercase}
+\fi
+% use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+% use microtype if available
+\IfFileExists{microtype.sty}{%
+\usepackage{microtype}
+\UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+\usepackage[margin=1in]{geometry}
+\usepackage{hyperref}
+\hypersetup{unicode=true,
+            pdftitle={DataDeficiency\_analysis},
+            pdfauthor={Alex},
+            pdfborder={0 0 0},
+            breaklinks=true}
+\urlstyle{same}  % don't use monospace font for urls
+\usepackage{color}
+\usepackage{fancyvrb}
+\newcommand{\VerbBar}{|}
+\newcommand{\VERB}{\Verb[commandchars=\\\{\}]}
+\DefineVerbatimEnvironment{Highlighting}{Verbatim}{commandchars=\\\{\}}
+% Add ',fontsize=\small' for more characters per line
+\usepackage{framed}
+\definecolor{shadecolor}{RGB}{248,248,248}
+\newenvironment{Shaded}{\begin{snugshade}}{\end{snugshade}}
+\newcommand{\KeywordTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{\textbf{#1}}}
+\newcommand{\DataTypeTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{#1}}
+\newcommand{\DecValTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
+\newcommand{\BaseNTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
+\newcommand{\FloatTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
+\newcommand{\ConstantTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\CharTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\SpecialCharTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\StringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\VerbatimStringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\SpecialStringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\ImportTok}[1]{#1}
+\newcommand{\CommentTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textit{#1}}}
+\newcommand{\DocumentationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\AnnotationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\CommentVarTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\OtherTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{#1}}
+\newcommand{\FunctionTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\VariableTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\ControlFlowTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{\textbf{#1}}}
+\newcommand{\OperatorTok}[1]{\textcolor[rgb]{0.81,0.36,0.00}{\textbf{#1}}}
+\newcommand{\BuiltInTok}[1]{#1}
+\newcommand{\ExtensionTok}[1]{#1}
+\newcommand{\PreprocessorTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textit{#1}}}
+\newcommand{\AttributeTok}[1]{\textcolor[rgb]{0.77,0.63,0.00}{#1}}
+\newcommand{\RegionMarkerTok}[1]{#1}
+\newcommand{\InformationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\WarningTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\AlertTok}[1]{\textcolor[rgb]{0.94,0.16,0.16}{#1}}
+\newcommand{\ErrorTok}[1]{\textcolor[rgb]{0.64,0.00,0.00}{\textbf{#1}}}
+\newcommand{\NormalTok}[1]{#1}
+\usepackage{graphicx,grffile}
+\makeatletter
+\def\maxwidth{\ifdim\Gin@nat@width>\linewidth\linewidth\else\Gin@nat@width\fi}
+\def\maxheight{\ifdim\Gin@nat@height>\textheight\textheight\else\Gin@nat@height\fi}
+\makeatother
+% Scale images if necessary, so that they will not overflow the page
+% margins by default, and it is still possible to overwrite the defaults
+% using explicit options in \includegraphics[width, height, ...]{}
+\setkeys{Gin}{width=\maxwidth,height=\maxheight,keepaspectratio}
+\IfFileExists{parskip.sty}{%
+\usepackage{parskip}
+}{% else
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{6pt plus 2pt minus 1pt}
+}
+\setlength{\emergencystretch}{3em}  % prevent overfull lines
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\setcounter{secnumdepth}{0}
+% Redefines (sub)paragraphs to behave more like sections
+\ifx\paragraph\undefined\else
+\let\oldparagraph\paragraph
+\renewcommand{\paragraph}[1]{\oldparagraph{#1}\mbox{}}
+\fi
+\ifx\subparagraph\undefined\else
+\let\oldsubparagraph\subparagraph
+\renewcommand{\subparagraph}[1]{\oldsubparagraph{#1}\mbox{}}
+\fi
+
+%%% Use protect on footnotes to avoid problems with footnotes in titles
+\let\rmarkdownfootnote\footnote%
+\def\footnote{\protect\rmarkdownfootnote}
+
+%%% Change title format to be more compact
+\usepackage{titling}
+
+% Create subtitle command for use in maketitle
+\newcommand{\subtitle}[1]{
+  \posttitle{
+    \begin{center}\large#1\end{center}
+    }
+}
+
+\setlength{\droptitle}{-2em}
+  \title{DataDeficiency\_analysis}
+  \pretitle{\vspace{\droptitle}\centering\huge}
+  \posttitle{\par}
+  \author{Alex}
+  \preauthor{\centering\large\emph}
+  \postauthor{\par}
+  \predate{\centering\large\emph}
+  \postdate{\par}
+  \date{8/29/2019}
+
+
+\begin{document}
+\maketitle
+
+\subsubsection{This is an R Markdown file that will show the annotated
+analysis of our data on factors contributing to data deficiency in all
+known shark
+species.}\label{this-is-an-r-markdown-file-that-will-show-the-annotated-analysis-of-our-data-on-factors-contributing-to-data-deficiency-in-all-known-shark-species.}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{library}\NormalTok{(tidyverse);}\KeywordTok{library}\NormalTok{(lme4);}\KeywordTok{library}\NormalTok{(sjPlot)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## -- Attaching packages -------------------------------------------------------------------------------------- tidyverse 1.2.1 --
+\end{verbatim}
+
+\begin{verbatim}
+## √ ggplot2 3.2.0     √ purrr   0.2.4
+## √ tibble  1.4.2     √ dplyr   0.7.8
+## √ tidyr   0.8.0     √ stringr 1.3.1
+## √ readr   1.1.1     √ forcats 0.3.0
+\end{verbatim}
+
+\begin{verbatim}
+## Warning: package 'ggplot2' was built under R version 3.5.2
+\end{verbatim}
+
+\begin{verbatim}
+## -- Conflicts ----------------------------------------------------------------------------------------- tidyverse_conflicts() --
+## x dplyr::filter() masks stats::filter()
+## x dplyr::lag()    masks stats::lag()
+\end{verbatim}
+
+\begin{verbatim}
+## Loading required package: Matrix
+\end{verbatim}
+
+\begin{verbatim}
+## 
+## Attaching package: 'Matrix'
+\end{verbatim}
+
+\begin{verbatim}
+## The following object is masked from 'package:tidyr':
+## 
+##     expand
+\end{verbatim}
+
+\begin{verbatim}
+## Warning in checkMatrixPackageVersion(): Package version inconsistency detected.
+## TMB was built with Matrix version 1.2.15
+## Current Matrix version is 1.2.14
+## Please re-install 'TMB' from source using install.packages('TMB', type = 'source') or ask CRAN for a binary version of 'TMB' matching CRAN's 'Matrix' package
+\end{verbatim}
+
+\begin{verbatim}
+## #refugeeswelcome
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{# Read in data}
+\NormalTok{dd <-}\StringTok{ }\KeywordTok{read.csv}\NormalTok{(}\StringTok{"DD_analysis_datafile_2.csv"}\NormalTok{, }\DataTypeTok{stringsAsFactors =} \OtherTok{FALSE}\NormalTok{)}
+\NormalTok{dd =}\StringTok{ }\NormalTok{dd[dd}\OperatorTok{$}\NormalTok{Order }\OperatorTok{!=}\StringTok{ ""}\NormalTok{,]}
+
+\CommentTok{# Set NAs to 0}
+\NormalTok{dd[}\KeywordTok{is.na}\NormalTok{(dd)] =}\StringTok{ }\DecValTok{0}
+\KeywordTok{table}\NormalTok{(dd}\OperatorTok{$}\NormalTok{Data.Deficient)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## 
+##   0   1 
+## 313 188
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{# Rename some columns}
+\NormalTok{dd =}\StringTok{ }\NormalTok{dd }\OperatorTok{%>%}\StringTok{ }\KeywordTok{rename}\NormalTok{(}\StringTok{"Rep_Strategy"}\NormalTok{ =}\StringTok{ "X.Reproductive.Strategy"}\NormalTok{,}
+                             \StringTok{"Vulnerability"}\NormalTok{ =}\StringTok{ "Vulnerability.."}\NormalTok{,}
+                             \StringTok{"Antarctic"}\NormalTok{ =}\StringTok{ "Antartic"}\NormalTok{, }\StringTok{"D1"}\NormalTok{ =}\StringTok{ "Depth.0.200."}\NormalTok{, }\StringTok{"D2"}\NormalTok{=}\StringTok{"Depth.201.1000."}\NormalTok{, }\StringTok{"D3"}\NormalTok{=}\StringTok{"Depth.1000.."}\NormalTok{)}
+
+\CommentTok{# Cleaning up human uses data (binary = yes or no)}
+\NormalTok{dd}\OperatorTok{$}\NormalTok{Human.Uses <-}\StringTok{ }\KeywordTok{ifelse}\NormalTok{ (dd}\OperatorTok{$}\NormalTok{Human.Uses }\OperatorTok{==}\StringTok{ ""}\NormalTok{, }\DecValTok{0}\NormalTok{, }\DecValTok{1}\NormalTok{)}
+\KeywordTok{table}\NormalTok{(dd}\OperatorTok{$}\NormalTok{Human.Uses) }
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## 
+##   0   1 
+## 179 322
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{dd}\OperatorTok{$}\NormalTok{Human.Uses <-}\StringTok{ }\KeywordTok{factor}\NormalTok{(dd}\OperatorTok{$}\NormalTok{Human.Uses, }\DataTypeTok{levels =} \KeywordTok{c}\NormalTok{(}\StringTok{"0"}\NormalTok{, }\StringTok{"1"}\NormalTok{))}
+
+\CommentTok{#Cleaning up depth data}
+\NormalTok{dd}\OperatorTok{$}\NormalTok{D1[dd}\OperatorTok{$}\NormalTok{D1 }\OperatorTok{==}\StringTok{ ""}\NormalTok{] <-}\StringTok{ "0"}\CommentTok{# D1 corresponds to the 0-200 m depth range}
+\NormalTok{dd}\OperatorTok{$}\NormalTok{D1 <-}\StringTok{ }\KeywordTok{factor}\NormalTok{(dd}\OperatorTok{$}\NormalTok{D1, }\DataTypeTok{levels =} \KeywordTok{c}\NormalTok{(}\StringTok{"0"}\NormalTok{, }\StringTok{"1"}\NormalTok{))}
+\KeywordTok{class}\NormalTok{(dd}\OperatorTok{$}\NormalTok{D1) }
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## [1] "factor"
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{dd}\OperatorTok{$}\NormalTok{D2[dd}\OperatorTok{$}\NormalTok{D2 }\OperatorTok{==}\StringTok{ ""}\NormalTok{] <-}\StringTok{ "0"} \CommentTok{#D2 corresponds to the 201-1000 m depth range}
+\NormalTok{dd}\OperatorTok{$}\NormalTok{D2 <-}\StringTok{ }\KeywordTok{factor}\NormalTok{(dd}\OperatorTok{$}\NormalTok{D2, }\DataTypeTok{levels =} \KeywordTok{c}\NormalTok{(}\StringTok{"0"}\NormalTok{, }\StringTok{"1"}\NormalTok{))}
+\KeywordTok{class}\NormalTok{(dd}\OperatorTok{$}\NormalTok{D2)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## [1] "factor"
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{dd}\OperatorTok{$}\NormalTok{D3[dd}\OperatorTok{$}\NormalTok{D3 }\OperatorTok{==}\StringTok{ ""}\NormalTok{] <-}\StringTok{ "0"}
+\NormalTok{dd}\OperatorTok{$}\NormalTok{D3 <-}\StringTok{ }\KeywordTok{factor}\NormalTok{(dd}\OperatorTok{$}\NormalTok{D3, }\DataTypeTok{levels =} \KeywordTok{c}\NormalTok{(}\StringTok{"0"}\NormalTok{, }\StringTok{"1"}\NormalTok{))}
+\KeywordTok{class}\NormalTok{(dd}\OperatorTok{$}\NormalTok{D3)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## [1] "factor"
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{# Cleaning up fisheries data}
+\NormalTok{dd}\OperatorTok{$}\NormalTok{Fisheries[dd}\OperatorTok{$}\NormalTok{Fisheries }\OperatorTok{==}\StringTok{ "NA"}\NormalTok{] <-}\StringTok{ "Unknown"}
+\NormalTok{dd}\OperatorTok{$}\NormalTok{Fisheries[dd}\OperatorTok{$}\NormalTok{Fisheries }\OperatorTok{==}\StringTok{ ""}\NormalTok{] <-}\StringTok{ "Unknown"}
+\NormalTok{dd}\OperatorTok{$}\NormalTok{Fisheries <-}\StringTok{ }\KeywordTok{factor}\NormalTok{(dd}\OperatorTok{$}\NormalTok{Fisheries, }\DataTypeTok{levels =} \KeywordTok{c}\NormalTok{(}\StringTok{"Unknown"}\NormalTok{, }\StringTok{"0"}\NormalTok{, }\StringTok{"1"}\NormalTok{))}
+
+\CommentTok{# Cleaning up reproductive strategy data}
+\NormalTok{dd}\OperatorTok{$}\NormalTok{Rep_Strategy[dd}\OperatorTok{$}\NormalTok{Rep_Strategy }\OperatorTok{==}\StringTok{ ""}\NormalTok{] =}\StringTok{ "Unknown"}
+\NormalTok{dd}\OperatorTok{$}\NormalTok{Rep_Strategy =}\StringTok{ }\KeywordTok{factor}\NormalTok{(dd}\OperatorTok{$}\NormalTok{Rep_Strategy, }\DataTypeTok{levels =} \KeywordTok{c}\NormalTok{(}\StringTok{"Unknown"}\NormalTok{, }\StringTok{"Ovoviviparous"}\NormalTok{, }\StringTok{"Viviparous"}\NormalTok{, }\StringTok{"Oviparous"}\NormalTok{))}
+
+\CommentTok{# Removing columns unused in data}
+\NormalTok{dd}\OperatorTok{$}\NormalTok{Benthic <-}\StringTok{ }\KeywordTok{as.numeric}\NormalTok{(dd}\OperatorTok{$}\NormalTok{Benthic) }\OperatorTok{%>%}\StringTok{ }\KeywordTok{replace_na}\NormalTok{(}\DecValTok{0}\NormalTok{)}
+\NormalTok{dd}\OperatorTok{$}\NormalTok{Vulnerability <-}\StringTok{ }\KeywordTok{as.numeric}\NormalTok{(dd}\OperatorTok{$}\NormalTok{Vulnerability) }\OperatorTok{%>%}\StringTok{ }\KeywordTok{replace_na}\NormalTok{(}\DecValTok{0}\NormalTok{)}
+
+\NormalTok{## Check normality of size variable; needs to be log transformed}
+\KeywordTok{hist}\NormalTok{(dd}\OperatorTok{$}\NormalTok{Size,}\DecValTok{100}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\includegraphics{DataDeficiency_analysis_files/figure-latex/unnamed-chunk-1-1.pdf}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{dd}\OperatorTok{$}\NormalTok{log_size<-}\StringTok{ }\KeywordTok{log}\NormalTok{(dd}\OperatorTok{$}\NormalTok{Size) }\CommentTok{#added a column with log transformed values, which we will use in the GLM}
+
+\KeywordTok{summary}\NormalTok{(dd)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+##     Order              Family             Genus          
+##  Length:501         Length:501         Length:501        
+##  Class :character   Class :character   Class :character  
+##  Mode  :character   Mode  :character   Mode  :character  
+##                                                          
+##                                                          
+##                                                          
+##    species          Common.name        Data.Deficient     Deepwater     
+##  Length:501         Length:501         Min.   :0.0000   Min.   :0.0000  
+##  Class :character   Class :character   1st Qu.:0.0000   1st Qu.:0.0000  
+##  Mode  :character   Mode  :character   Median :0.0000   Median :1.0000  
+##                                        Mean   :0.3752   Mean   :0.5329  
+##                                        3rd Qu.:1.0000   3rd Qu.:1.0000  
+##                                        Max.   :1.0000   Max.   :1.0000  
+##     Coastal          Pelagic           Benthic       BrackishFreshwater
+##  Min.   :0.0000   Min.   :0.00000   Min.   :0.0000   Min.   :0.00000   
+##  1st Qu.:0.0000   1st Qu.:0.00000   1st Qu.:0.0000   1st Qu.:0.00000   
+##  Median :1.0000   Median :0.00000   Median :1.0000   Median :0.00000   
+##  Mean   :0.5908   Mean   :0.07784   Mean   :0.6347   Mean   :0.08383   
+##  3rd Qu.:1.0000   3rd Qu.:0.00000   3rd Qu.:1.0000   3rd Qu.:0.00000   
+##  Max.   :1.0000   Max.   :1.00000   Max.   :1.0000   Max.   :1.00000   
+##     Tropical        Temperate          Global          Pacific     
+##  Min.   :0.0000   Min.   :0.0000   Min.   :0.0000   Min.   :0.000  
+##  1st Qu.:0.0000   1st Qu.:0.0000   1st Qu.:0.0000   1st Qu.:0.000  
+##  Median :0.0000   Median :0.0000   Median :0.0000   Median :0.000  
+##  Mean   :0.4132   Mean   :0.3553   Mean   :0.2076   Mean   :0.477  
+##  3rd Qu.:1.0000   3rd Qu.:1.0000   3rd Qu.:0.0000   3rd Qu.:1.000  
+##  Max.   :1.0000   Max.   :1.0000   Max.   :1.0000   Max.   :1.000  
+##     Atlantic          Indian           Arctic           Antarctic
+##  Min.   :0.0000   Min.   :0.0000   Min.   :0.000000   Min.   :0  
+##  1st Qu.:0.0000   1st Qu.:0.0000   1st Qu.:0.000000   1st Qu.:0  
+##  Median :0.0000   Median :0.0000   Median :0.000000   Median :0  
+##  Mean   :0.2335   Mean   :0.2695   Mean   :0.003992   Mean   :0  
+##  3rd Qu.:0.0000   3rd Qu.:1.0000   3rd Qu.:0.000000   3rd Qu.:0  
+##  Max.   :1.0000   Max.   :1.0000   Max.   :1.000000   Max.   :0  
+##  Trans.oceanic       Depth           D1      D2      D3      Human.Uses
+##  Min.   :0.0000   Length:501         0:224   0:201   0:422   0:179     
+##  1st Qu.:0.0000   Class :character   1:277   1:300   1: 79   1:322     
+##  Median :0.0000   Mode  :character                                     
+##  Mean   :0.1178                                                        
+##  3rd Qu.:0.0000                                                        
+##  Max.   :1.0000                                                        
+##    Fisheries   minor.commercial   commercial      subsistence     
+##  Unknown:  0   Min.   :0.0000   Min.   :0.0000   Min.   :0.00000  
+##  0      :295   1st Qu.:0.0000   1st Qu.:0.0000   1st Qu.:0.00000  
+##  1      :206   Median :0.0000   Median :0.0000   Median :0.00000  
+##                Mean   :0.1996   Mean   :0.1317   Mean   :0.06188  
+##                3rd Qu.:0.0000   3rd Qu.:0.0000   3rd Qu.:0.00000  
+##                Max.   :1.0000   Max.   :1.0000   Max.   :1.00000  
+##     Gamefish         Aquarium       Vulnerability        Size       
+##  Min.   :0.0000   Min.   :0.00000   Min.   :0.000   Min.   :  16.0  
+##  1st Qu.:0.0000   1st Qu.:0.00000   1st Qu.:2.000   1st Qu.:  51.0  
+##  Median :0.0000   Median :0.00000   Median :2.500   Median :  80.0  
+##  Mean   :0.1377   Mean   :0.03593   Mean   :2.638   Mean   : 119.2  
+##  3rd Qu.:0.0000   3rd Qu.:0.00000   3rd Qu.:3.500   3rd Qu.: 130.0  
+##  Max.   :1.0000   Max.   :1.00000   Max.   :4.000   Max.   :1900.0  
+##         Rep_Strategy    log_size    
+##  Unknown      :126   Min.   :2.773  
+##  Ovoviviparous:171   1st Qu.:3.932  
+##  Viviparous   : 83   Median :4.382  
+##  Oviparous    :121   Mean   :4.464  
+##                      3rd Qu.:4.868  
+##                      Max.   :7.550
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{#simple look: }
+\CommentTok{#Out of 501 shark species assessed: 37.5% are classified as DD, with ~ 4% not evaluated}
+\KeywordTok{sum}\NormalTok{(dd}\OperatorTok{$}\NormalTok{Data.Deficient}\OperatorTok{==}\DecValTok{1}\NormalTok{, }\DataTypeTok{na.rm=}\NormalTok{T)}\OperatorTok{/}\KeywordTok{nrow}\NormalTok{(dd) }\CommentTok{#.375}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## [1] 0.3752495
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{sum}\NormalTok{(dd}\OperatorTok{$}\NormalTok{Data.Deficient}\OperatorTok{==}\DecValTok{0}\NormalTok{, }\DataTypeTok{na.rm=}\NormalTok{T)}\OperatorTok{/}\KeywordTok{nrow}\NormalTok{(dd) }\CommentTok{# .585}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## [1] 0.6247505
+\end{verbatim}
+
+\subsubsection{After we have our superficial values describing the data,
+time to do some stats and visualization. What potential predictive
+factors are we interested
+in?}\label{after-we-have-our-superficial-values-describing-the-data-time-to-do-some-stats-and-visualization.-what-potential-predictive-factors-are-we-interested-in}
+
+\emph{Biology}\\
+Size\\
+Reproductive strategy
+
+\emph{Human Use}\\
+Human use in general (any use)\\
+Vulnerability\\
+Type of use (commercial, gamefish, aquaculture)
+
+\emph{Ecology}\\
+Geographic range\\
+Latitude/temperature (tropical/temperate)\\
+Habitat (benthic, deepwater, pelagic, coastal, freshwater)\\
+Depth range
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{#First, we will look at the coefficients of every single first order variable and extract p-values to see what we are dealing with}
+\NormalTok{firstorder.mod <-}\StringTok{ }\KeywordTok{glm}\NormalTok{(Data.Deficient }\OperatorTok{~}\StringTok{ }\NormalTok{Deepwater }\OperatorTok{+}\StringTok{ }\NormalTok{Coastal }\OperatorTok{+}\StringTok{ }\NormalTok{Pelagic }\OperatorTok{+}\StringTok{ }\NormalTok{Benthic }\OperatorTok{+}\StringTok{ }\NormalTok{BrackishFreshwater }\OperatorTok{+}
+\StringTok{      }\NormalTok{Tropical }\OperatorTok{+}\StringTok{ }\NormalTok{Temperate }\OperatorTok{+}\StringTok{ }
+\StringTok{      }\NormalTok{Global }\OperatorTok{+}\StringTok{ }\NormalTok{Pacific }\OperatorTok{+}\StringTok{ }\NormalTok{Atlantic }\OperatorTok{+}\StringTok{ }\NormalTok{Indian }\OperatorTok{+}\StringTok{ }\NormalTok{Arctic }\OperatorTok{+}\StringTok{ }\NormalTok{Antarctic }\OperatorTok{+}\StringTok{ }\NormalTok{Trans.oceanic }\OperatorTok{+}
+\StringTok{      }\NormalTok{Fisheries }\OperatorTok{+}\StringTok{ }\NormalTok{commercial }\OperatorTok{+}\StringTok{ }\NormalTok{subsistence }\OperatorTok{+}\StringTok{ }\NormalTok{Gamefish }\OperatorTok{+}\StringTok{ }\NormalTok{Aquarium }\OperatorTok{+}\StringTok{ }\NormalTok{Vulnerability }\OperatorTok{+}\StringTok{ }\NormalTok{Human.Uses}\OperatorTok{+}\StringTok{ }\NormalTok{D1 }\OperatorTok{+}\StringTok{ }\NormalTok{D2 }\OperatorTok{+}\StringTok{ }\NormalTok{D3 }\OperatorTok{+}
+\StringTok{      }\NormalTok{log_size }\OperatorTok{+}\StringTok{ }\NormalTok{Rep_Strategy, }\DataTypeTok{data =}\NormalTok{ dd, }\DataTypeTok{family =} \StringTok{"binomial"}\NormalTok{)}
+
+\NormalTok{firstorder.mod }
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## 
+## Call:  glm(formula = Data.Deficient ~ Deepwater + Coastal + Pelagic + 
+##     Benthic + BrackishFreshwater + Tropical + Temperate + Global + 
+##     Pacific + Atlantic + Indian + Arctic + Antarctic + Trans.oceanic + 
+##     Fisheries + commercial + subsistence + Gamefish + Aquarium + 
+##     Vulnerability + Human.Uses + D1 + D2 + D3 + log_size + Rep_Strategy, 
+##     family = "binomial", data = dd)
+## 
+## Coefficients:
+##               (Intercept)                  Deepwater  
+##                   4.41195                    0.19684  
+##                   Coastal                    Pelagic  
+##                  -0.39299                   -0.21943  
+##                   Benthic         BrackishFreshwater  
+##                   0.52715                   -1.48328  
+##                  Tropical                  Temperate  
+##                   0.05999                   -0.32356  
+##                    Global                    Pacific  
+##                   0.12319                    0.02388  
+##                  Atlantic                     Indian  
+##                  -0.03860                   -1.01675  
+##                    Arctic                  Antarctic  
+##                   2.40985                         NA  
+##             Trans.oceanic                 Fisheries1  
+##                  -0.49245                   -0.78847  
+##                commercial                subsistence  
+##                   0.28030                    0.02907  
+##                  Gamefish                   Aquarium  
+##                  -0.46031                    0.82358  
+##             Vulnerability                Human.Uses1  
+##                   0.88781                    0.43542  
+##                       D11                        D21  
+##                  -0.47777                   -0.35865  
+##                       D31                   log_size  
+##                  -0.89226                   -1.45468  
+## Rep_StrategyOvoviviparous     Rep_StrategyViviparous  
+##                  -0.01925                    0.30185  
+##     Rep_StrategyOviparous  
+##                  -0.20293  
+## 
+## Degrees of Freedom: 500 Total (i.e. Null);  473 Residual
+## Null Deviance:       663 
+## Residual Deviance: 534   AIC: 590
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{### note that we did try to include "Family" as a random variable; however, it was "rank deficient", which means that it was correlated with multiple other variables and therefore redundant. However, code is below}
+
+\NormalTok{firstorder.mod.re <-}\StringTok{ }\KeywordTok{glmer}\NormalTok{(Data.Deficient }\OperatorTok{~}\StringTok{ }\NormalTok{Deepwater }\OperatorTok{+}\StringTok{ }\NormalTok{Coastal }\OperatorTok{+}\StringTok{ }\NormalTok{Pelagic }\OperatorTok{+}\StringTok{ }\NormalTok{Benthic }\OperatorTok{+}\StringTok{ }\NormalTok{BrackishFreshwater }\OperatorTok{+}\StringTok{ }
+\StringTok{      }\NormalTok{Tropical }\OperatorTok{+}\StringTok{ }\NormalTok{Temperate }\OperatorTok{+}\StringTok{ }
+\StringTok{      }\NormalTok{Global }\OperatorTok{+}\StringTok{ }\NormalTok{Pacific }\OperatorTok{+}\StringTok{ }\NormalTok{Atlantic }\OperatorTok{+}\StringTok{ }\NormalTok{Indian }\OperatorTok{+}\StringTok{ }\NormalTok{Arctic }\OperatorTok{+}\StringTok{ }\NormalTok{Antarctic }\OperatorTok{+}\StringTok{ }\NormalTok{Trans.oceanic }\OperatorTok{+}
+\StringTok{      }\NormalTok{Fisheries }\OperatorTok{+}\StringTok{ }\NormalTok{commercial }\OperatorTok{+}\StringTok{ }\NormalTok{subsistence }\OperatorTok{+}\StringTok{ }\NormalTok{Gamefish }\OperatorTok{+}\StringTok{ }\NormalTok{Aquarium }\OperatorTok{+}\StringTok{ }\NormalTok{Vulnerability }\OperatorTok{+}\StringTok{ }
+\StringTok{      }\NormalTok{log_size }\OperatorTok{+}\StringTok{ }\NormalTok{Rep_Strategy }\OperatorTok{+}
+\StringTok{        }\NormalTok{(}\DecValTok{1}\OperatorTok{|}\NormalTok{Order), }\DataTypeTok{data =}\NormalTok{ dd, }\DataTypeTok{family =} \StringTok{"binomial"}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## fixed-effect model matrix is rank deficient so dropping 1 column / coefficient
+\end{verbatim}
+
+\begin{verbatim}
+## singular fit
+\end{verbatim}
+
+\subsubsection{Now to visualize a coefficient plots to see what is
+significant!}\label{now-to-visualize-a-coefficient-plots-to-see-what-is-significant}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{# Pull out plot data}
+\NormalTok{coefs <-}\StringTok{ }\KeywordTok{plot_model}\NormalTok{(firstorder.mod, }\DataTypeTok{transform =} \OtherTok{NULL}\NormalTok{)}
+
+\CommentTok{# Making custom figure}
+\NormalTok{coefs}\OperatorTok{$}\NormalTok{data }\OperatorTok{%>%}
+\StringTok{  }\KeywordTok{mutate}\NormalTok{(}\DataTypeTok{term =} \KeywordTok{factor}\NormalTok{(term, }\DataTypeTok{levels =}\NormalTok{ term)) }\OperatorTok{%>%}
+\StringTok{  }\CommentTok{# Color by sign of change, transparency by p-value}
+\StringTok{  }\KeywordTok{ggplot}\NormalTok{(}\KeywordTok{aes}\NormalTok{(}\DataTypeTok{x =}\NormalTok{ estimate,}
+             \DataTypeTok{y =} \KeywordTok{as.numeric}\NormalTok{(term),}
+             \DataTypeTok{color =} \KeywordTok{as.factor}\NormalTok{(}\KeywordTok{sign}\NormalTok{(estimate)),}
+             \DataTypeTok{alpha =} \KeywordTok{as.factor}\NormalTok{(p.value }\OperatorTok{<}\StringTok{ }\FloatTok{0.05}\NormalTok{))) }\OperatorTok{+}
+\StringTok{  }\KeywordTok{geom_point}\NormalTok{() }\OperatorTok{+}\StringTok{ }
+\StringTok{  }\CommentTok{# Add CIs around point}
+\StringTok{  }\KeywordTok{geom_segment}\NormalTok{(}\KeywordTok{aes}\NormalTok{(}\DataTypeTok{x =}\NormalTok{ conf.low,}
+                   \DataTypeTok{xend  =}\NormalTok{ conf.high,}
+                   \DataTypeTok{yend =} \KeywordTok{as.numeric}\NormalTok{(term))) }\OperatorTok{+}
+\StringTok{  }\KeywordTok{geom_vline}\NormalTok{(}\DataTypeTok{xintercept =} \DecValTok{0}\NormalTok{) }\OperatorTok{+}
+\StringTok{  }\CommentTok{# Adding labelled y axis}
+\StringTok{  }\KeywordTok{scale_y_continuous}\NormalTok{(}\DataTypeTok{labels =} \KeywordTok{as.character}\NormalTok{(coefs}\OperatorTok{$}\NormalTok{data}\OperatorTok{$}\NormalTok{term),}
+                     \DataTypeTok{breaks =} \KeywordTok{seq}\NormalTok{(}\DecValTok{1}\NormalTok{, }\DecValTok{27}\NormalTok{, }\DecValTok{1}\NormalTok{)) }\OperatorTok{+}
+\StringTok{  }\KeywordTok{scale_alpha_discrete}\NormalTok{(}\DataTypeTok{range =} \KeywordTok{c}\NormalTok{(.}\DecValTok{5}\NormalTok{, }\DecValTok{1}\NormalTok{)) }\OperatorTok{+}
+\StringTok{  }\KeywordTok{xlab}\NormalTok{(}\StringTok{"Log Odds Ratio of Being DD (Higher Values = Greater Chance)"}\NormalTok{) }\OperatorTok{+}
+\StringTok{  }\KeywordTok{ylab}\NormalTok{(}\StringTok{"Variables"}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## Warning: Using alpha for a discrete variable is not advised.
+\end{verbatim}
+
+\includegraphics{DataDeficiency_analysis_files/figure-latex/unnamed-chunk-3-1.pdf}
+
+\section{Results}\label{results}
+
+Here we see a few significant relationships:
+
+\emph{Biology}\\
+\textbf{Size} negative correlation with DD\\
+Reproductive strategy
+
+\emph{Human Use}\\
+Human use in general (any use)\\
+\textbf{Vulnerability} positive correlation with DD\\
+\textbf{Type of fishery} (\textbf{commercial - negative correlation},
+gamefish, aquaculture)
+
+\emph{Ecology}\\
+\textbf{Geographic range} positive corr. with Arctic Ocean (note small
+sample size); negative corr. with Indian Ocean\\
+Latitude/temperature (tropical/temperate)\\
+\textbf{Habitat} (\textbf{benthic - positive correlation}, deepwater,
+pelagic, coastal, \textbf{freshwater - negative correlation})\\
+\textbf{Depth range} (\textbf{0-200 m - negative correlation}, 201-1000
+m, \textbf{1000+ m- negative correlation})
+
+\emph{Let's summarize what this all means. In general, we are seeing
+that larger sharks are less likely to be data deficient, as are species
+targeted by fisheries specifically, rather than just human use in
+general. In terms of habitat, sharks are less likely to be data
+deficient if they are found in the Indian Ocean, in freshwater, and
+either in the photic zone or at depths of greater than 1000 m. Note that
+there may be an influence of sample size in some of these cases.}
+
+\emph{In contrast, highly vulnerable species are more likely to be data
+deficient. Sharks in the Arctic are also more likely to be data
+deficient, although we have a small sample size for this. Interestingly,
+although sharks at depths of greater than 1000 m are LESS likely to be
+data deficient, benthic species are likely to be. These two
+characteristics are not necessarily correlated, as benthic species could
+reside at all depths, depending on whether they are coastal or deep
+water.}
+
+\subsubsection{Let's visualize our significant
+results}\label{lets-visualize-our-significant-results}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{# We will need to backtransform in order to get the relationships on the real scale, rather than the transformed scale}
+
+\NormalTok{## subset coefficients by category}
+
+\NormalTok{fullcoeffs <-}\StringTok{ }\KeywordTok{summary}\NormalTok{(firstorder.mod)}\OperatorTok{$}\NormalTok{coefficients}
+
+\CommentTok{#size_coeffs <- fullcoeffs[c("log_size"),]}
+\CommentTok{#size_coeffs}
+\CommentTok{#vuln_coeffs <- plogis(fullcoeffs[c("Vulnerability"),])}
+
+\NormalTok{############ EVAN HELP####}
+\CommentTok{# class(dd$log_size)}
+\CommentTok{# size.new<-data.frame(log_size=seq(min(dd$Size), max(dd$Size))) #note that size is continous }
+\CommentTok{# Yl.p<-predict.glm(firstorder.mod, newdata= size.new$log_size, type="response", se.fit=T)}
+\CommentTok{# }
+\CommentTok{# class(dd$Vulnerability)}
+\CommentTok{# vuln.new <- data.frame(Vulnerability=seq(min(dd$Vulnerability), max(dd$Vulnerability))) # vulnerability is continuous}
+\CommentTok{# Yl.p<-predict.glm(firstorder.mod, newdata = vuln.new, type="response")}
+\NormalTok{############ }\RegionMarkerTok{END}\NormalTok{ EVAN HELP####}
+
+\NormalTok{### Plot backtransformed values against all values of size in this data set (dd$Size vs. )}
+
+\NormalTok{#### Habitat}
+\NormalTok{hab_coeffs <-}\StringTok{ }\KeywordTok{plogis}\NormalTok{(fullcoeffs[}\KeywordTok{c}\NormalTok{(}\StringTok{"Benthic"}\NormalTok{, }\StringTok{"Deepwater"}\NormalTok{, }\StringTok{"Pelagic"}\NormalTok{, }\StringTok{"Coastal"}\NormalTok{, }\StringTok{"BrackishFreshwater"}\NormalTok{),])}
+\KeywordTok{barplot}\NormalTok{(hab_coeffs[,}\StringTok{"Estimate"}\NormalTok{], }\DataTypeTok{ylab=}\StringTok{"Relative Probability of Data Deficiency"}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\includegraphics{DataDeficiency_analysis_files/figure-latex/unnamed-chunk-4-1.pdf}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{# OR! }
+
+\NormalTok{hab_coeffs.}\DecValTok{2}\NormalTok{ <-}\StringTok{ }\NormalTok{fullcoeffs[}\KeywordTok{c}\NormalTok{(}\StringTok{"Benthic"}\NormalTok{, }\StringTok{"Deepwater"}\NormalTok{, }\StringTok{"Pelagic"}\NormalTok{, }\StringTok{"Coastal"}\NormalTok{, }\StringTok{"BrackishFreshwater"}\NormalTok{),]}
+\KeywordTok{barplot}\NormalTok{(hab_coeffs.}\DecValTok{2}\NormalTok{[,}\StringTok{"Estimate"}\NormalTok{], }\DataTypeTok{ylab=}\StringTok{"Log Odds Ratio of Data Deficiency"}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\includegraphics{DataDeficiency_analysis_files/figure-latex/unnamed-chunk-4-2.pdf}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{### Geography}
+\NormalTok{geo_coeffs <-}\StringTok{ }\KeywordTok{plogis}\NormalTok{(fullcoeffs[}\KeywordTok{c}\NormalTok{(}\StringTok{"Atlantic"}\NormalTok{, }\StringTok{"Arctic"}\NormalTok{, }\StringTok{"Global"}\NormalTok{, }\StringTok{"Indian"}\NormalTok{, }\StringTok{"Pacific"}\NormalTok{, }\StringTok{"Global"}\NormalTok{),]) }\CommentTok{#note that this is a matrix}
+\KeywordTok{barplot}\NormalTok{(geo_coeffs[,}\StringTok{"Estimate"}\NormalTok{], }\DataTypeTok{ylab=}\StringTok{"Relative Probability of Data Deficiency"}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\includegraphics{DataDeficiency_analysis_files/figure-latex/unnamed-chunk-4-3.pdf}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{geo_coeffs.}\DecValTok{2}\NormalTok{ <-}\StringTok{ }\NormalTok{fullcoeffs[}\KeywordTok{c}\NormalTok{(}\StringTok{"Atlantic"}\NormalTok{, }\StringTok{"Arctic"}\NormalTok{, }\StringTok{"Global"}\NormalTok{, }\StringTok{"Indian"}\NormalTok{, }\StringTok{"Pacific"}\NormalTok{, }\StringTok{"Global"}\NormalTok{),] }\CommentTok{#note that this is a matrix}
+\KeywordTok{barplot}\NormalTok{(geo_coeffs.}\DecValTok{2}\NormalTok{[,}\StringTok{"Estimate"}\NormalTok{], }\DataTypeTok{ylab=}\StringTok{"Log Odds Ratio of Data Deficiency"}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\includegraphics{DataDeficiency_analysis_files/figure-latex/unnamed-chunk-4-4.pdf}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{### Depth range}
+\NormalTok{depth_coeffs <-}\StringTok{ }\KeywordTok{plogis}\NormalTok{(fullcoeffs[}\KeywordTok{c}\NormalTok{(}\StringTok{"D11"}\NormalTok{, }\StringTok{"D21"}\NormalTok{, }\StringTok{"D31"}\NormalTok{),])}
+\NormalTok{depth_coeffs}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+##      Estimate Std. Error    z value  Pr(>|z|)
+## D11 0.3827784  0.5601847 0.12185439 0.5120651
+## D21 0.4112862  0.5798417 0.24723844 0.5659973
+## D31 0.2906432  0.5802245 0.05972106 0.5014606
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{barplot}\NormalTok{(depth_coeffs[,}\StringTok{"Estimate"}\NormalTok{], }\DataTypeTok{names.arg=}\KeywordTok{c}\NormalTok{(}\StringTok{"0-200m"}\NormalTok{, }\StringTok{"201-1000m"}\NormalTok{, }\StringTok{"1000+"}\NormalTok{), }\DataTypeTok{horiz=}\OtherTok{TRUE}\NormalTok{, }\DataTypeTok{xlab=}\StringTok{"Relative Probability of Data Deficiency"}\NormalTok{, }\DataTypeTok{ylab=}\StringTok{"Depth"}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\includegraphics{DataDeficiency_analysis_files/figure-latex/unnamed-chunk-4-5.pdf}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{depth_coeffs.}\DecValTok{2}\NormalTok{ <-}\StringTok{ }\NormalTok{fullcoeffs[}\KeywordTok{c}\NormalTok{(}\StringTok{"D11"}\NormalTok{, }\StringTok{"D21"}\NormalTok{, }\StringTok{"D31"}\NormalTok{),]}
+\KeywordTok{barplot}\NormalTok{(depth_coeffs.}\DecValTok{2}\NormalTok{[,}\StringTok{"Estimate"}\NormalTok{], }\DataTypeTok{names.arg=}\KeywordTok{c}\NormalTok{(}\StringTok{"0-200m"}\NormalTok{, }\StringTok{"201-1000m"}\NormalTok{, }\StringTok{"1000+"}\NormalTok{), }\DataTypeTok{horiz=}\OtherTok{TRUE}\NormalTok{, }\DataTypeTok{xlab=}\StringTok{"Log Odds Ratio of Data Deficiency"}\NormalTok{, }\DataTypeTok{ylab=}\StringTok{"Depth"}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\includegraphics{DataDeficiency_analysis_files/figure-latex/unnamed-chunk-4-6.pdf}
+
+
+\end{document}

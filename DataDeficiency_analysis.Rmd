@@ -2,7 +2,7 @@
 title: "DataDeficiency_analysis"
 author: "Alex"
 date: "8/29/2019"
-output: html_document
+output: pdf_document
 ---
 
 ### This is an R Markdown file that will show the annotated analysis of our data on factors contributing to data deficiency in all known shark species.
@@ -159,20 +159,88 @@ Latitude/temperature (tropical/temperate)
 ### Let's visualize our significant results
 
 ```{r}
+
+# We will need to backtransform in order to get the relationships on the real scale, rather than the transformed scale
+
 ## subset coefficients by category
 
-fullcoeffs <- summary(firstorder.mod)$coefficients
-geo_coeffs <- fullcoeffs[c("Atlantic", "Arctic", "Global", "Indian", "Pacific", "Global"),] #note that this is a matrix
-bp <- barplot(geo_coeffs[,"Estimate"], ylab="Model coefficients")
+# We will need to backtransform in order to get the relationships on the real scale, rather than the transformed scale
 
-size_coeffs <- fullcoeffs[c("log_size"),]
-size_coeffs
+## subset coefficients by category
+fullcoeffs <- summary(firstorder.mod)$coefficients %>% as.data.frame(.) %>% rownames_to_column()
+coef_conf <- confint(firstorder.mod) %>% as.data.frame(.) %>% rownames_to_column()
+
+coef_table <- left_join(fullcoeffs, coef_conf) %>%
+  rename("Coef" = "rowname")
+
+#size_coeffs <- fullcoeffs[c("log_size"),]
+#size_coeffs
+#vuln_coeffs <- plogis(fullcoeffs[c("Vulnerability"),])
+
+########### Evan's Help ####
+library(emmeans)
+
+logsize_means <- emmeans(firstorder.mod, ~ log_size, 
+         var = "log_size", 
+         at = list(log_size = seq(2, 8, by = .25)),
+         type = "response")
+
+# Plotting the figure
+data.frame(logsize_means) %>%
+  ggplot(aes(x = exp(log_size), # Exponentiating log size
+             y = prob)) +
+  geom_ribbon(aes(ymin = asymp.LCL,
+              ymax = asymp.UCL),
+              alpha = .2) +
+  geom_line() +
+  theme_bw()
+ 
+vulnerability_means <- emmeans(firstorder.mod, ~ Vulnerability, 
+         var = "Vulnerability", 
+         at = list(Vulnerability = seq(0, 4)),
+         type = "response")
+
+data.frame(vulnerability_means) %>%
+  ggplot(aes(x = Vulnerability,
+             y = prob,
+             group = Vulnerability,
+             ymin = asymp.LCL,
+             ymax = asymp.UCL)) +
+  geom_point() +
+  geom_errorbar(width = .1)+
+  theme_bw()
+
+```
+
+
+```{r}
 ### Plot backtransformed values against all values of size in this data set (dd$Size vs. )
 
-vuln_coeffs <- fullcoeffs[c("Vulnerability"),]
-### See same thing for size, except with categorical variables
+#### Habitat
+hab_coeffs <- plogis(fullcoeffs[c("Benthic", "Deepwater", "Pelagic", "Coastal", "BrackishFreshwater"),])
+barplot(hab_coeffs[,"Estimate"], ylab="Relative Probability of Data Deficiency")
 
-hab_coeffs <- fullcoeffs[c("Benthic", "Deepwater", "Pelagic", "Coastal", "BrackishFreshwater"),]
-bp2 <- barplot(hab_coeffs[,"Estimate"], ylab="Model coefficients")
+# OR! 
+
+hab_coeffs.2 <- fullcoeffs[c("Benthic", "Deepwater", "Pelagic", "Coastal", "BrackishFreshwater"),]
+barplot(hab_coeffs.2[,"Estimate"], ylab="Log Odds Ratio of Data Deficiency")
+
+
+### Geography
+geo_coeffs <- plogis(fullcoeffs[c("Atlantic", "Arctic", "Global", "Indian", "Pacific", "Global"),]) #note that this is a matrix
+barplot(geo_coeffs[,"Estimate"], ylab="Relative Probability of Data Deficiency")
+
+geo_coeffs.2 <- fullcoeffs[c("Atlantic", "Arctic", "Global", "Indian", "Pacific", "Global"),] #note that this is a matrix
+barplot(geo_coeffs.2[,"Estimate"], ylab="Log Odds Ratio of Data Deficiency")
+
+
+### Depth range
+depth_coeffs <- plogis(fullcoeffs[c("D11", "D21", "D31"),])
+depth_coeffs
+barplot(depth_coeffs[,"Estimate"], names.arg=c("0-200m", "201-1000m", "1000+"), horiz=TRUE, xlab="Relative Probability of Data Deficiency", ylab="Depth")
+
+depth_coeffs.2 <- fullcoeffs[c("D11", "D21", "D31"),]
+barplot(depth_coeffs.2[,"Estimate"], names.arg=c("0-200m", "201-1000m", "1000+"), horiz=TRUE, xlab="Log Odds Ratio of Data Deficiency", ylab="Depth")
+
 ```
 
