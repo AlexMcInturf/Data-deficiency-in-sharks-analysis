@@ -182,7 +182,7 @@ species.}\label{this-is-an-r-markdown-file-that-will-show-the-annotated-analysis
 \end{verbatim}
 
 \begin{verbatim}
-## #refugeeswelcome
+## Learn more about sjPlot with 'browseVignettes("sjPlot")'.
 \end{verbatim}
 
 \begin{Shaded}
@@ -390,8 +390,7 @@ Reproductive strategy
 
 \emph{Human Use}\\
 Human use in general (any use)\\
-Vulnerability\\
-Type of use (commercial, gamefish, aquaculture)
+Type of use (fisheries, gamefish, aquaculture) Fisheries (any fishery)
 
 \emph{Ecology}\\
 Geographic range\\
@@ -405,7 +404,7 @@ Depth range
 \NormalTok{firstorder.mod <-}\StringTok{ }\KeywordTok{glm}\NormalTok{(Data.Deficient }\OperatorTok{~}\StringTok{ }\NormalTok{Deepwater }\OperatorTok{+}\StringTok{ }\NormalTok{Coastal }\OperatorTok{+}\StringTok{ }\NormalTok{Pelagic }\OperatorTok{+}\StringTok{ }\NormalTok{Benthic }\OperatorTok{+}\StringTok{ }\NormalTok{BrackishFreshwater }\OperatorTok{+}
 \StringTok{      }\NormalTok{Tropical }\OperatorTok{+}\StringTok{ }\NormalTok{Temperate }\OperatorTok{+}\StringTok{ }
 \StringTok{      }\NormalTok{Global }\OperatorTok{+}\StringTok{ }\NormalTok{Pacific }\OperatorTok{+}\StringTok{ }\NormalTok{Atlantic }\OperatorTok{+}\StringTok{ }\NormalTok{Indian }\OperatorTok{+}\StringTok{ }\NormalTok{Arctic }\OperatorTok{+}\StringTok{ }\NormalTok{Antarctic }\OperatorTok{+}\StringTok{ }\NormalTok{Trans.oceanic }\OperatorTok{+}
-\StringTok{      }\NormalTok{Fisheries }\OperatorTok{+}\StringTok{ }\NormalTok{commercial }\OperatorTok{+}\StringTok{ }\NormalTok{subsistence }\OperatorTok{+}\StringTok{ }\NormalTok{Gamefish }\OperatorTok{+}\StringTok{ }\NormalTok{Aquarium }\OperatorTok{+}\StringTok{ }\NormalTok{Vulnerability }\OperatorTok{+}\StringTok{ }\NormalTok{Human.Uses}\OperatorTok{+}\StringTok{ }\NormalTok{D1 }\OperatorTok{+}\StringTok{ }\NormalTok{D2 }\OperatorTok{+}\StringTok{ }\NormalTok{D3 }\OperatorTok{+}
+\StringTok{      }\NormalTok{Fisheries }\OperatorTok{+}\StringTok{ }\NormalTok{commercial }\OperatorTok{+}\StringTok{ }\NormalTok{subsistence }\OperatorTok{+}\StringTok{ }\NormalTok{Gamefish }\OperatorTok{+}\StringTok{ }\NormalTok{Aquarium }\OperatorTok{+}\StringTok{ }\NormalTok{Human.Uses}\OperatorTok{+}\StringTok{ }\NormalTok{D1 }\OperatorTok{+}\StringTok{ }\NormalTok{D2 }\OperatorTok{+}\StringTok{ }\NormalTok{D3 }\OperatorTok{+}
 \StringTok{      }\NormalTok{log_size }\OperatorTok{+}\StringTok{ }\NormalTok{Rep_Strategy, }\DataTypeTok{data =}\NormalTok{ dd, }\DataTypeTok{family =} \StringTok{"binomial"}\NormalTok{)}
 
 \NormalTok{firstorder.mod }
@@ -418,44 +417,42 @@ Depth range
 ##     Benthic + BrackishFreshwater + Tropical + Temperate + Global + 
 ##     Pacific + Atlantic + Indian + Arctic + Antarctic + Trans.oceanic + 
 ##     Fisheries + commercial + subsistence + Gamefish + Aquarium + 
-##     Vulnerability + Human.Uses + D1 + D2 + D3 + log_size + Rep_Strategy, 
-##     family = "binomial", data = dd)
+##     Human.Uses + D1 + D2 + D3 + log_size + Rep_Strategy, family = "binomial", 
+##     data = dd)
 ## 
 ## Coefficients:
 ##               (Intercept)                  Deepwater  
-##                   4.41195                    0.19684  
+##                   1.89798                    0.42050  
 ##                   Coastal                    Pelagic  
-##                  -0.39299                   -0.21943  
+##                  -0.29459                   -0.09330  
 ##                   Benthic         BrackishFreshwater  
-##                   0.52715                   -1.48328  
+##                   0.65265                   -1.53095  
 ##                  Tropical                  Temperate  
-##                   0.05999                   -0.32356  
+##                   0.22480                   -0.02920  
 ##                    Global                    Pacific  
-##                   0.12319                    0.02388  
+##                   0.38262                    0.17610  
 ##                  Atlantic                     Indian  
-##                  -0.03860                   -1.01675  
+##                   0.10587                   -0.86275  
 ##                    Arctic                  Antarctic  
-##                   2.40985                         NA  
+##                   1.78031                         NA  
 ##             Trans.oceanic                 Fisheries1  
-##                  -0.49245                   -0.78847  
+##                  -0.33777                   -0.60877  
 ##                commercial                subsistence  
-##                   0.28030                    0.02907  
+##                   0.12554                    0.04848  
 ##                  Gamefish                   Aquarium  
-##                  -0.46031                    0.82358  
-##             Vulnerability                Human.Uses1  
-##                   0.88781                    0.43542  
-##                       D11                        D21  
-##                  -0.47777                   -0.35865  
-##                       D31                   log_size  
-##                  -0.89226                   -1.45468  
-## Rep_StrategyOvoviviparous     Rep_StrategyViviparous  
-##                  -0.01925                    0.30185  
-##     Rep_StrategyOviparous  
-##                  -0.20293  
+##                  -0.47694                    0.98909  
+##               Human.Uses1                        D11  
+##                   0.29409                   -0.48294  
+##                       D21                        D31  
+##                  -0.28874                   -0.81920  
+##                  log_size  Rep_StrategyOvoviviparous  
+##                  -0.51819                    0.02542  
+##    Rep_StrategyViviparous      Rep_StrategyOviparous  
+##                   0.36607                   -0.11306  
 ## 
-## Degrees of Freedom: 500 Total (i.e. Null);  473 Residual
+## Degrees of Freedom: 500 Total (i.e. Null);  474 Residual
 ## Null Deviance:       663 
-## Residual Deviance: 534   AIC: 590
+## Residual Deviance: 556.6     AIC: 610.6
 \end{verbatim}
 
 \begin{Shaded}
@@ -477,6 +474,68 @@ Depth range
 
 \begin{verbatim}
 ## singular fit
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{### Potential second order model}
+\NormalTok{secondorder.mod <-}\StringTok{ }\KeywordTok{glm}\NormalTok{(Data.Deficient }\OperatorTok{~}\StringTok{ }\NormalTok{Deepwater }\OperatorTok{+}\StringTok{ }\NormalTok{Coastal }\OperatorTok{+}\StringTok{ }\NormalTok{Pelagic }\OperatorTok{+}\StringTok{ }\NormalTok{Benthic }\OperatorTok{+}\StringTok{ }\NormalTok{BrackishFreshwater }\OperatorTok{+}
+\StringTok{      }\NormalTok{Tropical }\OperatorTok{+}\StringTok{ }\NormalTok{Temperate }\OperatorTok{+}\StringTok{ }
+\StringTok{      }\NormalTok{Global }\OperatorTok{+}\StringTok{ }\NormalTok{Pacific }\OperatorTok{+}\StringTok{ }\NormalTok{Atlantic }\OperatorTok{+}\StringTok{ }\NormalTok{Indian }\OperatorTok{+}\StringTok{ }\NormalTok{Arctic }\OperatorTok{+}\StringTok{ }\NormalTok{Antarctic }\OperatorTok{+}\StringTok{ }\NormalTok{Trans.oceanic }\OperatorTok{+}
+\StringTok{      }\NormalTok{Fisheries }\OperatorTok{+}\StringTok{ }\NormalTok{commercial }\OperatorTok{+}\StringTok{ }\NormalTok{subsistence }\OperatorTok{+}\StringTok{ }\NormalTok{Gamefish }\OperatorTok{+}\StringTok{ }\NormalTok{Aquarium }\OperatorTok{+}\StringTok{ }\NormalTok{Human.Uses}\OperatorTok{+}\StringTok{ }\NormalTok{D1 }\OperatorTok{+}\StringTok{ }\NormalTok{D2 }\OperatorTok{+}\StringTok{ }\NormalTok{D3 }\OperatorTok{+}
+\StringTok{      }\NormalTok{log_size }\OperatorTok{+}\StringTok{ }\NormalTok{Rep_Strategy }\OperatorTok{+}\StringTok{ }\NormalTok{Coastal}\OperatorTok{*}\NormalTok{Fisheries }\OperatorTok{+}\StringTok{ }\NormalTok{Pelagic}\OperatorTok{*}\NormalTok{Fisheries }\OperatorTok{+}\StringTok{ }\NormalTok{Benthic}\OperatorTok{*}\NormalTok{Fisheries }\OperatorTok{+}\StringTok{ }\NormalTok{BrackishFreshwater}\OperatorTok{*}\NormalTok{Fisheries, }\DataTypeTok{data =}\NormalTok{ dd, }\DataTypeTok{family =} \StringTok{"binomial"}\NormalTok{)}
+
+\NormalTok{secondorder.mod }
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## 
+## Call:  glm(formula = Data.Deficient ~ Deepwater + Coastal + Pelagic + 
+##     Benthic + BrackishFreshwater + Tropical + Temperate + Global + 
+##     Pacific + Atlantic + Indian + Arctic + Antarctic + Trans.oceanic + 
+##     Fisheries + commercial + subsistence + Gamefish + Aquarium + 
+##     Human.Uses + D1 + D2 + D3 + log_size + Rep_Strategy + Coastal * 
+##     Fisheries + Pelagic * Fisheries + Benthic * Fisheries + BrackishFreshwater * 
+##     Fisheries, family = "binomial", data = dd)
+## 
+## Coefficients:
+##                   (Intercept)                      Deepwater  
+##                      1.917529                       0.379405  
+##                       Coastal                        Pelagic  
+##                      0.023509                       0.132359  
+##                       Benthic             BrackishFreshwater  
+##                      0.665089                     -15.219208  
+##                      Tropical                      Temperate  
+##                      0.345438                       0.059848  
+##                        Global                        Pacific  
+##                      0.476997                       0.142708  
+##                      Atlantic                         Indian  
+##                      0.069941                      -0.970620  
+##                        Arctic                      Antarctic  
+##                      1.541260                             NA  
+##                 Trans.oceanic                     Fisheries1  
+##                     -0.651753                       0.066194  
+##                    commercial                    subsistence  
+##                      0.204895                      -0.073075  
+##                      Gamefish                       Aquarium  
+##                     -0.466649                       0.977947  
+##                   Human.Uses1                            D11  
+##                      0.286262                      -0.488341  
+##                           D21                            D31  
+##                     -0.323358                      -0.772454  
+##                      log_size      Rep_StrategyOvoviviparous  
+##                     -0.559206                       0.007368  
+##        Rep_StrategyViviparous          Rep_StrategyOviparous  
+##                      0.509051                      -0.117778  
+##            Coastal:Fisheries1             Pelagic:Fisheries1  
+##                     -1.169136                      -0.389077  
+##            Benthic:Fisheries1  BrackishFreshwater:Fisheries1  
+##                      0.086389                      14.057666  
+## 
+## Degrees of Freedom: 500 Total (i.e. Null);  470 Residual
+## Null Deviance:       663 
+## Residual Deviance: 548.4     AIC: 610.4
 \end{verbatim}
 
 \subsubsection{Now to visualize a coefficient plots to see what is
@@ -503,7 +562,7 @@ significant!}\label{now-to-visualize-a-coefficient-plots-to-see-what-is-signific
 \StringTok{  }\KeywordTok{geom_vline}\NormalTok{(}\DataTypeTok{xintercept =} \DecValTok{0}\NormalTok{) }\OperatorTok{+}
 \StringTok{  }\CommentTok{# Adding labelled y axis}
 \StringTok{  }\KeywordTok{scale_y_continuous}\NormalTok{(}\DataTypeTok{labels =} \KeywordTok{as.character}\NormalTok{(coefs}\OperatorTok{$}\NormalTok{data}\OperatorTok{$}\NormalTok{term),}
-                     \DataTypeTok{breaks =} \KeywordTok{seq}\NormalTok{(}\DecValTok{1}\NormalTok{, }\DecValTok{27}\NormalTok{, }\DecValTok{1}\NormalTok{)) }\OperatorTok{+}
+                     \DataTypeTok{breaks =} \KeywordTok{seq}\NormalTok{(}\DecValTok{1}\NormalTok{, }\DecValTok{26}\NormalTok{, }\DecValTok{1}\NormalTok{)) }\OperatorTok{+}
 \StringTok{  }\KeywordTok{scale_alpha_discrete}\NormalTok{(}\DataTypeTok{range =} \KeywordTok{c}\NormalTok{(.}\DecValTok{5}\NormalTok{, }\DecValTok{1}\NormalTok{)) }\OperatorTok{+}
 \StringTok{  }\KeywordTok{xlab}\NormalTok{(}\StringTok{"Log Odds Ratio of Being DD (Higher Values = Greater Chance)"}\NormalTok{) }\OperatorTok{+}
 \StringTok{  }\KeywordTok{ylab}\NormalTok{(}\StringTok{"Variables"}\NormalTok{)}
@@ -516,6 +575,42 @@ significant!}\label{now-to-visualize-a-coefficient-plots-to-see-what-is-signific
 
 \includegraphics{DataDeficiency_analysis_files/figure-latex/unnamed-chunk-3-1.pdf}
 
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{############# REPEAT FOR SECOND ORDER MODEL #############}
+
+\CommentTok{# Pull out plot data}
+\NormalTok{coefs2 <-}\StringTok{ }\KeywordTok{plot_model}\NormalTok{(secondorder.mod, }\DataTypeTok{transform =} \OtherTok{NULL}\NormalTok{)}
+
+\CommentTok{# Making custom figure}
+\NormalTok{coefs2}\OperatorTok{$}\NormalTok{data }\OperatorTok{%>%}
+\StringTok{  }\KeywordTok{mutate}\NormalTok{(}\DataTypeTok{term =} \KeywordTok{factor}\NormalTok{(term, }\DataTypeTok{levels =}\NormalTok{ term)) }\OperatorTok{%>%}
+\StringTok{  }\CommentTok{# Color by sign of change, transparency by p-value}
+\StringTok{  }\KeywordTok{ggplot}\NormalTok{(}\KeywordTok{aes}\NormalTok{(}\DataTypeTok{x =}\NormalTok{ estimate,}
+             \DataTypeTok{y =} \KeywordTok{as.numeric}\NormalTok{(term),}
+             \DataTypeTok{color =} \KeywordTok{as.factor}\NormalTok{(}\KeywordTok{sign}\NormalTok{(estimate)),}
+             \DataTypeTok{alpha =} \KeywordTok{as.factor}\NormalTok{(p.value }\OperatorTok{<}\StringTok{ }\FloatTok{0.05}\NormalTok{))) }\OperatorTok{+}
+\StringTok{  }\KeywordTok{geom_point}\NormalTok{() }\OperatorTok{+}\StringTok{ }
+\StringTok{  }\CommentTok{# Add CIs around point}
+\StringTok{  }\KeywordTok{geom_segment}\NormalTok{(}\KeywordTok{aes}\NormalTok{(}\DataTypeTok{x =}\NormalTok{ conf.low,}
+                   \DataTypeTok{xend  =}\NormalTok{ conf.high,}
+                   \DataTypeTok{yend =} \KeywordTok{as.numeric}\NormalTok{(term))) }\OperatorTok{+}
+\StringTok{  }\KeywordTok{geom_vline}\NormalTok{(}\DataTypeTok{xintercept =} \DecValTok{0}\NormalTok{) }\OperatorTok{+}
+\StringTok{  }\CommentTok{# Adding labelled y axis}
+\StringTok{  }\KeywordTok{scale_y_continuous}\NormalTok{(}\DataTypeTok{labels =} \KeywordTok{as.character}\NormalTok{(coefs2}\OperatorTok{$}\NormalTok{data}\OperatorTok{$}\NormalTok{term),}
+                     \DataTypeTok{breaks =} \KeywordTok{seq}\NormalTok{(}\DecValTok{1}\NormalTok{, }\DecValTok{30}\NormalTok{, }\DecValTok{1}\NormalTok{)) }\OperatorTok{+}
+\StringTok{  }\KeywordTok{scale_alpha_discrete}\NormalTok{(}\DataTypeTok{range =} \KeywordTok{c}\NormalTok{(.}\DecValTok{5}\NormalTok{, }\DecValTok{1}\NormalTok{)) }\OperatorTok{+}
+\StringTok{  }\KeywordTok{xlab}\NormalTok{(}\StringTok{"Log Odds Ratio of Being DD (Higher Values = Greater Chance)"}\NormalTok{) }\OperatorTok{+}
+\StringTok{  }\KeywordTok{ylab}\NormalTok{(}\StringTok{"Variables"}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## Warning: Using alpha for a discrete variable is not advised.
+\end{verbatim}
+
+\includegraphics{DataDeficiency_analysis_files/figure-latex/unnamed-chunk-3-2.pdf}
+
 \section{Results}\label{results}
 
 Here we see a few significant relationships:
@@ -526,9 +621,9 @@ Reproductive strategy
 
 \emph{Human Use}\\
 Human use in general (any use)\\
-\textbf{Vulnerability} positive correlation with DD\\
 \textbf{Type of fishery} (\textbf{commercial - negative correlation},
-gamefish, aquaculture)
+gamefish, aquaculture)\\
+Fisheries (any fishery)
 
 \emph{Ecology}\\
 \textbf{Geographic range} positive corr. with Arctic Ocean (note small
@@ -563,29 +658,115 @@ results}\label{lets-visualize-our-significant-results}
 \begin{Highlighting}[]
 \CommentTok{# We will need to backtransform in order to get the relationships on the real scale, rather than the transformed scale}
 
-\NormalTok{## subset coefficients by category}
+\NormalTok{## extract all coefficients, make into a data frame}
+\NormalTok{fullcoeffs <-}\StringTok{ }\KeywordTok{summary}\NormalTok{(firstorder.mod)}\OperatorTok{$}\NormalTok{coefficients }\OperatorTok{%>%}\StringTok{ }\KeywordTok{as.data.frame}\NormalTok{(.) }\OperatorTok{%>%}\StringTok{ }\KeywordTok{rownames_to_column}\NormalTok{()}
+\NormalTok{coef_conf <-}\StringTok{ }\KeywordTok{confint}\NormalTok{(firstorder.mod) }\OperatorTok{%>%}\StringTok{ }\KeywordTok{as.data.frame}\NormalTok{(.) }\OperatorTok{%>%}\StringTok{ }\KeywordTok{rownames_to_column}\NormalTok{()}
+\end{Highlighting}
+\end{Shaded}
 
-\NormalTok{fullcoeffs <-}\StringTok{ }\KeywordTok{summary}\NormalTok{(firstorder.mod)}\OperatorTok{$}\NormalTok{coefficients}
+\begin{verbatim}
+## Waiting for profiling to be done...
+\end{verbatim}
 
-\CommentTok{#size_coeffs <- fullcoeffs[c("log_size"),]}
-\CommentTok{#size_coeffs}
-\CommentTok{#vuln_coeffs <- plogis(fullcoeffs[c("Vulnerability"),])}
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{# adds confidence intervals}
+\NormalTok{coef_table <-}\StringTok{ }\KeywordTok{left_join}\NormalTok{(fullcoeffs, coef_conf) }\OperatorTok{%>%}
+\StringTok{  }\KeywordTok{rename}\NormalTok{(}\StringTok{"Coef"}\NormalTok{ =}\StringTok{ "rowname"}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
 
-\NormalTok{############ EVAN HELP####}
-\CommentTok{# class(dd$log_size)}
-\CommentTok{# size.new<-data.frame(log_size=seq(min(dd$Size), max(dd$Size))) #note that size is continous }
-\CommentTok{# Yl.p<-predict.glm(firstorder.mod, newdata= size.new$log_size, type="response", se.fit=T)}
-\CommentTok{# }
-\CommentTok{# class(dd$Vulnerability)}
-\CommentTok{# vuln.new <- data.frame(Vulnerability=seq(min(dd$Vulnerability), max(dd$Vulnerability))) # vulnerability is continuous}
-\CommentTok{# Yl.p<-predict.glm(firstorder.mod, newdata = vuln.new, type="response")}
-\NormalTok{############ }\RegionMarkerTok{END}\NormalTok{ EVAN HELP####}
+\begin{verbatim}
+## Joining, by = "rowname"
+\end{verbatim}
 
-\NormalTok{### Plot backtransformed values against all values of size in this data set (dd$Size vs. )}
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{coef_table}
+\end{Highlighting}
+\end{Shaded}
 
-\NormalTok{#### Habitat}
-\NormalTok{hab_coeffs <-}\StringTok{ }\KeywordTok{plogis}\NormalTok{(fullcoeffs[}\KeywordTok{c}\NormalTok{(}\StringTok{"Benthic"}\NormalTok{, }\StringTok{"Deepwater"}\NormalTok{, }\StringTok{"Pelagic"}\NormalTok{, }\StringTok{"Coastal"}\NormalTok{, }\StringTok{"BrackishFreshwater"}\NormalTok{),])}
-\KeywordTok{barplot}\NormalTok{(hab_coeffs[,}\StringTok{"Estimate"}\NormalTok{], }\DataTypeTok{ylab=}\StringTok{"Relative Probability of Data Deficiency"}\NormalTok{)}
+\begin{verbatim}
+##                         Coef    Estimate Std. Error     z value
+## 1                (Intercept)  1.89798307  0.9993378  1.89924074
+## 2                  Deepwater  0.42049906  0.3380793  1.24378840
+## 3                    Coastal -0.29459044  0.2454618 -1.20014767
+## 4                    Pelagic -0.09329568  0.4578282 -0.20377878
+## 5                    Benthic  0.65265086  0.2684606  2.43108664
+## 6         BrackishFreshwater -1.53095099  0.6895971 -2.22006590
+## 7                   Tropical  0.22479967  0.3370047  0.66705199
+## 8                  Temperate -0.02920161  0.3490005 -0.08367213
+## 9                     Global  0.38262148  0.4423963  0.86488396
+## 10                   Pacific  0.17609809  0.3135966  0.56154344
+## 11                  Atlantic  0.10586736  0.3687716  0.28708110
+## 12                    Indian -0.86274559  0.3191445 -2.70330718
+## 13                    Arctic  1.78031054  1.6017366  1.11148768
+## 14             Trans.oceanic -0.33777067  0.5825540 -0.57981004
+## 15                Fisheries1 -0.60877476  0.3589603 -1.69593906
+## 16                commercial  0.12554128  0.4514905  0.27805963
+## 17               subsistence  0.04848245  0.5059173  0.09583077
+## 18                  Gamefish -0.47693959  0.4269441 -1.11710074
+## 19                  Aquarium  0.98909135  0.5909572  1.67371075
+## 20               Human.Uses1  0.29409053  0.3110277  0.94554448
+## 21                       D11 -0.48293789  0.2346903 -2.05776638
+## 22                       D21 -0.28874109  0.3129482 -0.92264810
+## 23                       D31 -0.81920015  0.3160997 -2.59158811
+## 24                  log_size -0.51819204  0.2172108 -2.38566475
+## 25 Rep_StrategyOvoviviparous  0.02542230  0.3176824  0.08002427
+## 26    Rep_StrategyViviparous  0.36607452  0.4902662  0.74668517
+## 27     Rep_StrategyOviparous -0.11305613  0.3451894 -0.32751916
+##       Pr(>|z|)       2.5 %      97.5 %
+## 1  0.057532831 -0.04375083  3.88483616
+## 2  0.213577452 -0.23943305  1.08983071
+## 3  0.230081994 -0.77736602  0.18647321
+## 4  0.838526378 -1.03029856  0.78043045
+## 5  0.015053614  0.12954257  1.18388478
+## 6  0.026414294 -3.07980864 -0.29835210
+## 7  0.504738928 -0.43520667  0.89001141
+## 8  0.933317117 -0.71528740  0.65744467
+## 9  0.387102483 -0.48334098  1.25528131
+## 10 0.574427122 -0.44244928  0.79055118
+## 11 0.774050224 -0.62224038  0.82751057
+## 12 0.006865327 -1.50144286 -0.24659331
+## 13 0.266358489 -1.70307878  5.27630354
+## 14 0.562042727 -1.49944902  0.79389022
+## 15 0.089897421 -1.31718319  0.09313587
+## 16 0.780966581 -0.78177290  1.00015193
+## 17 0.923654977 -0.97496978  1.02334685
+## 18 0.263951253 -1.34830851  0.33790352
+## 19 0.094187459 -0.18228542  2.16021474
+## 20 0.344380975 -0.31490342  0.90711437
+## 21 0.039612564 -0.94339201 -0.02184768
+## 22 0.356190618 -0.91224539  0.31851914
+## 23 0.009553407 -1.45013595 -0.20780617
+## 24 0.017048284 -0.95129682 -0.09759334
+## 25 0.936217954 -0.59736545  0.65065860
+## 26 0.455253622 -0.60413074  1.32353381
+## 27 0.743275255 -0.79193395  0.56406270
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{########### Evan's Help ####}
+\KeywordTok{library}\NormalTok{(emmeans) }\CommentTok{#computing estimated marginal means (least square means)}
+\CommentTok{#Least square means are means for groups that are adjusted for means of other factors in the model (allows us to account for different sample sizes between different families, etc.)}
+
+\NormalTok{logsize_means <-}\StringTok{ }\KeywordTok{emmeans}\NormalTok{(firstorder.mod, }\OperatorTok{~}\StringTok{ }\NormalTok{log_size, }
+         \DataTypeTok{var =} \StringTok{"log_size"}\NormalTok{, }
+         \DataTypeTok{at =} \KeywordTok{list}\NormalTok{(}\DataTypeTok{log_size =} \KeywordTok{seq}\NormalTok{(}\DecValTok{2}\NormalTok{, }\DecValTok{8}\NormalTok{, }\DataTypeTok{by =}\NormalTok{ .}\DecValTok{25}\NormalTok{)),}
+         \DataTypeTok{type =} \StringTok{"response"}\NormalTok{)}
+
+\CommentTok{# Plotting the figure}
+\KeywordTok{data.frame}\NormalTok{(logsize_means) }\OperatorTok{%>%}
+\StringTok{  }\KeywordTok{ggplot}\NormalTok{(}\KeywordTok{aes}\NormalTok{(}\DataTypeTok{x =} \KeywordTok{exp}\NormalTok{(log_size), }\CommentTok{# Exponentiating log size}
+             \DataTypeTok{y =}\NormalTok{ prob)) }\OperatorTok{+}
+\StringTok{  }\KeywordTok{geom_ribbon}\NormalTok{(}\KeywordTok{aes}\NormalTok{(}\DataTypeTok{ymin =}\NormalTok{ asymp.LCL,}
+              \DataTypeTok{ymax =}\NormalTok{ asymp.UCL),}
+              \DataTypeTok{alpha =}\NormalTok{ .}\DecValTok{2}\NormalTok{) }\OperatorTok{+}
+\StringTok{  }\KeywordTok{geom_line}\NormalTok{() }\OperatorTok{+}
+\StringTok{  }\KeywordTok{theme_bw}\NormalTok{() }\OperatorTok{+}
+\StringTok{  }\KeywordTok{xlab}\NormalTok{(}\StringTok{"Average species size (cm)"}\NormalTok{) }\OperatorTok{+}
+\StringTok{  }\KeywordTok{ylab}\NormalTok{(}\StringTok{"Probability of Data Deficiency"}\NormalTok{)}
 \end{Highlighting}
 \end{Shaded}
 
@@ -593,65 +774,55 @@ results}\label{lets-visualize-our-significant-results}
 
 \begin{Shaded}
 \begin{Highlighting}[]
+\CommentTok{#  }
+\CommentTok{# vulnerability_means <- emmeans(firstorder.mod, ~ Vulnerability, }
+\CommentTok{#          var = "Vulnerability", }
+\CommentTok{#          at = list(Vulnerability = seq(0, 4)),}
+\CommentTok{#          type = "response")}
+\CommentTok{# }
+\CommentTok{# data.frame(vulnerability_means) %>%}
+\CommentTok{#   ggplot(aes(x = Vulnerability,}
+\CommentTok{#              y = prob,}
+\CommentTok{#              group = Vulnerability,}
+\CommentTok{#              ymin = asymp.LCL,}
+\CommentTok{#              ymax = asymp.UCL)) +}
+\CommentTok{#   geom_point() +}
+\CommentTok{#   geom_errorbar(width = .1)+}
+\CommentTok{#   theme_bw()}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{### Plot backtransformed values against all values of size in this data set (dd$Size vs. )}
+
+\NormalTok{#### Habitat}
+\CommentTok{#hab_coeffs <- plogis(fullcoeffs[c("Benthic", "Deepwater", "Pelagic", "Coastal", "BrackishFreshwater"),])}
+\CommentTok{#barplot(hab_coeffs[,"Estimate"], ylab="Relative Probability of Data Deficiency")}
+
 \CommentTok{# OR! }
 
-\NormalTok{hab_coeffs.}\DecValTok{2}\NormalTok{ <-}\StringTok{ }\NormalTok{fullcoeffs[}\KeywordTok{c}\NormalTok{(}\StringTok{"Benthic"}\NormalTok{, }\StringTok{"Deepwater"}\NormalTok{, }\StringTok{"Pelagic"}\NormalTok{, }\StringTok{"Coastal"}\NormalTok{, }\StringTok{"BrackishFreshwater"}\NormalTok{),]}
-\KeywordTok{barplot}\NormalTok{(hab_coeffs.}\DecValTok{2}\NormalTok{[,}\StringTok{"Estimate"}\NormalTok{], }\DataTypeTok{ylab=}\StringTok{"Log Odds Ratio of Data Deficiency"}\NormalTok{)}
-\end{Highlighting}
-\end{Shaded}
+\CommentTok{#hab_coeffs.2 <- fullcoeffs[c("Benthic", "Deepwater", "Pelagic", "Coastal", "BrackishFreshwater"),]}
+\CommentTok{#barplot(hab_coeffs.2[,"Estimate"], ylab="Log Odds Ratio of Data Deficiency")}
 
-\includegraphics{DataDeficiency_analysis_files/figure-latex/unnamed-chunk-4-2.pdf}
 
-\begin{Shaded}
-\begin{Highlighting}[]
 \NormalTok{### Geography}
-\NormalTok{geo_coeffs <-}\StringTok{ }\KeywordTok{plogis}\NormalTok{(fullcoeffs[}\KeywordTok{c}\NormalTok{(}\StringTok{"Atlantic"}\NormalTok{, }\StringTok{"Arctic"}\NormalTok{, }\StringTok{"Global"}\NormalTok{, }\StringTok{"Indian"}\NormalTok{, }\StringTok{"Pacific"}\NormalTok{, }\StringTok{"Global"}\NormalTok{),]) }\CommentTok{#note that this is a matrix}
-\KeywordTok{barplot}\NormalTok{(geo_coeffs[,}\StringTok{"Estimate"}\NormalTok{], }\DataTypeTok{ylab=}\StringTok{"Relative Probability of Data Deficiency"}\NormalTok{)}
-\end{Highlighting}
-\end{Shaded}
+\CommentTok{#geo_coeffs <- plogis(fullcoeffs[c("Atlantic", "Arctic", "Global", "Indian", "Pacific", "Global"),]) #note that this is a matrix}
+\CommentTok{#barplot(geo_coeffs[,"Estimate"], ylab="Relative Probability of Data Deficiency")}
 
-\includegraphics{DataDeficiency_analysis_files/figure-latex/unnamed-chunk-4-3.pdf}
+\CommentTok{#geo_coeffs.2 <- fullcoeffs[c("Atlantic", "Arctic", "Global", "Indian", "Pacific", "Global"),] #note that this is a matrix}
+\CommentTok{#barplot(geo_coeffs.2[,"Estimate"], ylab="Log Odds Ratio of Data Deficiency")}
 
-\begin{Shaded}
-\begin{Highlighting}[]
-\NormalTok{geo_coeffs.}\DecValTok{2}\NormalTok{ <-}\StringTok{ }\NormalTok{fullcoeffs[}\KeywordTok{c}\NormalTok{(}\StringTok{"Atlantic"}\NormalTok{, }\StringTok{"Arctic"}\NormalTok{, }\StringTok{"Global"}\NormalTok{, }\StringTok{"Indian"}\NormalTok{, }\StringTok{"Pacific"}\NormalTok{, }\StringTok{"Global"}\NormalTok{),] }\CommentTok{#note that this is a matrix}
-\KeywordTok{barplot}\NormalTok{(geo_coeffs.}\DecValTok{2}\NormalTok{[,}\StringTok{"Estimate"}\NormalTok{], }\DataTypeTok{ylab=}\StringTok{"Log Odds Ratio of Data Deficiency"}\NormalTok{)}
-\end{Highlighting}
-\end{Shaded}
 
-\includegraphics{DataDeficiency_analysis_files/figure-latex/unnamed-chunk-4-4.pdf}
-
-\begin{Shaded}
-\begin{Highlighting}[]
 \NormalTok{### Depth range}
-\NormalTok{depth_coeffs <-}\StringTok{ }\KeywordTok{plogis}\NormalTok{(fullcoeffs[}\KeywordTok{c}\NormalTok{(}\StringTok{"D11"}\NormalTok{, }\StringTok{"D21"}\NormalTok{, }\StringTok{"D31"}\NormalTok{),])}
-\NormalTok{depth_coeffs}
+\CommentTok{#depth_coeffs <- plogis(fullcoeffs[c("D11", "D21", "D31"),])}
+\CommentTok{#depth_coeffs}
+\CommentTok{#barplot(depth_coeffs[,"Estimate"], names.arg=c("0-200m", "201-1000m", "1000+"), horiz=TRUE, xlab="Relative Probability of Data Deficiency", ylab="Depth")}
+
+\CommentTok{#depth_coeffs.2 <- fullcoeffs[c("D11", "D21", "D31"),]}
+\CommentTok{#barplot(depth_coeffs.2[,"Estimate"], names.arg=c("0-200m", "201-1000m", "1000+"), horiz=TRUE, xlab="Log Odds Ratio of Data Deficiency", ylab="Depth")}
 \end{Highlighting}
 \end{Shaded}
-
-\begin{verbatim}
-##      Estimate Std. Error    z value  Pr(>|z|)
-## D11 0.3827784  0.5601847 0.12185439 0.5120651
-## D21 0.4112862  0.5798417 0.24723844 0.5659973
-## D31 0.2906432  0.5802245 0.05972106 0.5014606
-\end{verbatim}
-
-\begin{Shaded}
-\begin{Highlighting}[]
-\KeywordTok{barplot}\NormalTok{(depth_coeffs[,}\StringTok{"Estimate"}\NormalTok{], }\DataTypeTok{names.arg=}\KeywordTok{c}\NormalTok{(}\StringTok{"0-200m"}\NormalTok{, }\StringTok{"201-1000m"}\NormalTok{, }\StringTok{"1000+"}\NormalTok{), }\DataTypeTok{horiz=}\OtherTok{TRUE}\NormalTok{, }\DataTypeTok{xlab=}\StringTok{"Relative Probability of Data Deficiency"}\NormalTok{, }\DataTypeTok{ylab=}\StringTok{"Depth"}\NormalTok{)}
-\end{Highlighting}
-\end{Shaded}
-
-\includegraphics{DataDeficiency_analysis_files/figure-latex/unnamed-chunk-4-5.pdf}
-
-\begin{Shaded}
-\begin{Highlighting}[]
-\NormalTok{depth_coeffs.}\DecValTok{2}\NormalTok{ <-}\StringTok{ }\NormalTok{fullcoeffs[}\KeywordTok{c}\NormalTok{(}\StringTok{"D11"}\NormalTok{, }\StringTok{"D21"}\NormalTok{, }\StringTok{"D31"}\NormalTok{),]}
-\KeywordTok{barplot}\NormalTok{(depth_coeffs.}\DecValTok{2}\NormalTok{[,}\StringTok{"Estimate"}\NormalTok{], }\DataTypeTok{names.arg=}\KeywordTok{c}\NormalTok{(}\StringTok{"0-200m"}\NormalTok{, }\StringTok{"201-1000m"}\NormalTok{, }\StringTok{"1000+"}\NormalTok{), }\DataTypeTok{horiz=}\OtherTok{TRUE}\NormalTok{, }\DataTypeTok{xlab=}\StringTok{"Log Odds Ratio of Data Deficiency"}\NormalTok{, }\DataTypeTok{ylab=}\StringTok{"Depth"}\NormalTok{)}
-\end{Highlighting}
-\end{Shaded}
-
-\includegraphics{DataDeficiency_analysis_files/figure-latex/unnamed-chunk-4-6.pdf}
 
 
 \end{document}
