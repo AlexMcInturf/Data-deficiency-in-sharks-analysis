@@ -8,35 +8,42 @@ output: html_document
 ### This is an R Markdown file that will show the annotated analysis of our data on factors contributing to data deficiency in all known shark species.
 
 ```{r}
-library(tidyverse);library(lme4);library(sjPlot)
+library(xtable); library(MASS); library(tidyverse);library(lme4);library(sjPlot)
 # Read in data
-dd <- read.csv("DD_analysis_datafile_2.csv", stringsAsFactors = FALSE)
+dd <- read.csv("DD_analysis_datafile_3.csv", stringsAsFactors = FALSE)
 dd = dd[dd$Order != "",]
 
 # Set NAs to 0
 dd[is.na(dd)] = 0
 table(dd$Data.Deficient)
-
+#head(dd)
+#summary(dd)
 # Rename some columns
 dd = dd %>% rename("Rep_Strategy" = "X.Reproductive.Strategy",
                              "Vulnerability" = "Vulnerability..",
-                             "Antarctic" = "Antartic", "D1" = "Depth.0.200.", "D2"="Depth.201.1000.", "D3"="Depth.1000..")
+                             "Antarctic" = "Antartic")
 
-# Cleaning up human uses data (binary = yes or no)
-dd$Human.Uses <- ifelse (dd$Human.Uses == "", 0, 1)
-table(dd$Human.Uses) 
-dd$Human.Uses <- factor(dd$Human.Uses, levels = c("0", "1"))
-
+class(dd$Epipelagic)
 #Cleaning up depth data
-dd$D1[dd$D1 == ""] <- "0"# D1 corresponds to the 0-200 m depth range
-dd$D1 <- factor(dd$D1, levels = c("0", "1"))
-class(dd$D1) 
-dd$D2[dd$D2 == ""] <- "0" #D2 corresponds to the 201-1000 m depth range
-dd$D2 <- factor(dd$D2, levels = c("0", "1"))
-class(dd$D2)
-dd$D3[dd$D3 == ""] <- "0"
-dd$D3 <- factor(dd$D3, levels = c("0", "1"))
-class(dd$D3)
+# assigning values to the 5 layers of the ocean
+# epipelagic - 0-200 m
+# mesopelagic - 200 - 1000 m
+# bathypelagic - 1,000 - 4,000 m 
+# abyssopelagic - 4,000-6,000 m 
+
+dd[dd$Epipelagic == ""] <- "0"
+dd$Epipelagic <- factor(dd$Epipelagic, levels = c("0", "1"))
+class(dd$Epipelagic)
+dd[dd$Mesopelagic == ""] <- "0"
+dd$Mesopelagic <- factor(dd$Mesopelagic, levels = c("0", "1"))
+class(dd$Mesopelagic)
+dd[dd$Bathypelagic == ""] <- "0"
+dd$Bathypelagic <- factor(dd$Bathypelagic, levels = c("0", "1"))
+class(dd$Bathypelagic)
+dd[dd$Abyssopelagic == ""] <- "0"
+dd$Abyssopelagic <- factor(dd$Abyssopelagic, levels = c("0", "1"))
+class(dd$Abyssopelagic)
+
 
 # Cleaning up fisheries data
 dd$Fisheries[dd$Fisheries == "NA"] <- "Unknown"
@@ -76,10 +83,10 @@ Type of use (fisheries, gamefish, aquaculture)
 Fisheries (any fishery)
 
 *Ecology*  
-Geographic range  
+Geographic range (oceans, trans-oceanic)
 Latitude/temperature (tropical/temperate)  
 Habitat (benthic, deepwater, pelagic, coastal, freshwater)  
-Depth range  
+Depth range (epipelagic, mesopelagic, bathypelagic, abyssopelagic)
 
 
 ```{r}
@@ -87,30 +94,66 @@ Depth range
 #First, we will look at the coefficients of every single first order variable and extract p-values to see what we are dealing with
 firstorder.mod <- glm(Data.Deficient ~ Deepwater + Coastal + Pelagic + Benthic + BrackishFreshwater +
       Tropical + Temperate + 
-      Global + Pacific + Atlantic + Indian + Arctic + Antarctic + Trans.oceanic +
-      Fisheries + commercial + subsistence + Gamefish + Aquarium + Human.Uses+ D1 + D2 + D3 +
+     Pacific + Atlantic + Indian + Arctic + Antarctic + Trans.oceanic +
+      Fisheries + commercial + subsistence + Gamefish + Aquarium + Epipelagic + Mesopelagic + Bathypelagic + Abyssopelagic+
       log_size + Rep_Strategy, data = dd, family = "binomial")
 
 firstorder.mod 
 
+# considering removing abyssopelagic - n=1
+firstorder.mod2 <- glm(Data.Deficient ~ Deepwater + Coastal + Pelagic + Benthic + BrackishFreshwater +
+      Tropical + Temperate + 
+     Pacific + Atlantic + Indian + Arctic + Antarctic + Trans.oceanic +
+      Fisheries + commercial + subsistence + Gamefish + Aquarium + Epipelagic + Mesopelagic + Bathypelagic +
+      log_size + Rep_Strategy, data = dd, family = "binomial")
+
+firstorder.mod2
+
 ### note that we did try to include "Family" as a random variable; however, it was "rank deficient", which means that it was correlated with multiple other variables and therefore redundant. However, code is below
 
-firstorder.mod.re <- glmer(Data.Deficient ~ Deepwater + Coastal + Pelagic + Benthic + BrackishFreshwater + 
-      Tropical + Temperate + 
-      Global + Pacific + Atlantic + Indian + Arctic + Antarctic + Trans.oceanic +
-      Fisheries + commercial + subsistence + Gamefish + Aquarium + Vulnerability + 
-      log_size + Rep_Strategy +
-        (1|Order), data = dd, family = "binomial")
+#firstorder.mod.re <- glmer(Data.Deficient ~ Deepwater + Coastal + Pelagic + Benthic + BrackishFreshwater + 
+   #   Tropical + Temperate + 
+    #  Global + Pacific + Atlantic + Indian + Arctic + Antarctic + Trans.oceanic +
+     # Fisheries + commercial + subsistence + Gamefish + Aquarium + Vulnerability + 
+      #log_size + Rep_Strategy +
+       # (1|Order), data = dd, family = "binomial")
 
 
-### Potential second order model
-secondorder.mod <- glm(Data.Deficient ~ Deepwater + Coastal + Pelagic + Benthic + BrackishFreshwater +
+### Second order model with all potential interactions
+secondorder.mod <- glm(Data.Deficient ~ Deepwater + Coastal + Pelagic + Benthic + BrackishFreshwater + Coastal*Benthic + Deepwater*Benthic + 
       Tropical + Temperate + 
-      Global + Pacific + Atlantic + Indian + Arctic + Antarctic + Trans.oceanic +
-      Fisheries + commercial + subsistence + Gamefish + Aquarium + Human.Uses+ D1 + D2 + D3 +
-      log_size + Rep_Strategy + Coastal*Fisheries + Pelagic*Fisheries + Benthic*Fisheries + Trans.oceanic*Fisheries + Global*Fisheries, data = dd, family = "binomial")
+      Tropical*Temperate + Pacific + Atlantic + Indian + Arctic + Trans.oceanic + Trans.oceanic*Pacific + Trans.oceanic*Atlantic + Trans.oceanic*Indian + Trans.oceanic*Arctic +
+      Fisheries + commercial + subsistence + Gamefish + Aquarium + Epipelagic + Mesopelagic + Bathypelagic + Abyssopelagic+
+      log_size + Rep_Strategy + Coastal*Fisheries + Pelagic*Fisheries + Benthic*Fisheries + Trans.oceanic*Fisheries, data = dd, family = "binomial")
 
 secondorder.mod 
+
+#removing trans-oceanic as a variable
+secondorder.mod2 <- glm(Data.Deficient ~ Deepwater + Coastal + Pelagic + Benthic + BrackishFreshwater + Coastal*Benthic + Deepwater*Benthic + 
+      Tropical + Temperate + 
+      Tropical*Temperate + Pacific + Atlantic + Indian + Arctic + 
+      Fisheries + commercial + subsistence + Gamefish + Aquarium + Epipelagic + Mesopelagic + Bathypelagic + Abyssopelagic+
+      log_size + Rep_Strategy + Coastal*Fisheries + Pelagic*Fisheries + Benthic*Fisheries + Fisheries, data = dd, family = "binomial")
+
+secondorder.mod2
+
+#removing abyssopelagic as a variable, including first order variable transoceanic
+secondorder.mod3 <- glm(Data.Deficient ~ Deepwater + Coastal + Pelagic + Benthic + BrackishFreshwater + Coastal*Benthic + Deepwater*Benthic + Trans.oceanic+
+      Tropical + Temperate + 
+      Tropical*Temperate + Pacific + Atlantic + Indian + Arctic + 
+      Fisheries + commercial + subsistence + Gamefish + Aquarium + Epipelagic + Mesopelagic + Bathypelagic + 
+      log_size + Rep_Strategy + Coastal*Fisheries + Pelagic*Fisheries + Benthic*Fisheries + Fisheries, data = dd, family = "binomial")
+
+secondorder.mod3
+
+#keeping abyssopelagic as a variable, including first order variable transoceanic
+secondorder.mod4 <- glm(Data.Deficient ~ Deepwater + Coastal + Pelagic + Benthic + BrackishFreshwater + Coastal*Benthic + Deepwater*Benthic + Trans.oceanic+
+      Tropical + Temperate + 
+      Tropical*Temperate + Pacific + Atlantic + Indian + Arctic + 
+      Fisheries + commercial + subsistence + Gamefish + Aquarium + Epipelagic + Mesopelagic + Bathypelagic + Abyssopelagic +
+      log_size + Rep_Strategy + Coastal*Fisheries + Pelagic*Fisheries + Benthic*Fisheries + Fisheries, data = dd, family = "binomial")
+
+secondorder.mod4
 
 
 ```
@@ -119,7 +162,6 @@ secondorder.mod
 ```{r}
 # Pull out plot data
 coefs <- plot_model(firstorder.mod, transform = NULL)
-
 # Making custom figure
 coefs$data %>%
   mutate(term = factor(term, levels = term)) %>%
@@ -136,43 +178,122 @@ coefs$data %>%
   geom_vline(xintercept = 0) +
   # Adding labelled y axis
   scale_y_continuous(labels = as.character(coefs$data$term),
-                     breaks = seq(1, 26, 1)) +
+                     breaks = seq(1, 25, 1)) +
   scale_alpha_discrete(range = c(.5, 1)) +
   xlab("Log Odds Ratio of Being DD (Higher Values = Greater Chance)") +
-  ylab("Variables")
+  ylab("Variables") + ggtitle("First order model")
 
-
-############# REPEAT FOR SECOND ORDER MODEL #############
-
-# Pull out plot data
-coefs2 <- plot_model(secondorder.mod, transform = NULL)
+coefs1.2 <- plot_model(firstorder.mod2, transform = NULL)
 
 # Making custom figure
-coefs2$data %>%
+coefs1.2$data %>%
   mutate(term = factor(term, levels = term)) %>%
-  # Color by sign of change, transparency by p-value
   ggplot(aes(x = estimate,
              y = as.numeric(term),
              color = as.factor(sign(estimate)),
              alpha = as.factor(p.value < 0.05))) +
   geom_point() + 
-  # Add CIs around point
   geom_segment(aes(x = conf.low,
                    xend  = conf.high,
                    yend = as.numeric(term))) +
   geom_vline(xintercept = 0) +
-  # Adding labelled y axis
+  scale_y_continuous(labels = as.character(coefs1.2$data$term),
+                     breaks = seq(1, 24, 1)) +
+  scale_alpha_discrete(range = c(.5, 1)) +
+  xlab("Log Odds Ratio of Being DD (Higher Values = Greater Chance)") +
+  ylab("Variables") + ggtitle("First order model w/o Abyssopelagic")
+
+
+############# REPEAT FOR SECOND ORDER MODEL #############
+
+# Pull out plot data
+coefs2 <- plot_model(secondorder.mod, transform = NULL) 
+
+# Making custom figure
+coefs2$data %>%
+  mutate(term = factor(term, levels = term)) %>%
+  ggplot(aes(x = estimate,
+             y = as.numeric(term),
+             color = as.factor(sign(estimate)),
+             alpha = as.factor(p.value < 0.05))) +
+  geom_point() + 
+  geom_segment(aes(x = conf.low,
+                   xend  = conf.high,
+                   yend = as.numeric(term))) +
+  geom_vline(xintercept = 0) +
   scale_y_continuous(labels = as.character(coefs2$data$term),
+                     breaks = seq(1, 35, 1)) +
+  scale_alpha_discrete(range = c(.5, 1)) +
+  xlab("Log Odds Ratio of Being DD (Higher Values = Greater Chance)") +
+  ylab("Variables") + ggtitle("Second Order Model - w/Transoceanic")
+
+###### without trans-oceanic ######
+
+# Pull out plot data
+coefs2.2 <- plot_model(secondorder.mod2, transform = NULL) 
+coefs2.2$data %>%
+  mutate(term = factor(term, levels = term)) %>%
+  ggplot(aes(x = estimate,
+             y = as.numeric(term),
+             color = as.factor(sign(estimate)),
+             alpha = as.factor(p.value < 0.05))) +
+  geom_point() + 
+  geom_segment(aes(x = conf.low,
+                   xend  = conf.high,
+                   yend = as.numeric(term))) +
+  geom_vline(xintercept = 0) +
+  scale_y_continuous(labels = as.character(coefs2.2$data$term),
+                     breaks = seq(1, 30, 1)) +
+  scale_alpha_discrete(range = c(.5, 1)) +
+  xlab("Log Odds Ratio of Being DD (Higher Values = Greater Chance)") +
+  ylab("Variables")+ ggtitle("Second Order Model - w/o Transoceanic")
+
+##### Remove abyssopelagic, keep transoceanic first order
+# Pull out plot data
+coefs2.3 <- plot_model(secondorder.mod3, transform = NULL) 
+# Making custom figure
+coefs2.3$data %>%
+  mutate(term = factor(term, levels = term)) %>%
+  ggplot(aes(x = estimate,
+             y = as.numeric(term),
+             color = as.factor(sign(estimate)),
+             alpha = as.factor(p.value < 0.05))) +
+  geom_point() + 
+  geom_segment(aes(x = conf.low,
+                   xend  = conf.high,
+                   yend = as.numeric(term))) +
+  geom_vline(xintercept = 0) +
+  scale_y_continuous(labels = as.character(coefs2.3$data$term),
+                     breaks = seq(1, 30, 1)) +
+  scale_alpha_discrete(range = c(.5, 1)) +
+  xlab("Log Odds Ratio of Being DD (Higher Values = Greater Chance)") +
+  ylab("Variables")+ ggtitle("Second Order Model - no abyssopelagic + 1st order transoceanic")
+
+##### Keep abyssopelagic, keep transoceanic first order
+# Pull out plot data
+coefs2.4 <- plot_model(secondorder.mod4, transform = NULL) 
+# Making custom figure
+coefs2.4$data %>%
+  mutate(term = factor(term, levels = term)) %>%
+  ggplot(aes(x = estimate,
+             y = as.numeric(term),
+             color = as.factor(sign(estimate)),
+             alpha = as.factor(p.value < 0.05))) +
+  geom_point() + 
+  geom_segment(aes(x = conf.low,
+                   xend  = conf.high,
+                   yend = as.numeric(term))) +
+  geom_vline(xintercept = 0) +
+  scale_y_continuous(labels = as.character(coefs2.4$data$term),
                      breaks = seq(1, 31, 1)) +
   scale_alpha_discrete(range = c(.5, 1)) +
   xlab("Log Odds Ratio of Being DD (Higher Values = Greater Chance)") +
-  ylab("Variables")
-
-
+  ylab("Variables")+ ggtitle("Second Order Model - w/ abyssopelagic + 1st order transoceanic")
 
 ```
 
-# Results  
+# Results
+*First order model*
 Here we see a few significant relationships:  
 
 *Biology*  
@@ -195,31 +316,51 @@ Latitude/temperature (tropical/temperate)
 *In contrast, highly vulnerable species are more likely to be data deficient. Sharks in the Arctic are also more likely to be data deficient, although we have a small sample size for this. Interestingly, although sharks at depths of greater than 1000 m are LESS likely to be data deficient, benthic species are likely to be. These two characteristics are not necessarily correlated, as benthic species could reside at all depths, depending on whether they are coastal or deep water.*  
 
 
-### Let's visualize our significant results
+# Results  
+*Second order model*  
+**TBD**  
+See below
+
+# Model selection  
+
+```{r}
+ic <- data.frame(Model = c("secondorder.mod", "secondorder.mod2", "secondorder.mod3", "secondorder.mod4", "firstorder.mod", "firstorder.mod2"),
+AIC = c(AIC(secondorder.mod), AIC(secondorder.mod4), AIC(secondorder.mod2), AIC(secondorder.mod3), AIC(firstorder.mod), AIC(firstorder.mod2)),
+stringsAsFactors = FALSE
+)
+
+ic <- ic[order(ic$AIC),]
+ic
+
+summary(secondorder.mod3) # no abyssopelagic, first order transoceanic
+
+```
+# AIC selection  
+*Generally seeing that second order models do functionally equally (even including abyssopelagic), except the one where we included transoceanic x ocean basin parameters*  
+
+
+### Let's visualize some of our our significant results
 
 ```{r}
 
-# We will need to backtransform in order to get the relationships on the real scale, rather than the transformed scale
+## subset coefficients by category
+fullcoeffs <- summary(secondorder.mod3)$coefficients %>% as.data.frame(.) %>% rownames_to_column()
+coef_conf <- confint(secondorder.mod3) %>% as.data.frame(.) %>% rownames_to_column() #error here
 
-## extract all coefficients, make into a data frame
-fullcoeffs <- summary(firstorder.mod)$coefficients %>% as.data.frame(.) %>% rownames_to_column()
-coef_conf <- confint(firstorder.mod) %>% as.data.frame(.) %>% rownames_to_column()
-# adds confidence intervals
 coef_table <- left_join(fullcoeffs, coef_conf) %>%
   rename("Coef" = "rowname")
 
-coef_table
+#size_coeffs <- fullcoeffs[c("log_size"),]
+#size_coeffs
+#vuln_coeffs <- plogis(fullcoeffs[c("Vulnerability"),])
 
 ########### Evan's Help ####
-library(emmeans) #computing estimated marginal means (least square means)
-#Least square means are means for groups that are adjusted for means of other factors in the model (allows us to account for different sample sizes between different families, etc.)
-# can add conditions that say waht are the mean probability for some given variables possibly given another or some variable beforehand
+library(emmeans)
 
-
-logsize_means <- emmeans(firstorder.mod, ~ log_size, 
+logsize_means <- emmeans(secondorder.mod3, ~ log_size, 
          var = "log_size", 
          at = list(log_size = seq(2, 8, by = .25)),
-         type = "response") #look into var or spec, include statment on estimated mean of DD that is fisheries|pelagic, etc.
+         type = "response")
 
 # Plotting the figure
 data.frame(logsize_means) %>%
@@ -228,85 +369,6 @@ data.frame(logsize_means) %>%
   geom_ribbon(aes(ymin = asymp.LCL,
               ymax = asymp.UCL),
               alpha = .2) +
-  geom_line() +
-  theme_bw() +
-  xlab("Average species size (cm)") +
-  ylab("Probability of Data Deficiency")
-#  
-
-
-
-### Exploring potential second-order interactions
-trash1 <- emmeans(firstorder.mod, ~ Coastal|Fisheries, 
-         var = "Fisheries|Coastal", 
-         at = list(Coastal = seq(0, 1, by = 1)),
-         type = "response") 
-
-trash1.2 <- emmeans(firstorder.mod, ~ Coastal, 
-         var = "Coastal", 
-         at = list(Coastal = seq(0, 1, by = 1)),
-         type = "response")
-
-trash1
-
-trash2 <- emmeans(firstorder.mod, ~ Pelagic|Fisheries, 
-         var = "Fisheries|Pelagic", 
-         at = list(Pelagic = seq(0, 1, by = 1)),
-         type = "response") 
-trash2
-
-trash2.2 <- emmeans(firstorder.mod, ~ Pelagic, 
-         var = "Pelagic", 
-         at = list(Pelagic = seq(0, 1, by = 1)),
-         type = "response")
-
-data.frame(trash1.2) %>%
-  ggplot(aes(x = Coastal, 
-             y = prob)) +
-  geom_ribbon(aes(ymin = asymp.LCL,
-              ymax = asymp.UCL),
-              alpha = .2) +
-  geom_line() +
-  theme_bw() +
-  xlab("Coastal") +
-  ylab("Probability of Data Deficiency")
-
-data.frame(trash1) %>%
-  ggplot(aes(x = Coastal, 
-             y = prob)) +
-  geom_ribbon(aes(ymin = asymp.LCL,
-              ymax = asymp.UCL),
-              alpha = .2) +
-  geom_line() +
-  theme_bw() +
-  xlab("Coastal|Fisheries") +
-  ylab("Probability of Data Deficiency")
-
-data.frame(trash2) %>%
-  ggplot(aes(x = Pelagic, 
-             y = prob)) +
-  geom_ribbon(aes(ymin = asymp.LCL,
-              ymax = asymp.UCL),
-              alpha = .2) +
-  geom_line() +
-  theme_bw() +
-  xlab("Pelagic|Fisheries") +
-  ylab("Probability of Data Deficiency")
-
-data.frame(trash2.2) %>%
-  ggplot(aes(x = Pelagic, 
-             y = prob)) +
-  geom_ribbon(aes(ymin = asymp.LCL,
-              ymax = asymp.UCL),
-              alpha = .2) +
-  geom_line() +
-  theme_bw() +
-  xlab("Pelagic") +
-  ylab("Probability of Data Deficiency")
-
-
-```
-
-
-
-
+  geom_line() + xlab("Average body size (cm)") +
+  ylab("Probability")
+ 
