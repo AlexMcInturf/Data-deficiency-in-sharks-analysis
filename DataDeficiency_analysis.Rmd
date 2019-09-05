@@ -155,6 +155,24 @@ secondorder.mod4 <- glm(Data.Deficient ~ Deepwater + Coastal + Pelagic + Benthic
 
 secondorder.mod4
 
+#removing abyssopelagic and transoceanic as a variable
+secondorder.mod5 <- glm(Data.Deficient ~ Deepwater + Coastal + Pelagic + Benthic + BrackishFreshwater + Coastal*Benthic + Deepwater*Benthic +
+      Tropical + Temperate + 
+      Tropical*Temperate + Pacific + Atlantic + Indian + Arctic + 
+      Fisheries + commercial + subsistence + Gamefish + Aquarium + Epipelagic + Mesopelagic + Bathypelagic + 
+      log_size + Rep_Strategy + Coastal*Fisheries + Pelagic*Fisheries + Benthic*Fisheries + Fisheries, data = dd, family = "binomial")
+
+secondorder.mod5
+
+### removing arctic, abyssopelagic, transoceanic
+secondorder.mod6 <- glm(Data.Deficient ~ Deepwater + Coastal + Pelagic + Benthic + BrackishFreshwater + Coastal*Benthic + Deepwater*Benthic +
+      Tropical + Temperate + 
+      Tropical*Temperate + Pacific + Atlantic + Indian + 
+      Fisheries + commercial + subsistence + Gamefish + Aquarium + Epipelagic + Mesopelagic + Bathypelagic + 
+      log_size + Rep_Strategy + Coastal*Fisheries + Pelagic*Fisheries + Benthic*Fisheries + Fisheries, data = dd, family = "binomial")
+
+secondorder.mod6
+
 
 ```
 ### Now to visualize a coefficient plots to see what is significant!
@@ -290,6 +308,52 @@ coefs2.4$data %>%
   xlab("Log Odds Ratio of Being DD (Higher Values = Greater Chance)") +
   ylab("Variables")+ ggtitle("Second Order Model - w/ abyssopelagic + 1st order transoceanic")
 
+##### Remove abyssopelagic, remove transoceanic
+# Pull out plot data
+coefs2.5 <- plot_model(secondorder.mod5, transform = NULL) 
+# Making custom figure
+coefs2.5$data %>%
+  mutate(term = factor(term, levels = term)) %>%
+  ggplot(aes(x = estimate,
+             y = as.numeric(term),
+             color = as.factor(sign(estimate)),
+             alpha = as.factor(p.value < 0.05))) +
+  geom_point() + 
+  geom_segment(aes(x = conf.low,
+                   xend  = conf.high,
+                   yend = as.numeric(term))) +
+  geom_vline(xintercept = 0) +
+  scale_y_continuous(labels = as.character(coefs2.5$data$term),
+                     breaks = seq(1, 29, 1)) +
+  scale_alpha_discrete(range = c(.5, 1)) +
+  xlab("Log Odds Ratio of Being DD (Higher Values = Greater Chance)") +
+  ylab("Variables")+ ggtitle("Second Order Model - no abyssopelagic or TO")
+
+##### Remove abyssopelagic, remove transoceanic and Arctic
+# Pull out plot data
+coefs2.6 <- plot_model(secondorder.mod6, transform = NULL) 
+# Making custom figure
+coefs2.6$data %>%
+  mutate(term = factor(term, levels = term)) %>%
+  ggplot(aes(x = estimate,
+             y = as.numeric(term),
+             color = as.factor(sign(estimate)),
+             alpha = as.factor(p.value < 0.05))) +
+  geom_point() + 
+  geom_segment(aes(x = conf.low,
+                   xend  = conf.high,
+                   yend = as.numeric(term))) +
+  geom_vline(xintercept = 0) +
+  scale_y_continuous(labels = as.character(coefs2.6$data$term),
+                     breaks = seq(1, 28, 1)) +
+  scale_alpha_discrete(range = c(.5, 1)) +
+  xlab("Log Odds Ratio of Being DD (Higher Values = Greater Chance)") +
+  ylab("Variables")+ ggtitle("Second Order Model - remove TO and all n<3")
+
+
+
+
+
 ```
 
 # Results
@@ -324,19 +388,42 @@ See below
 # Model selection  
 
 ```{r}
-ic <- data.frame(Model = c("secondorder.mod", "secondorder.mod2", "secondorder.mod3", "secondorder.mod4", "firstorder.mod", "firstorder.mod2"),
-AIC = c(AIC(secondorder.mod), AIC(secondorder.mod4), AIC(secondorder.mod2), AIC(secondorder.mod3), AIC(firstorder.mod), AIC(firstorder.mod2)),
+ic <- data.frame(Model = c("secondorder.mod", "secondorder.mod2", "secondorder.mod3", "secondorder.mod4", "firstorder.mod", "firstorder.mod2", "secondorder.mod5", "secondorder.mod6"),
+AIC = c(AIC(secondorder.mod), AIC(secondorder.mod4), AIC(secondorder.mod2), AIC(secondorder.mod3), AIC(firstorder.mod), AIC(firstorder.mod2), AIC(secondorder.mod5), AIC(secondorder.mod6)),
 stringsAsFactors = FALSE
 )
 
 ic <- ic[order(ic$AIC),]
 ic
 
-summary(secondorder.mod3) # no abyssopelagic, first order transoceanic
 
 ```
 # AIC selection  
-*Generally seeing that second order models do functionally equally (even including abyssopelagic), except the one where we included transoceanic x ocean basin parameters*  
+*Generally seeing three top models, all second order -*  
+1) no abyssopelagic, first order transoceanic (note that transoceanic is redundant, so not using this one)  
+2) no abyssopelagic or transoceanic  
+3) no abyssopelagic, Arctic, or transoceanic (likely going to use this one because Arctic is still relevant potentially, with caveat of small sample size)  
+
+```{r}
+##### Chosen model
+coefs2.5 <- plot_model(secondorder.mod5, transform = NULL) 
+coefs2.5$data %>%
+  mutate(term = factor(term, levels = term)) %>%
+  ggplot(aes(x = estimate,
+             y = as.numeric(term),
+             color = as.factor(sign(estimate)),
+             alpha = as.factor(p.value < 0.05))) +
+  geom_point() + 
+  geom_segment(aes(x = conf.low,
+                   xend  = conf.high,
+                   yend = as.numeric(term))) +
+  geom_vline(xintercept = 0) +
+  scale_y_continuous(labels = as.character(coefs2.5$data$term),
+                     breaks = seq(1, 29, 1)) +
+  scale_alpha_discrete(range = c(.5, 1)) +
+  xlab("Log Odds Ratio of Being DD (Higher Values = Greater Chance)") +
+  ylab("Variables")+ ggtitle("Second Order Model - no abyssopelagic or TO")
+```
 
 
 ### Let's visualize some of our our significant results
